@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="welcome">Welcome,</string>
+    <string name="transgeo">Transgeo</string>
+    <string name="latihan">Latihan</string>
+    <string name="tokoh">Tokoh</string>
+</resources>
