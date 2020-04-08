@@ -1,7 +1,15 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Transgeo</string>
     <string name="welcome">Welcome,</string>
     <string name="transgeo">Transgeo</string>
     <string name="latihan">Latihan</string>
     <string name="tokoh">Tokoh</string>
+    <string name="home">Home</string>
+    <string name="test">Test</string>
+    <string name="calculator">Calculator</string>
+    <string name="about">About</string>
+    <string name="phytagoras">Phytagoras</string>
+    <string name="master_filsafat">Master Filsafat</string>
+    <string name="deskTokoh">Phytagoras adlaah master filsafat, ia lahir di Yunani dan Iraq di zaman batu dan Iraq di zaman batu dan Iraq di zaman batu dan Iraq di zaman batu</string>
+    <string name="lihat_semua">Lihat Semua</string>
 </resources>

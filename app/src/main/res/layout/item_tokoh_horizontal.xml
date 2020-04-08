@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="150dp"
+    android:layout_height="100dp"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_linear_layout"
+    android:layout_marginEnd="15dp">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="8dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_photo_mini_desc_tokoh"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@color/gray" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="6dp">
+
+            <TextView
+                android:id="@+id/tv_nama_mini_desc_tokoh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/poppins"
+                android:text="@string/phytagoras"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_bidang_mini_desc_tokoh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="@string/phytagoras"
+                android:textColor="@color/gray"
+                android:textSize="10sp" />
+
+
+
+        </LinearLayout>
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/tv_desc_mini_desc_tokoh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLength="70"
+            android:maxLines="2"
+            android:text="@string/deskTokoh"
+            android:textColor="@color/descTokoh"
+            android:textSize="8sp" />
+        
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_item_tokoh"
+            android:layout_weight="10"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="2dp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
