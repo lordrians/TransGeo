@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="150dp"
-    android:layout_height="100dp"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="250dp"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="@drawable/rounded_linear_layout"
     android:layout_marginEnd="15dp">
@@ -14,8 +14,8 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/iv_photo_mini_desc_tokoh"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:src="@color/gray" />
         <LinearLayout
             android:layout_width="wrap_content"
@@ -31,7 +31,8 @@
                 android:fontFamily="@font/poppins"
                 android:text="@string/phytagoras"
                 android:textColor="@color/black"
-                android:textSize="12sp" />
+                android:textSize="20sp"
+                android:maxLines="1"/>
 
             <TextView
                 android:id="@+id/tv_bidang_mini_desc_tokoh"
@@ -40,7 +41,8 @@
                 android:fontFamily="@font/poppins"
                 android:text="@string/phytagoras"
                 android:textColor="@color/gray"
-                android:textSize="10sp" />
+                android:textSize="16sp"
+                android:maxLines="1"/>
 
 
 
@@ -61,19 +63,19 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ellipsize="end"
-            android:maxLength="70"
-            android:maxLines="2"
+            android:maxLength="150"
+            android:maxLines="3"
             android:text="@string/deskTokoh"
             android:textColor="@color/descTokoh"
-            android:textSize="8sp" />
+            android:textSize="12sp" />
         
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_arrow_item_tokoh"
             android:layout_weight="10"
             android:layout_gravity="center_vertical"
-            android:layout_marginStart="2dp"/>
+            android:layout_marginStart="2dp"
+            android:src="@drawable/ic_arrow_green"/>
 
     </LinearLayout>
 
