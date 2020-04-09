@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.transgeo.R;
-import com.example.transgeo.Tokoh;
+import com.example.transgeo.object.Tokoh;
 
 import java.util.ArrayList;
 

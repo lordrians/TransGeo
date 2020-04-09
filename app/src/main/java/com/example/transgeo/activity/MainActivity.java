@@ -1,4 +1,4 @@
-package com.example.transgeo;
+package com.example.transgeo.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -10,7 +10,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import com.example.transgeo.R;
 import com.example.transgeo.adapter.TokohAdapterHorizontal;
+import com.example.transgeo.dtobject.dtTokoh;
+import com.example.transgeo.object.Tokoh;
 
 import java.util.ArrayList;
 

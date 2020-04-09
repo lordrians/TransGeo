@@ -1,4 +1,6 @@
-package com.example.transgeo;
+package com.example.transgeo.dtobject;
+
+import com.example.transgeo.object.Tokoh;
 
 import java.util.ArrayList;
 

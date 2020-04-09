@@ -1,4 +1,4 @@
-package com.example.transgeo;
+package com.example.transgeo.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -9,12 +9,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.example.transgeo.adapter.TokohAdapterHorizontal;
+import com.example.transgeo.R;
 import com.example.transgeo.adapter.TokohAdapterVertical;
+import com.example.transgeo.dtobject.dtTokoh;
+import com.example.transgeo.object.Tokoh;
 
 import java.util.ArrayList;
 
-public class ListTokohActivity extends AppCompatActivity {
+public class ListTokohActivity extends AppCompatActivity implements View.OnClickListener {
     private LinearLayout llBackTokohList;
     private RecyclerView rvTokoh;
     private ArrayList<Tokoh> listTokoh = new ArrayList<>();
@@ -31,16 +33,7 @@ public class ListTokohActivity extends AppCompatActivity {
         listTokoh.addAll(dtTokoh.getData());
         showRvTokoh();
 
-        llBackTokohList.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
-                finish();
-
-            }
-        });
+        llBackTokohList.setOnClickListener(this);
 
     }
 
@@ -48,5 +41,18 @@ public class ListTokohActivity extends AppCompatActivity {
         rvTokoh.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL,false));
         TokohAdapterVertical tokohAdapterVertical = new TokohAdapterVertical(listTokoh, getApplicationContext());
         rvTokoh.setAdapter(tokohAdapterVertical);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+
+            case R.id.ll_back_tokoh_list:
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                finish();
+
+        }
     }
 }

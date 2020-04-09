@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".activity.MainActivity">
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -21,11 +21,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <View
+            <ImageView
                 android:id="@+id/view"
-                android:layout_width="325dp"
-                android:layout_height="100dp"
-                android:background="@drawable/ic_bg_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_bg_header_green"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -82,6 +82,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/textView3">
+
 
                 <ImageButton
                     android:layout_width="160dp"
@@ -241,6 +242,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/rv_tokoh_horizontal" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

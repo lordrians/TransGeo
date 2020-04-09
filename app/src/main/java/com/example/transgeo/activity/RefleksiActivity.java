@@ -1,8 +1,10 @@
-package com.example.transgeo;
+package com.example.transgeo.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.transgeo.R;
 
 public class RefleksiActivity extends AppCompatActivity {
 

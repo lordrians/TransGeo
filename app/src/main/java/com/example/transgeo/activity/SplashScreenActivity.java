@@ -1,4 +1,4 @@
-package com.example.transgeo;
+package com.example.transgeo.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,7 +10,9 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class SplashScreen extends AppCompatActivity {
+import com.example.transgeo.R;
+
+public class SplashScreenActivity extends AppCompatActivity {
     private static int SPLASH_SCREEN_TIME = 4000;
 
     Animation topAnm, botAnim;
@@ -33,7 +35,7 @@ public class SplashScreen extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashScreen.this, MainActivity.class);
+                Intent intent = new Intent(SplashScreenActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             }

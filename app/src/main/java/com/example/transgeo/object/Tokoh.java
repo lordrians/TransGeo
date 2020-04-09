@@ -1,4 +1,4 @@
-package com.example.transgeo;
+package com.example.transgeo.object;
 
 public class Tokoh {
     private String nama, bidang, poto,deksripsi;
