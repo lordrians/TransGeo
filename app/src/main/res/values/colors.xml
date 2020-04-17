@@ -9,4 +9,11 @@
     <color name="gray">#C4C4C4</color>
     <color name="descTokoh">#5F5F5F</color>
 
+    <color name="btn_calculator">#E9F5FD</color>
+    <color name="btn_calculator_select">#D7E5EE</color>
+
+    <color name="black_cal_c">#818181</color>
+    <color name="birutua_cal_c">#78001AFF</color>
+    <color name="biru_cal_c">#99B6D2</color>
+
 </resources>

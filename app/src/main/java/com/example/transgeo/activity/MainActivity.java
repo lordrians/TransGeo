@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.ll_lihat_semua_tokoh:
-                Intent intent = new Intent(getApplicationContext(), ListTokohActivity.class);
+                Intent intent = new Intent(getApplicationContext(), CalculatorActivity.class);
                 startActivity(intent);
         }
     }

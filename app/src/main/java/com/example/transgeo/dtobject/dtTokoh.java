@@ -35,20 +35,50 @@ public class dtTokoh {
     private static String[] deskripsi = {
             "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
                     "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
-                    "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya",
-            "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
+                    "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
+                    "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
+                    "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
+                    "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
                     "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
                     "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya",
             "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
                     "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
-                    "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya",
-            "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
+                    "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
+                    "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
+                    "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
+                    "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
                     "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
                     "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya",
             "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
                     "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
+                    "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
+                    "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
+                    "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
+                    "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
+                    "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
                     "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya",
             "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
+                    "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
+                    "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
+                    "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
+                    "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
+                    "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
+                    "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
+                    "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya",
+            "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
+                    "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
+                    "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
+                    "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
+                    "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
+                    "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
+                    "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
+                    "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya",
+            "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
+                    "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
+                    "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
+                    "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
+                    "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
+                    "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
                     "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya" +
                     "Dia adalah penemu geometri pertama didunia , sebelum firaun lahir ferian telah menciptakan ilmu tersebut , ini contoh ya"
     };

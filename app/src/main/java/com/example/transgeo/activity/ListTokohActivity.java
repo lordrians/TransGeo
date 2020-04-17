@@ -1,13 +1,12 @@
 package com.example.transgeo.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.LinearLayout;
 
 import com.example.transgeo.R;
 import com.example.transgeo.adapter.TokohAdapterVertical;
@@ -16,24 +15,35 @@ import com.example.transgeo.object.Tokoh;
 
 import java.util.ArrayList;
 
-public class ListTokohActivity extends AppCompatActivity implements View.OnClickListener {
-    private LinearLayout llBackTokohList;
+public class ListTokohActivity extends AppCompatActivity {
     private RecyclerView rvTokoh;
     private ArrayList<Tokoh> listTokoh = new ArrayList<>();
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_tokoh);
 
-        llBackTokohList = findViewById(R.id.ll_back_tokoh_list);
+        toolbar = findViewById(R.id.tb_cal_tokoh);
+        toolbar.setNavigationIcon(getDrawable(R.drawable.ic_arrow_back_black));
+        setSupportActionBar(toolbar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         rvTokoh = findViewById(R.id.rv_tokoh_vertical);
         rvTokoh.setHasFixedSize(true);
 
         listTokoh.addAll(dtTokoh.getData());
         showRvTokoh();
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
-        llBackTokohList.setOnClickListener(this);
 
     }
 
@@ -43,16 +53,4 @@ public class ListTokohActivity extends AppCompatActivity implements View.OnClick
         rvTokoh.setAdapter(tokohAdapterVertical);
     }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-
-            case R.id.ll_back_tokoh_list:
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
-                finish();
-
-        }
-    }
 }

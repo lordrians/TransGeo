@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     tools:context=".activity.ListTokohActivity">
 
     <ScrollView
@@ -29,58 +30,29 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
 
-            <LinearLayout
-                android:id="@+id/ll_back_tokoh_list"
-                android:layout_width="wrap_content"
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/tb_cal_tokoh"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="75dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginStart="16dp">
-
-                    <ImageView
-                        android:id="@+id/imageView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:src="@drawable/ic_arrow_back_black" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:text="@string/tokoh"
-                        android:textColor="@color/black"
-                        android:textSize="28sp"
-                        app:layout_constraintStart_toEndOf="@+id/imageView"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                </LinearLayout>
-
-                <View
-                    android:id="@+id/views"
-                    android:layout_width="75dp"
-                    android:layout_height="3dp"
-                    android:background="@drawable/ic_line_tokoh"
-                    android:layout_gravity="end"/>
-
-            </LinearLayout>
+                app:layout_constraintTop_toTopOf="parent"
+                app:title="@string/tokoh"
+                app:titleTextAppearance="@style/Toolbar.UnderLine"
+                app:titleTextColor="@android:color/black">
+            </androidx.appcompat.widget.Toolbar>
 
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_tokoh_vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:layout_marginTop="32dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                android:layout_margin="16dp"
-                app:layout_constraintTop_toBottomOf="@id/ll_back_tokoh_list"
+                app:layout_constraintTop_toBottomOf="@id/tb_cal_tokoh"
                 tools:listitem="@layout/item_tokoh_vertical" />
 
 

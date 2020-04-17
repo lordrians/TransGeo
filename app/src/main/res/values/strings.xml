@@ -10,6 +10,30 @@
     <string name="about">About</string>
     <string name="phytagoras">Phytagoras</string>
     <string name="master_filsafat">Master Filsafat</string>
-    <string name="deskTokoh">Phytagoras adlaah master filsafat, ia lahir di Yunani dan Iraq di zaman batu dan Iraq di zaman batu dan Iraq di zaman batu dan Iraq di zaman batu</string>
+    <string name="deskTokoh">Phytagoras adlaah master filsafat, ia lahir di Yunani dan Iraq di zaman batu dan Iraq di zaman batu dan Iraq di zaman batu dan Iraq
+         zaman batu dan Iraq di zaman batu dan Iraq di zaman ba zaman batu dan Iraq di zaman batu dan Iraq di zaman badi zaman batu</string>
     <string name="lihat_semua">Lihat Semua</string>
+
+    <string name="cal_c">C</string>
+    <string name="kurung">( )</string>
+    <string name="persen">%</string>
+    <string name="bagi">/</string>
+    <string name="x">x</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+    <string name="samadengan">=</string>
+    <string name="koma">,</string>
+    <string name="nol">0</string>
+    <string name="satu">1</string>
+    <string name="dua">2</string>
+    <string name="tiga">3</string>
+    <string name="empat">4</string>
+    <string name="lima">5</string>
+    <string name="enam">6</string>
+    <string name="tujuh">7</string>
+    <string name="delapan">8</string>
+    <string name="sembilan">9</string>
+    <string name="plusminus">+/-</string>
+    <string name="cal_perhitungan">38 x 35</string>
+    <string name="cal_hasil">12345</string>
 </resources>
