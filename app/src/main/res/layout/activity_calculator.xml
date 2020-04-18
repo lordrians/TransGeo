@@ -19,7 +19,7 @@
         app:titleTextColor="@android:color/black"></androidx.appcompat.widget.Toolbar>
 
     <TextView
-        android:id="@+id/btn_cal_input"
+        android:id="@+id/tv_cal_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -27,6 +27,7 @@
         android:layout_marginEnd="24dp"
         android:text="@string/cal_perhitungan"
         android:textAlignment="viewEnd"
+        android:maxLines="1"
         android:textColor="@color/biru_cal_c"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,7 +35,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tb_cal_tokoh" />
 
     <TextView
-        android:id="@+id/btn_cal_output"
+        android:id="@+id/tv_cal_output"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -42,6 +43,7 @@
         android:layout_marginBottom="8dp"
         android:text="@string/cal_hasil"
         android:textAlignment="viewEnd"
+        android:maxLength="14"
         android:textColor="@color/birutua_cal_c"
         android:textSize="45sp"
         android:textStyle="bold"
