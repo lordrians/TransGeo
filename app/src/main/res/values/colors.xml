@@ -15,5 +15,9 @@
     <color name="black_cal_c">#818181</color>
     <color name="birutua_cal_c">#78001AFF</color>
     <color name="biru_cal_c">#99B6D2</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="selected_tab">#ACDAAC</color>
+    <color name="unselected_tab">#F3C7B4</color>
 
 </resources>

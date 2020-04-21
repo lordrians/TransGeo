@@ -31,7 +31,7 @@
 
 
             <androidx.appcompat.widget.Toolbar
-                android:id="@+id/tb_cal_tokoh"
+                android:id="@+id/tb_list_tokoh"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
@@ -52,7 +52,7 @@
                 android:layout_marginTop="32dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tb_cal_tokoh"
+                app:layout_constraintTop_toBottomOf="@id/tb_list_tokoh"
                 tools:listitem="@layout/item_tokoh_vertical" />
 
 

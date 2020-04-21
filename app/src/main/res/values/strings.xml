@@ -36,4 +36,16 @@
     <string name="plusminus">+/-</string>
     <string name="cal_perhitungan">38 x 35</string>
     <string name="cal_hasil">12345</string>
+    <string name="menu_ujian">Ujian</string>
+    <string name="menu_kalkulator">Kalkulator</string>
+    <string name="menu_informasi">Informasi</string>
+    <string name="refleksi"><u>Refleksi</u></string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pengertian">Pengertian</string>
+    <string name="syarat">Syarat</string>
+    <string name="langkah">Langkah - Langkah</string>
+    <string name="contoh">Contoh Penyelesaian</string>
+    <string name="video">Video</string>
 </resources>

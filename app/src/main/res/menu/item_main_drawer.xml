@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/nav_header_main">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_draw_ujian"
+            android:icon="@drawable/ic_menu_ujian"
+            android:title="@string/menu_ujian" />
+        <item
+            android:id="@+id/nav_draw_kalkulator"
+            android:icon="@drawable/ic_menu_kalkulator"
+            android:title="@string/menu_kalkulator" />
+        <item
+            android:id="@+id/nav_draw_informasi"
+            android:icon="@drawable/ic_menu_informasi"
+            android:title="@string/menu_informasi" />
+    </group>
+</menu>

@@ -18,14 +18,14 @@ import java.util.ArrayList;
 public class ListTokohActivity extends AppCompatActivity {
     private RecyclerView rvTokoh;
     private ArrayList<Tokoh> listTokoh = new ArrayList<>();
-    Toolbar toolbar;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_tokoh);
 
-        toolbar = findViewById(R.id.tb_cal_tokoh);
+        toolbar = findViewById(R.id.tb_list_tokoh);
         toolbar.setNavigationIcon(getDrawable(R.drawable.ic_arrow_back_black));
         setSupportActionBar(toolbar);
 
@@ -37,12 +37,7 @@ public class ListTokohActivity extends AppCompatActivity {
 
         listTokoh.addAll(dtTokoh.getData());
         showRvTokoh();
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
+        toolbar.setNavigationOnClickListener(view -> finish());
 
 
     }

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- drawable for selected tab -->
+    <item android:state_selected="true">
+        <shape android:shape="rectangle">
+            <corners
+                android:bottomLeftRadius="18dp"
+                android:bottomRightRadius="18dp"
+                android:topLeftRadius="18dp"
+                android:topRightRadius="18dp" />
+            <padding
+                android:top="10dp"
+                android:right="10dp"
+                android:left="10dp"
+                android:bottom="10dp"/>
+            <stroke
+                android:width="10dp"
+                android:color="@android:color/transparent">
+            </stroke>
+            <solid android:color="@color/selected_tab" />
+        </shape>
+    </item>
+    <!-- drawable for unselected tab -->
+    <item android:state_selected="false">
+        <shape android:shape="rectangle">
+            <corners
+                android:bottomLeftRadius="18dp"
+                android:bottomRightRadius="18dp"
+                android:topLeftRadius="18dp"
+                android:topRightRadius="18dp" />
+            <padding
+                android:top="10dp"
+                android:right="10dp"
+                android:left="10dp"
+                android:bottom="10dp"/>
+            <stroke
+                android:width="10dp"
+                android:color="@android:color/transparent">
+            </stroke>
+            <solid android:color="@color/unselected_tab" />
+        </shape>
+    </item>
+
+</selector>

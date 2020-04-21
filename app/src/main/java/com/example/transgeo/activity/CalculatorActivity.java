@@ -9,10 +9,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
-//
-//import org.mozilla.javascript.Context;
-//import org.mozilla.javascript.Evaluator;
-//import org.mozilla.javascript.Scriptable;
+import androidx.appcompat.widget.Toolbar;
 
 import com.example.transgeo.R;
 
@@ -21,17 +18,24 @@ import net.objecthunter.exp4j.ExpressionBuilder;
 
 public class CalculatorActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0;
-    Button btnPlusMin, btnKoma, btnEqual, btnTambah, btnKurang, btnKali, btnBagi, btnPersen, btnKurung, btnClear;
-    ImageButton ivBackspace;
-    TextView tvInput, tvOutput;
-    String proses = "";
-    Boolean cekKurung = false;
+    private Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0;
+    private Button btnPlusMin, btnKoma, btnEqual, btnTambah, btnKurang, btnKali, btnBagi, btnPersen, btnKurung, btnClear;
+    private ImageButton ivBackspace;
+    private TextView tvInput, tvOutput;
+    private String proses = "";
+    private Boolean cekKurung = false;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator);
+
+        toolbar = findViewById(R.id.tb_calculator);
+        setSupportActionBar(toolbar);
+        setTitle("");
+
+
 
         btn0 = findViewById(R.id.btn_cal_0);
         btn1 = findViewById(R.id.btn_cal_1);
@@ -85,8 +89,12 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
 
         ivBackspace.setOnClickListener(this);
 
+        toolbar.setNavigationOnClickListener(view -> {
+            finish();
+        });
 
     }
+
 
     @Override
     public void onClick(View view) {
