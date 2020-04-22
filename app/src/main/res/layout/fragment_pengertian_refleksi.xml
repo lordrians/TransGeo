@@ -17,7 +17,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/iv_ref_pengertian"
                 android:layout_width="@dimen/materi_image_width"
                 android:layout_height="@dimen/materi_image_height"
                 android:layout_marginTop="24dp"
@@ -27,6 +27,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
+                android:id="@+id/tv_ref_pengertian"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
@@ -36,7 +37,7 @@
                 android:textSize="@dimen/text_materi"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/imageView3" />
+                app:layout_constraintTop_toBottomOf="@id/iv_ref_pengertian" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
