@@ -10,15 +10,17 @@ import android.widget.Toast;
 import com.example.transgeo.R;
 import com.example.transgeo.adapter.ViewPagerRefleksiAdapter;
 import com.example.transgeo.dtobject.DtMateri;
+import com.example.transgeo.object.GlobalVar;
 import com.example.transgeo.object.Materi;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 
 public class RefleksiActivity extends AppCompatActivity {
+
     private ViewPager viewPager;
     private TabLayout tabLayout;
-    SharedPreferences sharedPreferences, preferences ;
+    private SharedPreferences sharedPreferences;
     private ArrayList<Materi> arrayList;
     
 
@@ -32,10 +34,10 @@ public class RefleksiActivity extends AppCompatActivity {
 
         ViewPagerRefleksiAdapter adapter = new ViewPagerRefleksiAdapter(this, getSupportFragmentManager());
         viewPager.setAdapter(adapter);
-        sharedPreferences = getSharedPreferences("myThing", MODE_PRIVATE);
+        sharedPreferences = getSharedPreferences(GlobalVar.MFILE_SHARED_PREF, MODE_PRIVATE);
         tabLayout.setupWithViewPager(viewPager);
 
-        if (!sharedPreferences.contains("pIsiRefleksi")){
+        if (!sharedPreferences.contains(GlobalVar.P_ISI_REF)){
             setData();
 
             Toast.makeText(getApplicationContext(), "Data baru ", Toast.LENGTH_LONG ).show();
@@ -47,9 +49,6 @@ public class RefleksiActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "data belum Terisi", Toast.LENGTH_LONG ).show();
         }
 
-
-
-
     }
 
     private void setData() {
@@ -58,14 +57,14 @@ public class RefleksiActivity extends AppCompatActivity {
 
 
         SharedPreferences.Editor editor =  sharedPreferences.edit();
-        editor.putString("pIsiRefleksi", arrayList.get(0).getIsiMateri());
-        editor.putString("pPhotoRefleksi", arrayList.get(0).getPhoto());
-        editor.putString("sIsiRefleksi", arrayList.get(1).getIsiMateri());
-        editor.putString("sPhotoRefleksi", arrayList.get(1).getPhoto());
-        editor.putString("lIsiRefleksi", arrayList.get(2).getIsiMateri());
-        editor.putString("lPhotoRefleksi", arrayList.get(2).getPhoto());
-        editor.putString("cIsiRefleksi", arrayList.get(3).getIsiMateri());
-        editor.putString("cPhotoRefleksi", arrayList.get(3).getPhoto());
+        editor.putString(GlobalVar.P_ISI_REF, arrayList.get(0).getIsiMateri());
+        editor.putString(GlobalVar.P_PHOTO_REF, arrayList.get(0).getPhoto());
+        editor.putString(GlobalVar.S_ISI_REF, arrayList.get(1).getIsiMateri());
+        editor.putString(GlobalVar.S_PHOTO_REF, arrayList.get(1).getPhoto());
+        editor.putString(GlobalVar.L_ISI_REF, arrayList.get(2).getIsiMateri());
+        editor.putString(GlobalVar.L_PHOTO_REF, arrayList.get(2).getPhoto());
+        editor.putString(GlobalVar.C_ISI_REF, arrayList.get(3).getIsiMateri());
+        editor.putString(GlobalVar.C_PHOTO_REF, arrayList.get(3).getPhoto());
         editor.commit();
     }
 

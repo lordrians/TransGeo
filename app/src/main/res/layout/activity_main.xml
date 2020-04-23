@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="false"
     tools:context=".activity.MainActivity"
-    tools:openDrawer="">
+    tools:openDrawer="end">
 
     <FrameLayout
         android:layout_width="match_parent"

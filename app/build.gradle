@@ -47,5 +47,7 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     implementation 'com.faendir.rhino:rhino-android:1.5.2'
     implementation 'net.objecthunter:exp4j:0.4.8'
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
+    implementation files('libs/YouTubeAndroidPlayerApi.jar')
 
 }

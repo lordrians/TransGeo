@@ -16,6 +16,8 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.transgeo.R;
+import com.example.transgeo.activity.RefleksiActivity;
+import com.example.transgeo.object.GlobalVar;
 
 
 /**
@@ -45,10 +47,10 @@ public class PengertianRefleksiFragment extends Fragment {
         ivPengertian = view.findViewById(R.id.iv_ref_pengertian);
         tvPengertian = view.findViewById(R.id.tv_ref_pengertian);
 
-        SharedPreferences sharedPreferences = getContext().getSharedPreferences("myThing", 0);
-        tvPengertian.setText(sharedPreferences.getString("pIsiRefleksi",""));
+        SharedPreferences sharedPreferences = getContext().getSharedPreferences(GlobalVar.MFILE_SHARED_PREF, 0);
+        tvPengertian.setText(sharedPreferences.getString(GlobalVar.P_ISI_REF,""));
         Glide.with(getContext())
-                .load(sharedPreferences.getString("pPhotoRefleksi",""))
+                .load(sharedPreferences.getString(GlobalVar.P_PHOTO_REF,""))
                 .apply(new RequestOptions().centerCrop())
                 .into(ivPengertian);
 

@@ -16,6 +16,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.transgeo.R;
+import com.example.transgeo.object.GlobalVar;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -42,10 +43,10 @@ public class SyaratRefleksiFragment extends Fragment {
         ivSyarat = view.findViewById(R.id.iv_ref_syarat);
         tvSyarat = view.findViewById(R.id.tv_ref_syarat);
 
-        SharedPreferences sharedPreferences = getContext().getSharedPreferences("myThing", 0);
-        tvSyarat.setText(sharedPreferences.getString("sIsiRefleksi",""));
+        SharedPreferences sharedPreferences = getContext().getSharedPreferences(GlobalVar.MFILE_SHARED_PREF, 0);
+        tvSyarat.setText(sharedPreferences.getString(GlobalVar.S_ISI_REF,""));
         Glide.with(getContext())
-                .load(sharedPreferences.getString("sPhotoRefleksi",""))
+                .load(sharedPreferences.getString(GlobalVar.S_PHOTO_REF,""))
                 .apply(new RequestOptions().centerCrop())
                 .into(ivSyarat);
     }

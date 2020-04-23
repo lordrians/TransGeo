@@ -48,4 +48,6 @@
     <string name="langkah">Langkah - Langkah</string>
     <string name="contoh">Contoh Penyelesaian</string>
     <string name="video">Video</string>
+
+    <string name="player_error">Error initializing YouTube player: %s</string>
 </resources>
