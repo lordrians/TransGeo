@@ -22,8 +22,8 @@ import com.example.transgeo.object.GlobalVar;
  * A simple {@link Fragment} subclass.
  */
 public class ContohRefleksiFragment extends Fragment {
-    ImageView ivContoh;
-    TextView tvContoh;
+    private ImageView ivContoh;
+    private TextView tvContoh;
     public ContohRefleksiFragment() {
         // Required empty public constructor
     }

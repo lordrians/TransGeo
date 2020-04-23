@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ArrayList<Tokoh> listTokoh = new ArrayList<>();
 
     private Button btnLihatSemua;
-    private ImageButton btnRefleksi;
+    private ImageButton btnRefleksi, btnRotasi, btnDilatasi, btnTranslasi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +44,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnLihatSemua = findViewById(R.id.btn_lihat_semua_tokoh);
         btnRefleksi = findViewById(R.id.btn_refleksi);
+        btnRotasi = findViewById(R.id.btn_rotasi);
+        btnDilatasi = findViewById(R.id.btn_dilatasi);
+        btnTranslasi = findViewById(R.id.btn_translasi);
 
         navigationView = findViewById(R.id.nav_drawer);
         drawerLayout = findViewById(R.id.drawer_layout);
@@ -57,6 +60,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnLihatSemua.setOnClickListener(this);
         btnRefleksi.setOnClickListener(this);
+        btnRotasi.setOnClickListener(this);
+        btnDilatasi.setOnClickListener(this);
+        btnTranslasi.setOnClickListener(this);
 
 
     }
@@ -85,11 +91,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+
             case R.id.btn_lihat_semua_tokoh:
                 startActivity(new Intent(getApplicationContext(),ListTokohActivity.class));
                 break;
             case R.id.btn_refleksi:
                 startActivity(new Intent(getApplicationContext(),RefleksiActivity.class));
+                break;
+            case R.id.btn_rotasi:
+                startActivity(new Intent(getApplicationContext(),RotasiActivity.class));
+                break;
+            case R.id.btn_dilatasi:
+                startActivity(new Intent(getApplicationContext(),DilatasiActivity.class));
+                break;
+            case R.id.btn_translasi:
+                startActivity(new Intent(getApplicationContext(),TranslasiActivity.class));
                 break;
 
         }

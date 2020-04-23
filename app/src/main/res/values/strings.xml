@@ -50,4 +50,7 @@
     <string name="video">Video</string>
 
     <string name="player_error">Error initializing YouTube player: %s</string>
+    <string name="rotasi">Rotasi</string>
+    <string name="dilatasi">Dilatasi</string>
+    <string name="translasi">Translasi</string>
 </resources>

@@ -21,7 +21,6 @@ public class RefleksiActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private TabLayout tabLayout;
     private SharedPreferences sharedPreferences;
-    private ArrayList<Materi> arrayList;
     
 
     @Override
@@ -38,23 +37,35 @@ public class RefleksiActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
 
         if (!sharedPreferences.contains(GlobalVar.P_ISI_REF)){
-            setData();
-
+            setDataMateri();
             Toast.makeText(getApplicationContext(), "Data baru ", Toast.LENGTH_LONG ).show();
+            if (!sharedPreferences.contains(GlobalVar.ID_VIDEO_REF)){
+                sendIdYoutube();
+                Toast.makeText(getApplicationContext(), "Data Vidio baru ", Toast.LENGTH_LONG ).show();
+            }
 
-//            dt3 = sharedPreferences.getString("asd","");
-//
-//            Toast.makeText(getApplicationContext(), dt3, Toast.LENGTH_LONG ).show();
+
         } else {
             Toast.makeText(getApplicationContext(), "data belum Terisi", Toast.LENGTH_LONG ).show();
         }
 
     }
 
-    private void setData() {
+    private void sendIdYoutube() {
+        ArrayList<Materi> materis;
+        materis = DtMateri.getVideo();
+        SharedPreferences.Editor edit =  sharedPreferences.edit();
+        edit.putString(GlobalVar.ID_VIDEO_REF, materis.get(0).getVideo());
+        edit.putString(GlobalVar.ID_VIDEO_ROT, materis.get(1).getVideo());
+        edit.putString(GlobalVar.ID_VIDEO_TRANS, materis.get(2).getVideo());
+        edit.putString(GlobalVar.ID_VIDEO_DIL, materis.get(3).getVideo());
+        edit.commit();
+
+    }
+
+    private void setDataMateri() {
+        ArrayList<Materi> arrayList;
         arrayList = DtMateri.getDataRefleksi();
-
-
 
         SharedPreferences.Editor editor =  sharedPreferences.edit();
         editor.putString(GlobalVar.P_ISI_REF, arrayList.get(0).getIsiMateri());

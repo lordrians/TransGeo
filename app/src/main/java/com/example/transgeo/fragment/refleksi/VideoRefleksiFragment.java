@@ -2,6 +2,7 @@ package com.example.transgeo.fragment.refleksi;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -27,7 +28,8 @@ import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTube
  * A simple {@link Fragment} subclass.
  */
 public class VideoRefleksiFragment extends Fragment implements YouTubePlayer.OnInitializedListener {
-    YouTubePlayerFragment playerView;
+    private YouTubePlayerFragment playerView;
+
     public VideoRefleksiFragment() {
         // Required empty public constructor
     }
@@ -39,6 +41,7 @@ public class VideoRefleksiFragment extends Fragment implements YouTubePlayer.OnI
         View view = inflater.inflate(R.layout.fragment_video_refleksi, container, false);
         playerView = (YouTubePlayerFragment) getActivity().getFragmentManager().findFragmentById(R.id.video_refleksi);
         playerView.initialize(GlobalVar.YOUTUBE_API_KEY, this);
+
         return view;
     }
 
@@ -50,24 +53,6 @@ public class VideoRefleksiFragment extends Fragment implements YouTubePlayer.OnI
 
 
     }
-
-//    @Override
-//    public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
-//        if (!b){
-//            youTubePlayer.cueVideo("8oI0TVbXfpk");
-//        }
-//    }
-//
-//    @Override
-//    public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
-//        if (youTubeInitializationResult.isUserRecoverableError()){
-//            youTubeInitializationResult.getErrorDialog(getActivity(), GlobalVar.RECOVERY_REQUEST).show();
-//        } else {
-//            String errMsg = String.format(getString(R.string.player_error), youTubeInitializationResult.toString());
-//            Toast.makeText(getActivity(), errMsg, Toast.LENGTH_LONG).show();
-//        }
-//    }
-
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if (requestCode == GlobalVar.RECOVERY_REQUEST){
@@ -82,7 +67,9 @@ public class VideoRefleksiFragment extends Fragment implements YouTubePlayer.OnI
     @Override
     public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
         if (!b){
-            youTubePlayer.cueVideo("8oI0TVbXfpk");
+            SharedPreferences sharedPreferences = getContext().getSharedPreferences(GlobalVar.MFILE_SHARED_PREF, 0);
+            String idVidio = sharedPreferences.getString(GlobalVar.ID_VIDEO_REF,"");
+            youTubePlayer.cueVideo(idVidio);
         }
     }
 
