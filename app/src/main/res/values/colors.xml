@@ -19,5 +19,6 @@
 
     <color name="selected_tab">#ACDAAC</color>
     <color name="unselected_tab">#F3C7B4</color>
+    <color name="btn_materi_selected">#7EB1B1B1</color>
 
 </resources>

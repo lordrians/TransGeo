@@ -5,7 +5,8 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="@drawable/rounded_linear_layout"
-    android:layout_marginEnd="15dp">
+    android:layout_marginEnd="15dp"
+    android:foreground="@drawable/selector_btn_press">
     
     <LinearLayout
         android:layout_width="match_parent"

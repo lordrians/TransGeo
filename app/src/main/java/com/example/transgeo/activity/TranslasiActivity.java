@@ -1,6 +1,7 @@
 package com.example.transgeo.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.SharedPreferences;
@@ -21,6 +22,7 @@ public class TranslasiActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private TabLayout tabLayout;
     private SharedPreferences sharedPreferences;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,10 @@ public class TranslasiActivity extends AppCompatActivity {
 
         viewPager = findViewById(R.id.vp_translasi);
         tabLayout = findViewById(R.id.tl_translasi);
+        toolbar = findViewById(R.id.tb_translasi);
+
+        setSupportActionBar(toolbar);
+        toolbar.setNavigationOnClickListener(view -> finish());
 
         ViewPagerTranslasiAdapter adapter = new ViewPagerTranslasiAdapter(this, getSupportFragmentManager());
         viewPager.setAdapter(adapter);

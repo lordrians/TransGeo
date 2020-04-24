@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.view.InflateException;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,6 +30,7 @@ import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTube
  */
 public class VideoRefleksiFragment extends Fragment implements YouTubePlayer.OnInitializedListener {
     private YouTubePlayerFragment playerView;
+    private static View view;
 
     public VideoRefleksiFragment() {
         // Required empty public constructor
@@ -38,9 +40,16 @@ public class VideoRefleksiFragment extends Fragment implements YouTubePlayer.OnI
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_video_refleksi, container, false);
-        playerView = (YouTubePlayerFragment) getActivity().getFragmentManager().findFragmentById(R.id.video_refleksi);
-        playerView.initialize(GlobalVar.YOUTUBE_API_KEY, this);
+        if (view != null){
+            ViewGroup parent = (ViewGroup) view.getParent();
+            if (parent != null){
+                parent.removeView(view);
+            }
+        }
+        try {
+            view = inflater.inflate(R.layout.fragment_video_refleksi, container, false);
+        } catch (InflateException e){
+        }
 
         return view;
     }
@@ -49,8 +58,8 @@ public class VideoRefleksiFragment extends Fragment implements YouTubePlayer.OnI
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-
-
+        playerView = (YouTubePlayerFragment) getActivity().getFragmentManager().findFragmentById(R.id.video_refleksi);
+        playerView.initialize(GlobalVar.YOUTUBE_API_KEY, this);
 
     }
     @Override

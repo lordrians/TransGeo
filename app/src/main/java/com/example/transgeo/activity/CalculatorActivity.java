@@ -6,6 +6,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.HorizontalScrollView;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,8 +35,6 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
         toolbar = findViewById(R.id.tb_calculator);
         setSupportActionBar(toolbar);
         setTitle("");
-
-
 
         btn0 = findViewById(R.id.btn_cal_0);
         btn1 = findViewById(R.id.btn_cal_1);
@@ -94,6 +93,7 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
         });
 
     }
+
 
 
     @Override

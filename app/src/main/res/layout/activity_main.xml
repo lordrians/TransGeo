@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="false"
     tools:context=".activity.MainActivity"
-    tools:openDrawer="end">
+    tools:openDrawer="">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -33,7 +33,7 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
                 <androidx.appcompat.widget.Toolbar
                     android:id="@+id/tb_main_activity"
@@ -95,62 +95,75 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <GridLayout
+                <LinearLayout
                     android:id="@+id/gridLayout"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_marginStart="23dp"
                     android:layout_marginTop="24dp"
                     android:layout_marginEnd="23dp"
-                    android:alignmentMode="alignMargins"
-                    android:columnCount="2"
-                    android:columnOrderPreserved="false"
-                    android:rowCount="2"
+                    android:orientation="vertical"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/textView3">
 
+<!--                    android:columnCount="2"-->
+<!--                    android:columnOrderPreserved="false"-->
+<!--                    android:rowCount="2"-->
 
-                    <ImageButton
-                        android:id="@+id/btn_refleksi"
-                        android:layout_width="160dp"
-                        android:layout_height="90dp"
-                        android:layout_rowWeight="1"
-                        android:layout_columnWeight="1"
-                        android:layout_marginEnd="5dp"
-                        android:background="@drawable/ic_refleksi" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
-                    <ImageButton
-                        android:id="@+id/btn_rotasi"
-                        android:layout_width="160dp"
-                        android:layout_height="90dp"
-                        android:layout_rowWeight="1"
-                        android:layout_columnWeight="1"
-                        android:layout_marginStart="5dp"
-                        android:background="@drawable/ic_rotasi" />
+                        <ImageButton
+                            android:id="@+id/btn_refleksi"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/ic_refleksi"
+                            android:foreground="@drawable/selector_btn_press"/>
 
-                    <ImageButton
-                        android:id="@+id/btn_translasi"
-                        android:layout_width="160dp"
-                        android:layout_height="90dp"
-                        android:layout_rowWeight="1"
-                        android:layout_columnWeight="1"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginTop="25dp"
-                        android:background="@drawable/ic_translasi" />
+                        <ImageButton
+                            android:id="@+id/btn_rotasi"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/ic_rotasi"
+                            android:foreground="@drawable/selector_btn_press" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/btn_translasi"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/grid_image_margin_top"
+                            android:background="@drawable/ic_translasi"
+                            android:foreground="@drawable/selector_btn_press" />
 
 
-                    <ImageButton
-                        android:id="@+id/btn_dilatasi"
-                        android:layout_width="160dp"
-                        android:layout_height="90dp"
-                        android:layout_rowWeight="1"
-                        android:layout_columnWeight="1"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginTop="25dp"
-                        android:background="@drawable/ic_dilatasi" />
+                        <ImageButton
+                            android:id="@+id/btn_dilatasi"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_marginTop="@dimen/grid_image_margin_top"
+                            android:background="@drawable/ic_dilatasi"
+                            android:foreground="@drawable/selector_btn_press" />
 
-                </GridLayout>
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
 
                 <TextView
                     android:id="@+id/textView2"
@@ -183,19 +196,22 @@
                         <ImageButton
                             android:layout_width="140dp"
                             android:layout_height="70dp"
-                            android:background="@drawable/ic_latihan_easy" />
+                            android:background="@drawable/ic_latihan_easy"
+                            android:foreground="@drawable/selector_btn_press" />
 
                         <ImageButton
                             android:layout_width="140dp"
                             android:layout_height="70dp"
                             android:layout_marginStart="15dp"
-                            android:background="@drawable/ic_latihan_medium" />
+                            android:background="@drawable/ic_latihan_medium"
+                            android:foreground="@drawable/selector_btn_press" />
 
                         <ImageButton
                             android:layout_width="140dp"
                             android:layout_height="70dp"
                             android:layout_marginStart="15dp"
-                            android:background="@drawable/ic_latihan_hard" />
+                            android:background="@drawable/ic_latihan_hard"
+                            android:foreground="@drawable/selector_btn_press" />
 
                     </LinearLayout>
                 </HorizontalScrollView>
@@ -218,48 +234,14 @@
                     android:layout_height="20dp"
                     android:layout_marginEnd="24dp"
                     android:background="@color/white"
-                    android:drawableRight="@drawable/ic_arrow_gray"
+                    android:foreground="@drawable/selector_btn_press"
+                    android:drawableEnd="@drawable/ic_arrow_gray"
                     android:drawablePadding="10dp"
                     android:text="@string/lihat_semua"
                     android:textColor="@color/gray"
                     android:textSize="12sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/textView23" />
-
-                <!--                <LinearLayout-->
-                <!--                    android:id="@+id/ll_lihat_semua_tokoh"-->
-                <!--                    android:layout_width="wrap_content"-->
-                <!--                    android:layout_height="wrap_content"-->
-                <!--                    android:layout_marginEnd="24dp"-->
-                <!--                    android:orientation="horizontal"-->
-                <!--                    app:layout_constraintEnd_toEndOf="parent"-->
-                <!--                    app:layout_constraintTop_toTopOf="@+id/textView23">-->
-
-                <!--                    <TextView-->
-                <!--                        android:layout_width="wrap_content"-->
-                <!--                        android:layout_height="wrap_content"-->
-                <!--                        android:text="@string/lihat_semua"-->
-                <!--                        android:textColor="@color/gray"-->
-                <!--                        android:textSize="12sp" />-->
-
-                <!--                    <ImageView-->
-                <!--                        android:layout_width="wrap_content"-->
-                <!--                        android:layout_height="wrap_content"-->
-                <!--                        android:layout_gravity="center_vertical"-->
-                <!--                        android:layout_marginStart="8dp"-->
-                <!--                        android:src="@drawable/ic_arrow_gray" />-->
-
-                <!--                </LinearLayout>-->
-
-                <!--            <HorizontalScrollView-->
-                <!--                android:id="@+id/horizontalScrollView2"-->
-                <!--                android:layout_width="match_parent"-->
-                <!--                android:layout_height="wrap_content"-->
-                <!--                android:layout_marginStart="16dp"-->
-                <!--                android:layout_marginTop="8dp"-->
-                <!--                app:layout_constraintEnd_toEndOf="parent"-->
-                <!--                app:layout_constraintStart_toStartOf="parent"-->
-                <!--                app:layout_constraintTop_toBottomOf="@+id/textView23">-->
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_tokoh_horizontal"
@@ -286,7 +268,6 @@
                     app:layout_constraintRight_toRightOf="parent"
                     android:layout_marginTop="70dp"/>
 
-                <!--            </HorizontalScrollView>-->
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -306,13 +287,31 @@
         app:headerLayout="@layout/nav_header_main"
         app:menu="@menu/item_main_drawer"
         android:background="@color/white">
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="350dp"
-            android:layout_gravity="bottom"
-            android:background="@drawable/ic_background_navdraw"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/ic_background_navdraw"/>
+
+
+        </LinearLayout>
+
 
     </com.google.android.material.navigation.NavigationView>
 
 
 </androidx.drawerlayout.widget.DrawerLayout>
+<!--<View-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="350dp"-->
+<!--android:layout_gravity="bottom"-->
+<!--android:background="@drawable/ic_background_navdraw"/>-->
+
+
+<!--    app:headerLayout="@layout/nav_header_main"-->
+<!--    app:menu="@menu/item_main_drawer"-->

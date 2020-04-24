@@ -3,8 +3,11 @@ package com.example.transgeo.fragment.translasi;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.view.InflateException;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +24,7 @@ import com.google.android.youtube.player.YouTubePlayerFragment;
  */
 public class VideoTranslasiFragment extends Fragment implements YouTubePlayer.OnInitializedListener {
     private YouTubePlayerFragment playerView;
+    private static View view;
 
     public VideoTranslasiFragment() {
         // Required empty public constructor
@@ -31,10 +35,26 @@ public class VideoTranslasiFragment extends Fragment implements YouTubePlayer.On
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_video_translasi, container, false);
+        if (view != null){
+            ViewGroup parent = (ViewGroup) view.getParent();
+            if (parent != null){
+                parent.removeView(view);
+            }
+        }
+        try {
+            view = inflater.inflate(R.layout.fragment_video_translasi, container, false);
+        } catch (InflateException e){
+        }
+
+        return view;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
         playerView = (YouTubePlayerFragment) getActivity().getFragmentManager().findFragmentById(R.id.video_translasi);
         playerView.initialize(GlobalVar.YOUTUBE_API_KEY, this);
-        return view;
     }
 
     @Override

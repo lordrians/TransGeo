@@ -28,6 +28,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
+    private Toolbar toolbar;
 
     private RecyclerView rvTokoh;
     private ArrayList<Tokoh> listTokoh = new ArrayList<>();
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         rvTokoh = findViewById(R.id.rv_tokoh_horizontal);
-
+        toolbar = findViewById(R.id.tb_main_activity);
         btnLihatSemua = findViewById(R.id.btn_lihat_semua_tokoh);
         btnRefleksi = findViewById(R.id.btn_refleksi);
         btnRotasi = findViewById(R.id.btn_rotasi);
@@ -63,7 +64,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnRotasi.setOnClickListener(this);
         btnDilatasi.setOnClickListener(this);
         btnTranslasi.setOnClickListener(this);
-
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                drawerLayout.openDrawer(GravityCompat.START);
+            }
+        });
 
     }
 

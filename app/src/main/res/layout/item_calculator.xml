@@ -3,335 +3,335 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <GridLayout
-        android:id="@+id/gridLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:columnCount="4"
-        android:rowCount="5">
+<!--    <GridLayout-->
+<!--        android:id="@+id/gridLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:columnCount="4"-->
+<!--        android:rowCount="5">-->
 
-        <Button
-            android:id="@+id/btn_cal_clear"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/cal_height_btn"
-            android:layout_row="0"
-            android:layout_rowWeight="1"
-            android:layout_column="0"
-            android:layout_columnWeight="1"
-            android:layout_margin="6dp"
-            android:background="@drawable/selector_btn_calculator"
-            android:fontFamily="@font/poppins"
-            android:text="@string/cal_c"
-            android:textColor="@color/black_cal_c"
-            android:textSize="@dimen/calTextNum"
-            android:textStyle="bold" />
+<!--        <Button-->
+<!--            android:id="@+id/btn_cal_clear"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="@dimen/cal_height_btn"-->
+<!--            android:layout_row="0"-->
+<!--            android:layout_rowWeight="1"-->
+<!--            android:layout_column="0"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_margin="6dp"-->
+<!--            android:background="@drawable/selector_btn_calculator"-->
+<!--            android:fontFamily="@font/poppins"-->
+<!--            android:text="@string/cal_c"-->
+<!--            android:textColor="@color/black_cal_c"-->
+<!--            android:textSize="@dimen/calTextNum"-->
+<!--            android:textStyle="bold" />-->
 
-        <Button
-            android:id="@+id/btn_cal_kurung"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/cal_height_btn"
-            android:layout_row="0"
-            android:layout_rowWeight="1"
-            android:layout_column="1"
-            android:layout_columnWeight="1"
-            android:layout_margin="6dp"
-            android:background="@drawable/selector_btn_calculator"
-            android:fontFamily="@font/poppins"
-            android:text="@string/kurung"
-            android:textColor="@color/birutua_cal_c"
-            android:textSize="@dimen/calTextNum"
-            android:textStyle="bold" />
+<!--        <Button-->
+<!--            android:id="@+id/btn_cal_kurung"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="@dimen/cal_height_btn"-->
+<!--            android:layout_row="0"-->
+<!--            android:layout_rowWeight="1"-->
+<!--            android:layout_column="1"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_margin="6dp"-->
+<!--            android:background="@drawable/selector_btn_calculator"-->
+<!--            android:fontFamily="@font/poppins"-->
+<!--            android:text="@string/kurung"-->
+<!--            android:textColor="@color/birutua_cal_c"-->
+<!--            android:textSize="@dimen/calTextNum"-->
+<!--            android:textStyle="bold" />-->
 
-        <Button
-            android:id="@+id/btn_cal_persen"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/cal_height_btn"
-            android:layout_row="0"
-            android:layout_rowWeight="1"
-            android:layout_column="2"
-            android:layout_columnWeight="1"
-            android:layout_margin="6dp"
-            android:background="@drawable/selector_btn_calculator"
-            android:fontFamily="@font/poppins"
-            android:text="@string/persen"
-            android:textColor="@color/birutua_cal_c"
-            android:textSize="@dimen/calTextNum"
-            android:textStyle="bold" />
+<!--        <Button-->
+<!--            android:id="@+id/btn_cal_persen"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="@dimen/cal_height_btn"-->
+<!--            android:layout_row="0"-->
+<!--            android:layout_rowWeight="1"-->
+<!--            android:layout_column="2"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_margin="6dp"-->
+<!--            android:background="@drawable/selector_btn_calculator"-->
+<!--            android:fontFamily="@font/poppins"-->
+<!--            android:text="@string/persen"-->
+<!--            android:textColor="@color/birutua_cal_c"-->
+<!--            android:textSize="@dimen/calTextNum"-->
+<!--            android:textStyle="bold" />-->
 
-        <Button
-            android:id="@+id/btn_cal_pembagian"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/cal_height_btn"
-            android:layout_row="0"
-            android:layout_rowWeight="1"
-            android:layout_column="3"
-            android:layout_columnWeight="1"
-            android:layout_margin="6dp"
-            android:background="@drawable/selector_btn_calculator"
-            android:fontFamily="@font/poppins"
-            android:text="@string/bagi"
-            android:textColor="@color/birutua_cal_c"
-            android:textSize="@dimen/calTextNum"
-            android:textStyle="bold" />
+<!--        <Button-->
+<!--            android:id="@+id/btn_cal_pembagian"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="@dimen/cal_height_btn"-->
+<!--            android:layout_row="0"-->
+<!--            android:layout_rowWeight="1"-->
+<!--            android:layout_column="3"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_margin="6dp"-->
+<!--            android:background="@drawable/selector_btn_calculator"-->
+<!--            android:fontFamily="@font/poppins"-->
+<!--            android:text="@string/bagi"-->
+<!--            android:textColor="@color/birutua_cal_c"-->
+<!--            android:textSize="@dimen/calTextNum"-->
+<!--            android:textStyle="bold" />-->
 
-        <Button
-            android:id="@+id/btn_cal_7"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/cal_height_btn"
-            android:layout_row="1"
-            android:layout_rowWeight="1"
-            android:layout_column="0"
-            android:layout_columnWeight="1"
-            android:layout_margin="6dp"
-            android:background="@drawable/selector_btn_calculator"
-            android:fontFamily="@font/poppins"
-            android:text="@string/tujuh"
-            android:textColor="@color/biru_cal_c"
-            android:textSize="@dimen/calTextNum"
-            android:textStyle="bold" />
+<!--        <Button-->
+<!--            android:id="@+id/btn_cal_7"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="@dimen/cal_height_btn"-->
+<!--            android:layout_row="1"-->
+<!--            android:layout_rowWeight="1"-->
+<!--            android:layout_column="0"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_margin="6dp"-->
+<!--            android:background="@drawable/selector_btn_calculator"-->
+<!--            android:fontFamily="@font/poppins"-->
+<!--            android:text="@string/tujuh"-->
+<!--            android:textColor="@color/biru_cal_c"-->
+<!--            android:textSize="@dimen/calTextNum"-->
+<!--            android:textStyle="bold" />-->
 
-        <Button
-            android:id="@+id/btn_cal_8"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/cal_height_btn"
-            android:layout_row="1"
-            android:layout_rowWeight="1"
-            android:layout_column="1"
-            android:layout_columnWeight="1"
-            android:layout_margin="6dp"
-            android:background="@drawable/selector_btn_calculator"
-            android:fontFamily="@font/poppins"
-            android:text="@string/delapan"
-            android:textColor="@color/biru_cal_c"
-            android:textSize="@dimen/calTextNum"
-            android:textStyle="bold" />
+<!--        <Button-->
+<!--            android:id="@+id/btn_cal_8"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="@dimen/cal_height_btn"-->
+<!--            android:layout_row="1"-->
+<!--            android:layout_rowWeight="1"-->
+<!--            android:layout_column="1"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_margin="6dp"-->
+<!--            android:background="@drawable/selector_btn_calculator"-->
+<!--            android:fontFamily="@font/poppins"-->
+<!--            android:text="@string/delapan"-->
+<!--            android:textColor="@color/biru_cal_c"-->
+<!--            android:textSize="@dimen/calTextNum"-->
+<!--            android:textStyle="bold" />-->
 
-        <Button
-            android:id="@+id/btn_cal_9"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/cal_height_btn"
-            android:layout_row="1"
-            android:layout_rowWeight="1"
-            android:layout_column="2"
-            android:layout_columnWeight="1"
-            android:layout_margin="6dp"
-            android:background="@drawable/selector_btn_calculator"
-            android:fontFamily="@font/poppins"
-            android:text="@string/sembilan"
-            android:textColor="@color/biru_cal_c"
-            android:textSize="@dimen/calTextNum"
-            android:textStyle="bold" />
+<!--        <Button-->
+<!--            android:id="@+id/btn_cal_9"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="@dimen/cal_height_btn"-->
+<!--            android:layout_row="1"-->
+<!--            android:layout_rowWeight="1"-->
+<!--            android:layout_column="2"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_margin="6dp"-->
+<!--            android:background="@drawable/selector_btn_calculator"-->
+<!--            android:fontFamily="@font/poppins"-->
+<!--            android:text="@string/sembilan"-->
+<!--            android:textColor="@color/biru_cal_c"-->
+<!--            android:textSize="@dimen/calTextNum"-->
+<!--            android:textStyle="bold" />-->
 
-        <Button
-            android:id="@+id/btn_cal_perkalian"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/cal_height_btn"
-            android:layout_row="1"
-            android:layout_rowWeight="1"
-            android:layout_column="3"
-            android:layout_columnWeight="1"
-            android:layout_margin="6dp"
-            android:background="@drawable/selector_btn_calculator"
-            android:fontFamily="@font/poppins"
-            android:text="@string/x"
-            android:textColor="@color/birutua_cal_c"
-            android:textSize="@dimen/calTextNum"
-            android:textStyle="bold" />
+<!--        <Button-->
+<!--            android:id="@+id/btn_cal_perkalian"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="@dimen/cal_height_btn"-->
+<!--            android:layout_row="1"-->
+<!--            android:layout_rowWeight="1"-->
+<!--            android:layout_column="3"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_margin="6dp"-->
+<!--            android:background="@drawable/selector_btn_calculator"-->
+<!--            android:fontFamily="@font/poppins"-->
+<!--            android:text="@string/x"-->
+<!--            android:textColor="@color/birutua_cal_c"-->
+<!--            android:textSize="@dimen/calTextNum"-->
+<!--            android:textStyle="bold" />-->
 
-        <Button
-            android:id="@+id/btn_cal_4"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/cal_height_btn"
-            android:layout_row="2"
-            android:layout_rowWeight="1"
-            android:layout_column="0"
-            android:layout_columnWeight="1"
-            android:layout_margin="6dp"
-            android:background="@drawable/selector_btn_calculator"
-            android:fontFamily="@font/poppins"
-            android:text="@string/empat"
-            android:textColor="@color/biru_cal_c"
-            android:textSize="@dimen/calTextNum"
-            android:textStyle="bold" />
+<!--        <Button-->
+<!--            android:id="@+id/btn_cal_4"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="@dimen/cal_height_btn"-->
+<!--            android:layout_row="2"-->
+<!--            android:layout_rowWeight="1"-->
+<!--            android:layout_column="0"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_margin="6dp"-->
+<!--            android:background="@drawable/selector_btn_calculator"-->
+<!--            android:fontFamily="@font/poppins"-->
+<!--            android:text="@string/empat"-->
+<!--            android:textColor="@color/biru_cal_c"-->
+<!--            android:textSize="@dimen/calTextNum"-->
+<!--            android:textStyle="bold" />-->
 
-        <Button
-            android:id="@+id/btn_cal_5"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/cal_height_btn"
-            android:layout_row="2"
-            android:layout_rowWeight="1"
-            android:layout_column="1"
-            android:layout_columnWeight="1"
-            android:layout_margin="6dp"
-            android:background="@drawable/selector_btn_calculator"
-            android:fontFamily="@font/poppins"
-            android:text="@string/lima"
-            android:textColor="@color/biru_cal_c"
-            android:textSize="@dimen/calTextNum"
-            android:textStyle="bold" />
+<!--        <Button-->
+<!--            android:id="@+id/btn_cal_5"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="@dimen/cal_height_btn"-->
+<!--            android:layout_row="2"-->
+<!--            android:layout_rowWeight="1"-->
+<!--            android:layout_column="1"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_margin="6dp"-->
+<!--            android:background="@drawable/selector_btn_calculator"-->
+<!--            android:fontFamily="@font/poppins"-->
+<!--            android:text="@string/lima"-->
+<!--            android:textColor="@color/biru_cal_c"-->
+<!--            android:textSize="@dimen/calTextNum"-->
+<!--            android:textStyle="bold" />-->
 
-        <Button
-            android:id="@+id/btn_cal_6"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/cal_height_btn"
-            android:layout_row="2"
-            android:layout_rowWeight="1"
-            android:layout_column="2"
-            android:layout_columnWeight="1"
-            android:layout_margin="6dp"
-            android:background="@drawable/selector_btn_calculator"
-            android:fontFamily="@font/poppins"
-            android:text="@string/enam"
-            android:textColor="@color/biru_cal_c"
-            android:textSize="@dimen/calTextNum"
-            android:textStyle="bold" />
+<!--        <Button-->
+<!--            android:id="@+id/btn_cal_6"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="@dimen/cal_height_btn"-->
+<!--            android:layout_row="2"-->
+<!--            android:layout_rowWeight="1"-->
+<!--            android:layout_column="2"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_margin="6dp"-->
+<!--            android:background="@drawable/selector_btn_calculator"-->
+<!--            android:fontFamily="@font/poppins"-->
+<!--            android:text="@string/enam"-->
+<!--            android:textColor="@color/biru_cal_c"-->
+<!--            android:textSize="@dimen/calTextNum"-->
+<!--            android:textStyle="bold" />-->
 
-        <Button
-            android:id="@+id/btn_cal_pengurangan"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/cal_height_btn"
-            android:layout_row="2"
-            android:layout_rowWeight="1"
-            android:layout_column="3"
-            android:layout_columnWeight="1"
-            android:layout_margin="6dp"
-            android:background="@drawable/selector_btn_calculator"
-            android:fontFamily="@font/poppins"
-            android:text="@string/minus"
-            android:textColor="@color/birutua_cal_c"
-            android:textSize="@dimen/calTextNum"
-            android:textStyle="bold" />
+<!--        <Button-->
+<!--            android:id="@+id/btn_cal_pengurangan"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="@dimen/cal_height_btn"-->
+<!--            android:layout_row="2"-->
+<!--            android:layout_rowWeight="1"-->
+<!--            android:layout_column="3"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_margin="6dp"-->
+<!--            android:background="@drawable/selector_btn_calculator"-->
+<!--            android:fontFamily="@font/poppins"-->
+<!--            android:text="@string/minus"-->
+<!--            android:textColor="@color/birutua_cal_c"-->
+<!--            android:textSize="@dimen/calTextNum"-->
+<!--            android:textStyle="bold" />-->
 
-        <Button
-            android:id="@+id/btn_cal_1"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/cal_height_btn"
-            android:layout_row="3"
-            android:layout_rowWeight="1"
-            android:layout_column="0"
-            android:layout_columnWeight="1"
-            android:layout_margin="6dp"
-            android:background="@drawable/selector_btn_calculator"
-            android:fontFamily="@font/poppins"
-            android:text="@string/satu"
-            android:textColor="@color/biru_cal_c"
-            android:textSize="@dimen/calTextNum"
-            android:textStyle="bold" />
+<!--        <Button-->
+<!--            android:id="@+id/btn_cal_1"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="@dimen/cal_height_btn"-->
+<!--            android:layout_row="3"-->
+<!--            android:layout_rowWeight="1"-->
+<!--            android:layout_column="0"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_margin="6dp"-->
+<!--            android:background="@drawable/selector_btn_calculator"-->
+<!--            android:fontFamily="@font/poppins"-->
+<!--            android:text="@string/satu"-->
+<!--            android:textColor="@color/biru_cal_c"-->
+<!--            android:textSize="@dimen/calTextNum"-->
+<!--            android:textStyle="bold" />-->
 
-        <Button
-            android:id="@+id/btn_cal_2"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/cal_height_btn"
-            android:layout_row="3"
-            android:layout_rowWeight="1"
-            android:layout_column="1"
-            android:layout_columnWeight="1"
-            android:layout_margin="6dp"
-            android:background="@drawable/selector_btn_calculator"
-            android:fontFamily="@font/poppins"
-            android:text="@string/dua"
-            android:textColor="@color/biru_cal_c"
-            android:textSize="@dimen/calTextNum"
-            android:textStyle="bold" />
+<!--        <Button-->
+<!--            android:id="@+id/btn_cal_2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="@dimen/cal_height_btn"-->
+<!--            android:layout_row="3"-->
+<!--            android:layout_rowWeight="1"-->
+<!--            android:layout_column="1"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_margin="6dp"-->
+<!--            android:background="@drawable/selector_btn_calculator"-->
+<!--            android:fontFamily="@font/poppins"-->
+<!--            android:text="@string/dua"-->
+<!--            android:textColor="@color/biru_cal_c"-->
+<!--            android:textSize="@dimen/calTextNum"-->
+<!--            android:textStyle="bold" />-->
 
-        <Button
-            android:id="@+id/btn_cal_3"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/cal_height_btn"
-            android:layout_row="3"
-            android:layout_rowWeight="1"
-            android:layout_column="2"
-            android:layout_columnWeight="1"
-            android:layout_margin="6dp"
-            android:background="@drawable/selector_btn_calculator"
-            android:fontFamily="@font/poppins"
-            android:text="@string/tiga"
-            android:textColor="@color/biru_cal_c"
-            android:textSize="@dimen/calTextNum"
-            android:textStyle="bold" />
+<!--        <Button-->
+<!--            android:id="@+id/btn_cal_3"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="@dimen/cal_height_btn"-->
+<!--            android:layout_row="3"-->
+<!--            android:layout_rowWeight="1"-->
+<!--            android:layout_column="2"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_margin="6dp"-->
+<!--            android:background="@drawable/selector_btn_calculator"-->
+<!--            android:fontFamily="@font/poppins"-->
+<!--            android:text="@string/tiga"-->
+<!--            android:textColor="@color/biru_cal_c"-->
+<!--            android:textSize="@dimen/calTextNum"-->
+<!--            android:textStyle="bold" />-->
 
-        <Button
-            android:id="@+id/btn_cal_perjumlahan"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/cal_height_btn"
-            android:layout_row="3"
-            android:layout_rowWeight="1"
-            android:layout_column="3"
-            android:layout_columnWeight="1"
-            android:layout_margin="6dp"
-            android:background="@drawable/selector_btn_calculator"
-            android:fontFamily="@font/poppins"
-            android:text="@string/plus"
-            android:textColor="@color/birutua_cal_c"
-            android:textSize="@dimen/calTextNum"
-            android:textStyle="bold" />
+<!--        <Button-->
+<!--            android:id="@+id/btn_cal_perjumlahan"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="@dimen/cal_height_btn"-->
+<!--            android:layout_row="3"-->
+<!--            android:layout_rowWeight="1"-->
+<!--            android:layout_column="3"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_margin="6dp"-->
+<!--            android:background="@drawable/selector_btn_calculator"-->
+<!--            android:fontFamily="@font/poppins"-->
+<!--            android:text="@string/plus"-->
+<!--            android:textColor="@color/birutua_cal_c"-->
+<!--            android:textSize="@dimen/calTextNum"-->
+<!--            android:textStyle="bold" />-->
 
-        <Button
-            android:id="@+id/btn_cal_plusmin"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/cal_height_btn"
-            android:layout_row="4"
-            android:layout_rowWeight="1"
-            android:layout_column="0"
-            android:layout_columnWeight="1"
-            android:layout_margin="6dp"
-            android:background="@drawable/selector_btn_calculator"
-            android:fontFamily="@font/poppins"
-            android:text="@string/plusminus"
-            android:textColor="@color/biru_cal_c"
-            android:textSize="@dimen/calTextNum"
-            android:textStyle="bold" />
+<!--        <Button-->
+<!--            android:id="@+id/btn_cal_plusmin"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="@dimen/cal_height_btn"-->
+<!--            android:layout_row="4"-->
+<!--            android:layout_rowWeight="1"-->
+<!--            android:layout_column="0"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_margin="6dp"-->
+<!--            android:background="@drawable/selector_btn_calculator"-->
+<!--            android:fontFamily="@font/poppins"-->
+<!--            android:text="@string/plusminus"-->
+<!--            android:textColor="@color/biru_cal_c"-->
+<!--            android:textSize="@dimen/calTextNum"-->
+<!--            android:textStyle="bold" />-->
 
-        <Button
-            android:id="@+id/btn_cal_0"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/cal_height_btn"
-            android:layout_row="4"
-            android:layout_rowWeight="1"
-            android:layout_column="1"
-            android:layout_columnWeight="1"
-            android:layout_margin="6dp"
-            android:background="@drawable/selector_btn_calculator"
-            android:fontFamily="@font/poppins"
-            android:text="@string/nol"
-            android:textColor="@color/biru_cal_c"
-            android:textSize="@dimen/calTextNum"
-            android:textStyle="bold" />
+<!--        <Button-->
+<!--            android:id="@+id/btn_cal_0"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="@dimen/cal_height_btn"-->
+<!--            android:layout_row="4"-->
+<!--            android:layout_rowWeight="1"-->
+<!--            android:layout_column="1"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_margin="6dp"-->
+<!--            android:background="@drawable/selector_btn_calculator"-->
+<!--            android:fontFamily="@font/poppins"-->
+<!--            android:text="@string/nol"-->
+<!--            android:textColor="@color/biru_cal_c"-->
+<!--            android:textSize="@dimen/calTextNum"-->
+<!--            android:textStyle="bold" />-->
 
-        <Button
-            android:id="@+id/btn_cal_koma"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/cal_height_btn"
-            android:layout_row="4"
-            android:layout_rowWeight="1"
-            android:layout_column="2"
-            android:layout_columnWeight="1"
-            android:layout_margin="6dp"
-            android:background="@drawable/selector_btn_calculator"
-            android:fontFamily="@font/poppins"
-            android:text="@string/koma"
-            android:textColor="@color/biru_cal_c"
-            android:textSize="@dimen/calTextNum" />
+<!--        <Button-->
+<!--            android:id="@+id/btn_cal_koma"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="@dimen/cal_height_btn"-->
+<!--            android:layout_row="4"-->
+<!--            android:layout_rowWeight="1"-->
+<!--            android:layout_column="2"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_margin="6dp"-->
+<!--            android:background="@drawable/selector_btn_calculator"-->
+<!--            android:fontFamily="@font/poppins"-->
+<!--            android:text="@string/koma"-->
+<!--            android:textColor="@color/biru_cal_c"-->
+<!--            android:textSize="@dimen/calTextNum" />-->
 
-        <Button
-            android:id="@+id/btn_cal_equal"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/cal_height_btn"
-            android:layout_row="4"
-            android:layout_rowWeight="1"
-            android:layout_column="3"
-            android:layout_columnWeight="1"
-            android:layout_margin="6dp"
-            android:background="@drawable/selector_btn_calculator"
-            android:fontFamily="@font/poppins"
-            android:text="@string/samadengan"
-            android:textColor="@color/birutua_cal_c"
-            android:textSize="@dimen/calTextNum"
-            android:textStyle="bold" />
-
-
+<!--        <Button-->
+<!--            android:id="@+id/btn_cal_equal"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="@dimen/cal_height_btn"-->
+<!--            android:layout_row="4"-->
+<!--            android:layout_rowWeight="1"-->
+<!--            android:layout_column="3"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_margin="6dp"-->
+<!--            android:background="@drawable/selector_btn_calculator"-->
+<!--            android:fontFamily="@font/poppins"-->
+<!--            android:text="@string/samadengan"-->
+<!--            android:textColor="@color/birutua_cal_c"-->
+<!--            android:textSize="@dimen/calTextNum"-->
+<!--            android:textStyle="bold" />-->
 
 
-    </GridLayout>
+
+
+<!--    </GridLayout>-->
 
 </RelativeLayout>
