@@ -6,7 +6,12 @@ public class GlobalVar {
     public static final String YOUTUBE_API_KEY = "AIzaSyDfOy9xkhqDnKM86vY9ijaBbkhvePZvfEg";
     public static final int RECOVERY_REQUEST = 1;
 
+    public static final String PILIHAN_SOAL = "PILIHAN_SOAL";
+    public static final String SOAL_UJIAN = "SOAL_UJIAN";
+
+
     public static final String MFILE_SHARED_PREF = "Materi";
+    public static final String MYFILE_SP_SOAL = "Soal";
 
     //Refleksi
     public static final String P_ISI_REF = "P_ISI_REF";
@@ -48,10 +53,19 @@ public class GlobalVar {
     public static final String C_ISI_DIL = "C_ISI_DIL";
     public static final String C_PHOTO_DIL = "C_PHOTO_DIL";
 
+    //Video
     public static final String ID_VIDEO_REF = "ID_VIDEO_REF";
     public static final String ID_VIDEO_TRANS = "ID_VIDEO_TRANS";
     public static final String ID_VIDEO_ROT = "ID_VIDEO_ROT";
     public static final String ID_VIDEO_DIL = "ID_VIDEO_DIL";
+
+    //Soal
+    public static final String SOAL_NUM_ = "SOAL_NUM_";
+    public static final String SCORE = "SCORE";
+    public static final String BENAR = "BENAR";
+    public static final String SALAH = "SALAH";
+
+
 
 
 

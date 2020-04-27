@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <corners android:radius="20dp"/>
+    <padding android:top="@dimen/pad_top_tvpopup"
+        android:bottom="@dimen/pad_bot_tvpopup"/>
+    <solid android:color="@color/done_answer"/>
+
+
+</shape>

@@ -13,4 +13,15 @@
     <dimen name="grid_image_height">90dp</dimen>
     <dimen name="grid_image_margin_top">12dp</dimen>
     <dimen name="cal_width_btn">0dp</dimen>
+    <dimen name="text_soal">16sp</dimen>
+    <dimen name="image_soal_height">200dp</dimen>
+    <dimen name="image_soal_mStart">24dp</dimen>
+    <dimen name="image_soal_mEnd">24dp</dimen>
+    <dimen name="margin_top_soal">8dp</dimen>
+    <dimen name="image_ss_start_width">300</dimen>
+    <dimen name="image_ss_start_height">250dp</dimen>
+    <dimen name="alert_width">100dp</dimen>
+    <dimen name="alert_height">100dp</dimen>
+    <dimen name="pad_top_tvpopup">16dp</dimen>
+    <dimen name="pad_bot_tvpopup">16dp</dimen>
 </resources>

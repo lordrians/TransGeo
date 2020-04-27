@@ -114,97 +114,96 @@
 
 
 
-<!--    <androidx.appcompat.widget.Toolbar-->
-<!--        android:id="@+id/tb_calculator"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:navigationIcon="@drawable/ic_arrow_back_black"-->
-<!--        app:titleTextColor="@android:color/black"/>-->
+</LinearLayout>
 
-<!--    <TextView-->
-<!--        android:id="@+id/tv_cal_input"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="24dp"-->
-<!--        android:layout_marginTop="16dp"-->
-<!--        android:layout_marginEnd="24dp"-->
-<!--        android:textAlignment="viewEnd"-->
-<!--        android:maxLines="1"-->
-<!--        android:textColor="@color/biru_cal_c"-->
-<!--        android:textSize="35sp"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/tb_calculator" />-->
 
-<!--    <TextView-->
-<!--        android:id="@+id/tv_cal_output"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="24dp"-->
-<!--        android:layout_marginEnd="24dp"-->
-<!--        android:layout_marginBottom="8dp"-->
-<!--        android:textAlignment="viewEnd"-->
-<!--        android:maxLength="14"-->
-<!--        android:textColor="@color/birutua_cal_c"-->
-<!--        android:textSize="45sp"-->
-<!--        android:textStyle="bold"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/iv_cal_backspace"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent" />-->
+    <!--    <androidx.appcompat.widget.Toolbar-->
+    <!--        android:id="@+id/tb_calculator"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:navigationIcon="@drawable/ic_arrow_back_black"-->
+    <!--        app:titleTextColor="@android:color/black"/>-->
 
-<!--    <ImageButton-->
-<!--        android:id="@+id/iv_cal_backspace"-->
-<!--        android:layout_width="45dp"-->
-<!--        android:layout_height="30dp"-->
-<!--        android:layout_gravity="end"-->
-<!--        android:layout_marginEnd="24dp"-->
-<!--        android:layout_marginBottom="16dp"-->
-<!--        android:src="@mipmap/ic_backspace"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"-->
-<!--        app:layout_constraintEnd_toEndOf="parent" />-->
+    <!--    <TextView-->
+    <!--        android:id="@+id/tv_cal_input"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="24dp"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:layout_marginEnd="24dp"-->
+    <!--        android:textAlignment="viewEnd"-->
+    <!--        android:maxLines="1"-->
+    <!--        android:textColor="@color/biru_cal_c"-->
+    <!--        android:textSize="35sp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/tb_calculator" />-->
 
-<!--    <RelativeLayout-->
-<!--        android:id="@+id/relativeLayout"-->
-<!--        android:layout_width="404dp"-->
-<!--        android:layout_height="1dp"-->
-<!--        android:layout_marginStart="24dp"-->
-<!--        android:layout_marginEnd="24dp"-->
-<!--        android:layout_marginBottom="24dp"-->
-<!--        android:background="@color/biru_cal_c"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/include"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent" />-->
+    <!--    <TextView-->
+    <!--        android:id="@+id/tv_cal_output"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="24dp"-->
+    <!--        android:layout_marginEnd="24dp"-->
+    <!--        android:layout_marginBottom="8dp"-->
+    <!--        android:textAlignment="viewEnd"-->
+    <!--        android:maxLength="14"-->
+    <!--        android:textColor="@color/birutua_cal_c"-->
+    <!--        android:textSize="45sp"-->
+    <!--        android:textStyle="bold"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/iv_cal_backspace"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent" />-->
 
-<!--    <include-->
-<!--        android:id="@+id/include"-->
-<!--        layout="@layout/item_calculator_test"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="0dp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent" />-->
+    <!--    <ImageButton-->
+    <!--        android:id="@+id/iv_cal_backspace"-->
+    <!--        android:layout_width="45dp"-->
+    <!--        android:layout_height="30dp"-->
+    <!--        android:layout_gravity="end"-->
+    <!--        android:layout_marginEnd="24dp"-->
+    <!--        android:layout_marginBottom="16dp"-->
+    <!--        android:src="@mipmap/ic_backspace"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent" />-->
+
+    <!--    <RelativeLayout-->
+    <!--        android:id="@+id/relativeLayout"-->
+    <!--        android:layout_width="404dp"-->
+    <!--        android:layout_height="1dp"-->
+    <!--        android:layout_marginStart="24dp"-->
+    <!--        android:layout_marginEnd="24dp"-->
+    <!--        android:layout_marginBottom="24dp"-->
+    <!--        android:background="@color/biru_cal_c"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/include"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+    <!--    <include-->
+    <!--        android:id="@+id/include"-->
+    <!--        layout="@layout/item_calculator_test"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent" />-->
 
     <!--    <view-->
-<!--        android:id="@+id/view3"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="2dp"-->
-<!--        android:layout_marginStart="24dp"-->
-<!--        android:layout_marginTop="8dp"-->
-<!--        android:layout_marginEnd="24dp"-->
-<!--        app:strokeColor="@color/biru_cal_c" />-->
+    <!--        android:id="@+id/view3"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="2dp"-->
+    <!--        android:layout_marginStart="24dp"-->
+    <!--        android:layout_marginTop="8dp"-->
+    <!--        android:layout_marginEnd="24dp"-->
+    <!--        app:strokeColor="@color/biru_cal_c" />-->
 
-<!--    <RelativeLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:gravity="bottom">-->
-
-
-
-<!--    </RelativeLayout>-->
+    <!--    <RelativeLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:gravity="bottom">-->
 
 
 
-</LinearLayout>
+    <!--    </RelativeLayout>-->

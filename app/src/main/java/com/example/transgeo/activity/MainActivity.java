@@ -19,6 +19,7 @@ import android.widget.LinearLayout;
 import com.example.transgeo.R;
 import com.example.transgeo.adapter.TokohAdapterHorizontal;
 import com.example.transgeo.dtobject.dtTokoh;
+import com.example.transgeo.object.GlobalVar;
 import com.example.transgeo.object.Tokoh;
 import com.google.android.material.navigation.NavigationView;
 
@@ -79,6 +80,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 case R.id.nav_draw_kalkulator:
                     startActivity(new Intent(getApplicationContext(), CalculatorActivity.class));
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                    return false;
+
+                case R.id.nav_draw_ujian:
+                    Intent intent = new Intent(getApplicationContext(), SoalActivity.class);
+                    intent.putExtra(GlobalVar.PILIHAN_SOAL, GlobalVar.SOAL_UJIAN);
+                    startActivity(intent);
                     drawerLayout.closeDrawer(GravityCompat.START);
                     return false;
 

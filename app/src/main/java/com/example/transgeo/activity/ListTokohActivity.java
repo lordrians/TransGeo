@@ -29,8 +29,6 @@ public class ListTokohActivity extends AppCompatActivity {
         toolbar.setNavigationIcon(getDrawable(R.drawable.ic_arrow_back_black));
         setSupportActionBar(toolbar);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         rvTokoh = findViewById(R.id.rv_tokoh_vertical);
         rvTokoh.setHasFixedSize(true);

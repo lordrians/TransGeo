@@ -17,8 +17,21 @@
     <color name="biru_cal_c">#99B6D2</color>
     <color name="white">#FFFFFF</color>
 
+    <color name="btn_soal_nextprev">#FFA077</color>
     <color name="selected_tab">#ACDAAC</color>
     <color name="unselected_tab">#F3C7B4</color>
     <color name="btn_materi_selected">#7EB1B1B1</color>
+    <color name="done_answer">#F44336</color>
+    <color name="nilai">#783892EE</color>
+    <color name="nilai78">#780077F1</color>
+    <color name="bg_content_finish">#F0F5FA</color>
+    <color name="bg_linear_layout_nilai">#EBE9F5FD</color>
+
+    <color name="bg_linear_layout_benar">#E8FFE8</color>
+    <color name="benar">#8CE68C</color>
+
+    <color name="bg_linear_layout_salah">#FAF3F0</color>
+    <color name="salah">#FCBDA3</color>
+    <color name="yellow">#E6791A</color>
 
 </resources>

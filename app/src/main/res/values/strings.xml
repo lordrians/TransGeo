@@ -53,4 +53,25 @@
     <string name="rotasi">Rotasi</string>
     <string name="dilatasi">Dilatasi</string>
     <string name="translasi">Translasi</string>
+    <string name="selanjutnya">Selanjutnya</string>
+    <string name="sebelumnya">Sebelumnya</string>
+    <string name="sudahsiap">Sudah siap </string>
+    <string name="memulai_latihan">memulai latihan?</string>
+    <string name="deskStartSoal">Siapkan secangkir kopi dan snack yang banyak sebelum memulai latihan ya !   Selamat mengerjakan :)</string>
+    <string name="start_soal">Mulai Mengerjakan</string>
+    <string name="ujianselesai">Ujian Selesai !</string>
+    <string name="nilai">Nilai :</string>
+    <string name="nilai78">78</string>
+    <string name="jawaban">Jawaban</string>
+    <string name="perbanyak_belajar">Perbanyak lagi belajarmu...</string>
+    <string name="benar5">23</string>
+    <string name="Benar">Benar</string>
+    <string name="Salah">Salah</string>
+    <string name="salah5">5</string>
+    <string name="akhiri_ujian">Akhiri Ujian</string>
+    <string name="timer">00:23:05</string>
+    <string name="pertnayaan_verif_soal">Apakah kamu sudah yakin dengan jawabanmu? \n Jangan lupa periksa kembali sebelum mengumpulkan jawaban.</string>
+    <string name="kamu_belum">"Kamu belum mengerjakan nomor \n"</string>
+    <string name="kembali">KEMBALI</string>
+    <string name="kumpulkan">KUMPULKAN</string>
 </resources>
