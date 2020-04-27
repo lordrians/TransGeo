@@ -48,7 +48,6 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
         btn9 = findViewById(R.id.btn_cal_9);
 
 
-        btnPlusMin = findViewById(R.id.btn_cal_plusmin);
         btnKoma = findViewById(R.id.btn_cal_koma);
         btnEqual = findViewById(R.id.btn_cal_equal);
         btnTambah = findViewById(R.id.btn_cal_perjumlahan);
@@ -155,10 +154,6 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
 
             case R.id.btn_cal_9:
                 appendOnExpresstion("9", true);
-
-                break;
-
-            case R.id.btn_cal_plusmin:
 
                 break;
 

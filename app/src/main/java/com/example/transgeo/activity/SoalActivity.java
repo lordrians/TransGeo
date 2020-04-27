@@ -25,6 +25,7 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.transgeo.R;
 import com.example.transgeo.adapter.ViewPagerSoalAdapter;
+import com.example.transgeo.dtobject.DtSoalEasy;
 import com.example.transgeo.dtobject.DtSoalUjian;
 import com.example.transgeo.object.GlobalVar;
 import com.google.android.material.tabs.TabLayout;
@@ -76,7 +77,35 @@ public class SoalActivity extends AppCompatActivity implements View.OnClickListe
 
         toolbar.setNavigationOnClickListener(view -> {
 
-            finish();
+            Button btnTidak, btnKeluar;
+            DisplayMetrics metrics = getResources().getDisplayMetrics();
+
+            int width = metrics.widthPixels;
+            int height = metrics.heightPixels;
+
+            LayoutInflater inflater = this.getLayoutInflater();
+
+            popupView = inflater.inflate(R.layout.popup_verifikasi_keluar,null);
+            btnTidak = popupView.findViewById(R.id.btn_popup_verif_tidak);
+            btnKeluar = popupView.findViewById(R.id.btn_popup_verif_keluar);
+
+            btnTidak.setOnClickListener(view1 -> {
+                popDialogVerif.dismiss();
+            });
+
+            btnKeluar.setOnClickListener(view1 -> {
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.clear();
+                editor.apply();
+                popDialogVerif.dismiss();
+                finish();
+            });
+
+
+            popDialogVerif.setContentView(popupView);
+            popDialogVerif.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            popDialogVerif.getWindow().setLayout((6*width)/7, (4*height)/5);
+            popDialogVerif.show();
 
         });
 
@@ -96,6 +125,12 @@ public class SoalActivity extends AppCompatActivity implements View.OnClickListe
         pilihanSoal = getIntent().getStringExtra(GlobalVar.PILIHAN_SOAL);
         if (pilihanSoal.equals(GlobalVar.SOAL_UJIAN)){
             SoalAdapter = new ViewPagerSoalAdapter(this, DtSoalUjian.getSoalUjian());
+            jmlSoal = DtSoalUjian.getSoalUjian().size();
+            storeSharedPreference();
+            vpSoal.setOffscreenPageLimit(jmlSoal);
+            vpSoal.setAdapter(SoalAdapter);
+        } else if (pilihanSoal.equals(GlobalVar.SOAL_EASY)){
+            SoalAdapter = new ViewPagerSoalAdapter(this, DtSoalEasy.getSoalUjian());
             jmlSoal = DtSoalUjian.getSoalUjian().size();
             storeSharedPreference();
             vpSoal.setOffscreenPageLimit(jmlSoal);

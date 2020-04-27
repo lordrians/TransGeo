@@ -50,9 +50,9 @@
     <string name="video">Video</string>
 
     <string name="player_error">Error initializing YouTube player: %s</string>
-    <string name="rotasi">Rotasi</string>
-    <string name="dilatasi">Dilatasi</string>
-    <string name="translasi">Translasi</string>
+    <string name="rotasi"><u>Rotasi</u></string>
+    <string name="dilatasi"><u>Dilatasi</u></string>
+    <string name="translasi"><u>Translasi</u></string>
     <string name="selanjutnya">Selanjutnya</string>
     <string name="sebelumnya">Sebelumnya</string>
     <string name="sudahsiap">Sudah siap </string>
@@ -74,4 +74,7 @@
     <string name="kamu_belum">"Kamu belum mengerjakan nomor \n"</string>
     <string name="kembali">KEMBALI</string>
     <string name="kumpulkan">KUMPULKAN</string>
+    <string name="meninggalkansoal">Apakah kamu yakin ingin keluar?</string>
+    <string name="tidak">TIDAK</string>
+    <string name="keluar">KELUAR</string>
 </resources>

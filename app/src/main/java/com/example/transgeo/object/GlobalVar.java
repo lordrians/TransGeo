@@ -8,6 +8,9 @@ public class GlobalVar {
 
     public static final String PILIHAN_SOAL = "PILIHAN_SOAL";
     public static final String SOAL_UJIAN = "SOAL_UJIAN";
+    public static final String SOAL_EASY = "SOAL_EASY";
+    public static final String SOAL_MEDIUM = "SOAL_MEDIUM";
+    public static final String SOAL_HARD = "SOAL_HARD";
 
 
     public static final String MFILE_SHARED_PREF = "Materi";

@@ -77,7 +77,7 @@ public class ViewPagerSoalAdapter extends RecyclerView.Adapter<ViewPagerSoalAdap
 
                 int select =tabLayout.getSelectedTabPosition();
                 TabLayout.Tab se = tabLayout.getTabAt(select);
-                se.view.setBackgroundResource(R.drawable.selector_answered_tab_soal);
+                se.view.setBackgroundResource(R.drawable.selector_bg_nosoal);
 
                 if (JwbUser.equals(listSoal.get(position).getCorrectAns())){
                     SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -102,7 +102,7 @@ public class ViewPagerSoalAdapter extends RecyclerView.Adapter<ViewPagerSoalAdap
         TextView tvSoal;
         ViewPager vpSoal;
         ImageView ivSoal;
-        RadioButton rbPgA,rbPgB,rbPgC,rbPgD,rbCheck;
+        RadioButton rbPgA,rbPgB,rbPgC,rbPgD;
         RadioGroup rgPg;
 
         public MyViewHolder(@NonNull View itemView) {

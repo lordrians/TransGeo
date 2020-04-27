@@ -37,23 +37,10 @@
                 android:layout_marginTop="@dimen/pad_text_materi_top"
                 android:fontFamily="@font/poppins"
                 android:gravity="center"
-                android:text="@string/pertnayaan_verif_soal"
+                android:text="@string/meninggalkansoal"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
-            <TextView
-                android:id="@+id/tv_jwb_kosong"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="@dimen/pad_text_materi_top"
-                android:paddingStart="12dp"
-                android:paddingEnd="12dp"
-                android:background="@drawable/bg_tv_popup_soal"
-                android:fontFamily="@font/poppins"
-                android:gravity="center"
-                android:textColor="@color/white"
-                android:textSize="14sp" />
 
         </LinearLayout>
 
@@ -65,24 +52,24 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btn_popup_kembali"
+                android:id="@+id/btn_popup_verif_tidak"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
                 android:background="@drawable/selector_btn_popup_soal"
                 android:fontFamily="@font/poppins"
-                android:text="@string/kembali"
+                android:text="@string/tidak"
                 android:textColor="@color/yellow"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/btn_popup_kumpulkan"
+                android:id="@+id/btn_popup_verif_keluar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/selector_btn_popup_soal"
                 android:fontFamily="@font/poppins"
-                android:text="@string/kumpulkan"
+                android:text="@string/keluar"
                 android:textColor="@color/yellow"
                 android:textSize="14sp"
                 android:textStyle="bold" />

@@ -259,18 +259,18 @@
             android:layout_weight="1"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/btn_cal_plusmin"
-                android:layout_width="@dimen/cal_width_btn"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_margin="6dp"
-                android:background="@drawable/selector_btn_calculator"
-                android:fontFamily="@font/poppins"
-                android:text="@string/plusminus"
-                android:textColor="@color/biru_cal_c"
-                android:textSize="@dimen/calTextNum"
-                android:textStyle="bold" />
+<!--            <Button-->
+<!--                android:id="@+id/btn_cal_plusmin"-->
+<!--                android:layout_width="@dimen/cal_width_btn"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_margin="6dp"-->
+<!--                android:background="@drawable/selector_btn_calculator"-->
+<!--                android:fontFamily="@font/poppins"-->
+<!--                android:text="@string/plusminus"-->
+<!--                android:textColor="@color/biru_cal_c"-->
+<!--                android:textSize="@dimen/calTextNum"-->
+<!--                android:textStyle="bold" />-->
 
             <Button
                 android:id="@+id/btn_cal_0"
