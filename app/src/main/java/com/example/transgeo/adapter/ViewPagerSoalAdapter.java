@@ -69,6 +69,27 @@ public class ViewPagerSoalAdapter extends RecyclerView.Adapter<ViewPagerSoalAdap
         } else {
             holder.ivSoal.setVisibility(View.GONE);
         }
+        holder.rgPg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                RadioButton rbCheck = radioGroup.findViewById(i);
+                String JwbUser = rbCheck.getText().toString();
+
+                int select =tabLayout.getSelectedTabPosition();
+                TabLayout.Tab se = tabLayout.getTabAt(select);
+                se.view.setBackgroundResource(R.drawable.selector_answered_tab_soal);
+
+                if (JwbUser.equals(listSoal.get(position).getCorrectAns())){
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putInt(GlobalVar.SOAL_NUM_ + position, 1);
+                    editor.apply();
+                } else {
+                    SharedPreferences.Editor editor =  sharedPreferences.edit();
+                    editor.putInt(GlobalVar.SOAL_NUM_ + position, 0);
+                    editor.apply();
+                }
+            }
+        });
 
     }
 
@@ -96,26 +117,26 @@ public class ViewPagerSoalAdapter extends RecyclerView.Adapter<ViewPagerSoalAdap
             vpSoal = itemView.findViewById(R.id.vp_soal);
             ivSoal = itemView.findViewById(R.id.iv_soal);
 
-            rgPg.setOnCheckedChangeListener((radioGroup, i) -> {
-
-                rbCheck = radioGroup.findViewById(i);
-                String JwbUser = rbCheck.getText().toString();
-
-                int select =tabLayout.getSelectedTabPosition();
-                TabLayout.Tab se = tabLayout.getTabAt(select);
-                se.view.setBackgroundResource(R.drawable.selector_answered_tab_soal);
-
-                if (JwbUser.equals(listSoal.get(getAdapterPosition()).getCorrectAns())){
-                    SharedPreferences.Editor editor = sharedPreferences.edit();
-                    editor.putInt(GlobalVar.SOAL_NUM_ + getAdapterPosition(), 1);
-                    editor.apply();
-                } else {
-                    SharedPreferences.Editor editor =  sharedPreferences.edit();
-                    editor.putInt(GlobalVar.SOAL_NUM_ + getAdapterPosition(), 0);
-                    editor.apply();
-                }
-
-            });
+//            rgPg.setOnCheckedChangeListener((radioGroup, i) -> {
+//
+//                rbCheck = radioGroup.findViewById(i);
+//                String JwbUser = rbCheck.getText().toString();
+//
+//                int select =tabLayout.getSelectedTabPosition();
+//                TabLayout.Tab se = tabLayout.getTabAt(select);
+//                se.view.setBackgroundResource(R.drawable.selector_answered_tab_soal);
+//
+//                if (JwbUser.equals(listSoal.get(getAdapterPosition()).getCorrectAns())){
+//                    SharedPreferences.Editor editor = sharedPreferences.edit();
+//                    editor.putInt(GlobalVar.SOAL_NUM_ + getAdapterPosition(), 1);
+//                    editor.apply();
+//                } else {
+//                    SharedPreferences.Editor editor =  sharedPreferences.edit();
+//                    editor.putInt(GlobalVar.SOAL_NUM_ + getAdapterPosition(), 0);
+//                    editor.apply();
+//                }
+//
+//            });
 
         }
     }

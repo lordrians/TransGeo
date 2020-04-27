@@ -22,7 +22,7 @@
             android:paddingBottom="32dp">
 
             <androidx.appcompat.widget.Toolbar
-                android:id="@+id/tb_list_tokoh"
+                android:id="@+id/tb_finish"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -107,6 +107,7 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/tv_finish_score"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -168,6 +169,7 @@
                             android:textSize="18sp"/>
 
                         <TextView
+                            android:id="@+id/tv_finish_benar"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -205,6 +207,7 @@
                             android:textSize="18sp" />
 
                         <TextView
+                            android:id="@+id/tv_finish_salah"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"

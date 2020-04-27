@@ -46,10 +46,6 @@ public class SoalActivity extends AppCompatActivity implements View.OnClickListe
     private TabLayout tabLayout ;
     private ArrayList<String> soalKosong = new ArrayList<>();
 
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -102,6 +98,7 @@ public class SoalActivity extends AppCompatActivity implements View.OnClickListe
             SoalAdapter = new ViewPagerSoalAdapter(this, DtSoalUjian.getSoalUjian());
             jmlSoal = DtSoalUjian.getSoalUjian().size();
             storeSharedPreference();
+            vpSoal.setOffscreenPageLimit(jmlSoal);
             vpSoal.setAdapter(SoalAdapter);
         }
     }
@@ -171,7 +168,7 @@ public class SoalActivity extends AppCompatActivity implements View.OnClickListe
         tvJwbKosong = popupView.findViewById(R.id.tv_jwb_kosong);
         btnKembali = popupView.findViewById(R.id.btn_popup_kembali);
         btnKumpulkan = popupView.findViewById(R.id.btn_popup_kumpulkan);
-
+        int hasil = jawabanBenar * 100 / jmlSoal;
 
 
         btnKembali.setOnClickListener(view -> {
@@ -179,14 +176,19 @@ public class SoalActivity extends AppCompatActivity implements View.OnClickListe
             popDialogVerif.dismiss();
         });
         btnKumpulkan.setOnClickListener(view -> {
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.clear();
+            editor.apply();
             Intent intent = new Intent(getApplicationContext(), FinishUjianActivity.class);
             intent.putExtra(GlobalVar.BENAR, jawabanBenar);
             intent.putExtra(GlobalVar.SALAH, jawabanSalah);
+            intent.putExtra(GlobalVar.SCORE, hasil);
             startActivity(intent);
+            popDialogVerif.dismiss();
             finish();
         });
 
-        int hasil = jawabanBenar * 10 / jmlSoal;
+
 
         popDialogVerif.setContentView(popupView);
         popDialogVerif.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -196,7 +198,6 @@ public class SoalActivity extends AppCompatActivity implements View.OnClickListe
         if (soalKosong.isEmpty()){
             tvJwbKosong.setVisibility(View.GONE);
         } else {
-            Toast.makeText(getApplicationContext(), soalKosong.toString(), Toast.LENGTH_LONG).show();
             tvJwbKosong.setText(getResources().getText(R.string.kamu_belum) + soalKosong.toString());
         }
 
