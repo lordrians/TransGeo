@@ -23,6 +23,7 @@
             android:layout_marginEnd="16dp">
 
             <TextView
+                android:id="@+id/tv_soal_timer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
@@ -40,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:fontFamily="@font/poppins"
-                android:text="@string/akhiri_ujian"
+                android:text="@string/akhiri_latihan"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="14dp"
                 android:background="@drawable/rounded_btn_selesai"

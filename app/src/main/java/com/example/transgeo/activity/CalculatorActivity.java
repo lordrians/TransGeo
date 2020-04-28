@@ -83,7 +83,6 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
         btnKali.setOnClickListener(this);
         btnTambah.setOnClickListener(this);
         btnEqual.setOnClickListener(this);
-        btnPlusMin.setOnClickListener(this);
 
         ivBackspace.setOnClickListener(this);
 

@@ -13,6 +13,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TabHost;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -34,10 +35,12 @@ public class ViewPagerSoalAdapter extends RecyclerView.Adapter<ViewPagerSoalAdap
     private TabLayout tabLayout;
     private SharedPreferences sharedPreferences;
     private View parentLayout;
+    private String PaketSoal;
 
-    public ViewPagerSoalAdapter(Context context, ArrayList<Soal> listSoal) {
+    public ViewPagerSoalAdapter(Context context, ArrayList<Soal> listSoal, String PaketSoal) {
         this.context = context;
         this.listSoal = listSoal;
+        this.PaketSoal = PaketSoal;
     }
 
     @NonNull
@@ -69,16 +72,15 @@ public class ViewPagerSoalAdapter extends RecyclerView.Adapter<ViewPagerSoalAdap
         } else {
             holder.ivSoal.setVisibility(View.GONE);
         }
-        holder.rgPg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                RadioButton rbCheck = radioGroup.findViewById(i);
-                String JwbUser = rbCheck.getText().toString();
+        holder.rgPg.setOnCheckedChangeListener((radioGroup, i) -> {
+            RadioButton rbCheck = radioGroup.findViewById(i);
+            String JwbUser = rbCheck.getText().toString();
 
-                int select =tabLayout.getSelectedTabPosition();
-                TabLayout.Tab se = tabLayout.getTabAt(select);
-                se.view.setBackgroundResource(R.drawable.selector_bg_nosoal);
+            int select = tabLayout.getSelectedTabPosition();
+            TabLayout.Tab se = tabLayout.getTabAt(select);
+            se.view.setBackgroundResource(R.drawable.selector_bg_nosoal);
 
+            if (PaketSoal.equals(GlobalVar.SOAL_UJIAN)){
                 if (JwbUser.equals(listSoal.get(position).getCorrectAns())){
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putInt(GlobalVar.SOAL_NUM_ + position, 1);
@@ -88,7 +90,21 @@ public class ViewPagerSoalAdapter extends RecyclerView.Adapter<ViewPagerSoalAdap
                     editor.putInt(GlobalVar.SOAL_NUM_ + position, 0);
                     editor.apply();
                 }
+            } else {
+                if (JwbUser.equals(listSoal.get(position).getCorrectAns())){
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putInt(GlobalVar.SOAL_NUM_ + position, 1);
+                    editor.apply();
+                    Toast.makeText(context, R.string.jawabanbenar, Toast.LENGTH_SHORT).show();
+                } else {
+                    SharedPreferences.Editor editor =  sharedPreferences.edit();
+                    editor.putInt(GlobalVar.SOAL_NUM_ + position, 0);
+                    editor.apply();
+                    Toast.makeText(context, R.string.jawabansalah, Toast.LENGTH_SHORT).show();
+                }
             }
+
+
         });
 
     }
@@ -117,26 +133,6 @@ public class ViewPagerSoalAdapter extends RecyclerView.Adapter<ViewPagerSoalAdap
             vpSoal = itemView.findViewById(R.id.vp_soal);
             ivSoal = itemView.findViewById(R.id.iv_soal);
 
-//            rgPg.setOnCheckedChangeListener((radioGroup, i) -> {
-//
-//                rbCheck = radioGroup.findViewById(i);
-//                String JwbUser = rbCheck.getText().toString();
-//
-//                int select =tabLayout.getSelectedTabPosition();
-//                TabLayout.Tab se = tabLayout.getTabAt(select);
-//                se.view.setBackgroundResource(R.drawable.selector_answered_tab_soal);
-//
-//                if (JwbUser.equals(listSoal.get(getAdapterPosition()).getCorrectAns())){
-//                    SharedPreferences.Editor editor = sharedPreferences.edit();
-//                    editor.putInt(GlobalVar.SOAL_NUM_ + getAdapterPosition(), 1);
-//                    editor.apply();
-//                } else {
-//                    SharedPreferences.Editor editor =  sharedPreferences.edit();
-//                    editor.putInt(GlobalVar.SOAL_NUM_ + getAdapterPosition(), 0);
-//                    editor.apply();
-//                }
-//
-//            });
 
         }
     }

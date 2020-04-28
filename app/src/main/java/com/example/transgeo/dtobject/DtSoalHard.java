@@ -5,42 +5,41 @@ import com.example.transgeo.object.Soal;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class DtSoalEasy {
-
+public class DtSoalHard {
     private static String[] soal = {
-            "1111111111111111111",
-            "2222222222222222",
-            "333333333333333",
-            "4444444444444444 ",
-            "5555555555555555",
+            "AAAAAAAAAAAAAAAAAAAA",
+            "BBBBBBBBBBBBBBBBBBB",
+            "CCCCCCCCCCCCCCC",
+            "DDDDDDDDDDDDDDD ",
+            "EEEEEEEEEEEEEEEEEEEE",
             "FFFFFFFFFFFFFFFFFF",
-            "1111111111111111111",
-            "1111111111111111111",
-            "1111111111111111111",
-            "1111111111111111111",
-            "1111111111111111111",
-            "1111111111111111111 ",
-            "1111111111111111111",
-            "1111111111111111111",
-            "1111111111111111111",
-            "1111111111111111111",
-            "1111111111111111111",
-            "1111111111111111111",
-            "1111111111111111111",
-            "1111111111111111111 ",
-            "1111111111111111111",
-            "1111111111111111111",
-            "1111111111111111111",
-            "1111111111111111111",
-            "1111111111111111111",
-            "1111111111111111111",
-            "1111111111111111111",
-            "1111111111111111111 ",
-            "1111111111111111111",
-            "1111111111111111111",
-            "1111111111111111111",
-            "1111111111111111111",
-            "1111111111111111111 "
+            "GGGGGGGGGGGGGGGGGGGGGG",
+            "HHHHHHHHHHHHHHHHHHHHHH",
+            "AAAAAAAAAAAAAAAAAAAA",
+            "BBBBBBBBBBBBBBBBBBB",
+            "CCCCCCCCCCCCCCC",
+            "DDDDDDDDDDDDDDD ",
+            "EEEEEEEEEEEEEEEEEEEE",
+            "FFFFFFFFFFFFFFFFFF",
+            "GGGGGGGGGGGGGGGGGGGGGG",
+            "HHHHHHHHHHHHHHHHHHHHHH",
+            "AAAAAAAAAAAAAAAAAAAA",
+            "BBBBBBBBBBBBBBBBBBB",
+            "CCCCCCCCCCCCCCC",
+            "DDDDDDDDDDDDDDD ",
+            "EEEEEEEEEEEEEEEEEEEE",
+            "FFFFFFFFFFFFFFFFFF",
+            "GGGGGGGGGGGGGGGGGGGGGG",
+            "HHHHHHHHHHHHHHHHHHHHHH",
+            "AAAAAAAAAAAAAAAAAAAA",
+            "BBBBBBBBBBBBBBBBBBB",
+            "CCCCCCCCCCCCCCC",
+            "DDDDDDDDDDDDDDD ",
+            "EEEEEEEEEEEEEEEEEEEE",
+            "FFFFFFFFFFFFFFFFFF",
+            "GGGGGGGGGGGGGGGGGGGGGG",
+            "HHHHHHHHHHHHHHHHHHHHHH",
+            "IIIIIIIIIIIIIIIIIIII "
     };
 
     private static String[] pgA = {
@@ -282,7 +281,7 @@ public class DtSoalEasy {
         ArrayList<Soal> soalAwal = getSoalUjian();
 
         ArrayList<Soal> randomSoal = new ArrayList<>();
-        for (int i = 0; i < 20; i++){
+        for (int i = 0; i < 30; i++){
             int randomIndex = rand.nextInt(soalAwal.size());
 
             randomSoal.add(soalAwal.get(randomIndex));
@@ -292,7 +291,4 @@ public class DtSoalEasy {
         }
         return randomSoal;
     }
-
-
-
 }

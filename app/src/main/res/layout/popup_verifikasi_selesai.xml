@@ -31,6 +31,7 @@
                 android:src="@drawable/ic_alert" />
 
             <TextView
+                android:id="@+id/tv_verif_popup_desc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

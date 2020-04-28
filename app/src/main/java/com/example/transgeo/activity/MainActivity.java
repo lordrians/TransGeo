@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ArrayList<Tokoh> listTokoh = new ArrayList<>();
 
     private Button btnLihatSemua;
-    private ImageButton btnRefleksi, btnRotasi, btnDilatasi, btnTranslasi, btnSoalEasy;
+    private ImageButton btnRefleksi, btnRotasi, btnDilatasi, btnTranslasi, btnSoalEasy, btnMedium, btnHard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +58,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnDilatasi = findViewById(R.id.btn_dilatasi);
         btnTranslasi = findViewById(R.id.btn_translasi);
         btnSoalEasy = findViewById(R.id.btn_soal_easy);
+        btnMedium = findViewById(R.id.btn_soal_medium);
+        btnHard = findViewById(R.id.btn_soal_hard);
+
 
         navigationView = findViewById(R.id.nav_drawer);
         drawerLayout = findViewById(R.id.drawer_layout);
@@ -77,13 +80,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnDilatasi.setOnClickListener(this);
         btnTranslasi.setOnClickListener(this);
         btnSoalEasy.setOnClickListener(this);
+        btnMedium.setOnClickListener(this);
+        btnHard.setOnClickListener(this);
 
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                drawerLayout.openDrawer(GravityCompat.START);
-            }
-        });
+        toolbar.setNavigationOnClickListener(view -> drawerLayout.openDrawer(GravityCompat.START));
 
     }
 
@@ -149,33 +149,38 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onBackPressed() {
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)){
+            drawerLayout.closeDrawer(GravityCompat.START);
+        } else {
+            Button btnTidak, btnKeluar;
+            DisplayMetrics metrics = getResources().getDisplayMetrics();
 
-        Button btnTidak, btnKeluar;
-        DisplayMetrics metrics = getResources().getDisplayMetrics();
+            int width = metrics.widthPixels;
+            int height = metrics.heightPixels;
 
-        int width = metrics.widthPixels;
-        int height = metrics.heightPixels;
+            LayoutInflater inflater = this.getLayoutInflater();
 
-        LayoutInflater inflater = this.getLayoutInflater();
+            popupView = inflater.inflate(R.layout.popup_verifikasi_keluar,null);
+            btnTidak = popupView.findViewById(R.id.btn_popup_verif_tidak);
+            btnKeluar = popupView.findViewById(R.id.btn_popup_verif_keluar);
 
-        popupView = inflater.inflate(R.layout.popup_verifikasi_keluar,null);
-        btnTidak = popupView.findViewById(R.id.btn_popup_verif_tidak);
-        btnKeluar = popupView.findViewById(R.id.btn_popup_verif_keluar);
+            btnTidak.setOnClickListener(view1 -> {
+                popDialogVerif.dismiss();
+            });
 
-        btnTidak.setOnClickListener(view1 -> {
-            popDialogVerif.dismiss();
-        });
-
-        btnKeluar.setOnClickListener(view1 -> {
-            popDialogVerif.dismiss();
-            finish();
-        });
+            btnKeluar.setOnClickListener(view1 -> {
+                popDialogVerif.dismiss();
+                finish();
+            });
 
 
-        popDialogVerif.setContentView(popupView);
-        popDialogVerif.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        popDialogVerif.getWindow().setLayout((6*width)/7, (4*height)/5);
-        popDialogVerif.show();
+            popDialogVerif.setContentView(popupView);
+            popDialogVerif.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            popDialogVerif.getWindow().setLayout((6*width)/7, (4*height)/5);
+            popDialogVerif.show();
+        }
+
+
 
     }
 

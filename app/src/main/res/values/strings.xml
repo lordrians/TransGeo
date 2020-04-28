@@ -69,7 +69,7 @@
     <string name="Salah">Salah</string>
     <string name="salah5">5</string>
     <string name="akhiri_ujian">Akhiri Ujian</string>
-    <string name="timer">00:23:05</string>
+    <string name="timer"></string>
     <string name="pertnayaan_verif_soal">Apakah kamu sudah yakin dengan jawabanmu? \n Jangan lupa periksa kembali sebelum mengumpulkan jawaban.</string>
     <string name="kamu_belum">"Kamu belum mengerjakan nomor \n"</string>
     <string name="kembali">KEMBALI</string>
@@ -77,4 +77,8 @@
     <string name="meninggalkansoal">Apakah kamu yakin ingin keluar?</string>
     <string name="tidak">TIDAK</string>
     <string name="keluar">KELUAR</string>
+    <string name="jawabansalah">Jawaban Salah</string>
+    <string name="jawabanbenar">Jawaban Benar</string>
+    <string name="akhiri_latihan">Akhiri Latihan</string>
+    <string name="waktuhabis">Maaf waktu ujian anda habis.</string>
 </resources>

@@ -3,6 +3,7 @@ package com.example.transgeo.dtobject;
 import com.example.transgeo.object.Soal;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class DtSoalUjian {
 
@@ -274,6 +275,22 @@ public class DtSoalUjian {
 
         }
         return list;
+    }
+
+    public static ArrayList<Soal> randSoal(){
+        Random rand = new Random();
+        ArrayList<Soal> soalAwal = getSoalUjian();
+
+        ArrayList<Soal> randomSoal = new ArrayList<>();
+        for (int i = 0; i < 30; i++){
+            int randomIndex = rand.nextInt(soalAwal.size());
+
+            randomSoal.add(soalAwal.get(randomIndex));
+
+            soalAwal.remove(randomIndex);
+
+        }
+        return randomSoal;
     }
 
 }
