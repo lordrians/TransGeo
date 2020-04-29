@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.transgeo">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -14,12 +15,16 @@
         <activity android:name=".activity.FinishUjianActivity">
 
         </activity>
-        <activity android:name=".activity.SplashScreenStartSoal" />
+        <activity android:name=".activity.SplashScreenStartSoal"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
         <activity android:name=".activity.SoalActivity" />
         <activity android:name=".activity.DilatasiActivity" />
         <activity android:name=".activity.TranslasiActivity" />
         <activity android:name=".activity.RotasiActivity" />
-        <activity android:name=".activity.CalculatorActivity" />
+        <activity android:name=".activity.CalculatorActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
         <activity android:name=".activity.DetailTokohActivity" />
         <activity android:name=".activity.ListTokohActivity" />
         <activity android:name=".activity.SplashScreenActivity">
@@ -30,7 +35,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.RefleksiActivity" />
-        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.MainActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
     </application>
 
 </manifest>
