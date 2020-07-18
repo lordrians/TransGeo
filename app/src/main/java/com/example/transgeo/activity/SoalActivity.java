@@ -41,12 +41,12 @@ public class SoalActivity extends AppCompatActivity implements View.OnClickListe
     private TextView tvTimer;
     private Dialog popDialogVerif;
     private ViewPager2 vpSoal;
-    private View popupView, popUpVerif;
+    private View popupView;
     private boolean pressedKumpulkan = false;
 
     private CountDownTimer timerUjian;
 
-    private int jmlSoal, hasil, jawabanUser, jawabanBenar =0, jawabanSalah = 0, waktuUjian = 10;
+    private int jmlSoal, hasil, jawabanUser, jawabanBenar =0, jawabanSalah = 0, waktuUjian = 30;
     private SharedPreferences sharedPreferences;
     private Toolbar toolbar;
     private String pilihanSoal;
@@ -211,11 +211,12 @@ public class SoalActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.btn_akhiri_ujian:
                 if (pilihanSoal.equals(GlobalVar.SOAL_UJIAN)){
-                    Toast.makeText(getApplicationContext(),"PopUp", Toast.LENGTH_LONG).show();
                     ShowPopUp();
 
+                } else {
+                    keluar();
                 }
-                keluar();
+
                 break;
 
         }
@@ -243,6 +244,16 @@ public class SoalActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    private void hitungJawabKosong(){
+        for (int i = 0; i < jmlSoal; i++){
+            jawabanUser = sharedPreferences.getInt(GlobalVar.SOAL_NUM_ + i, 0);
+            if (jawabanUser == -1){
+                soalKosong.add(String.valueOf(i+1));
+            }
+        }
+    }
+
+    @SuppressLint("InflateParams")
     private void ShowPopUp() {
 
         TextView tvJwbKosong;
@@ -251,6 +262,9 @@ public class SoalActivity extends AppCompatActivity implements View.OnClickListe
 
         int width = metrics.widthPixels;
         int height = metrics.heightPixels;
+
+        //hitung jawaban kosong
+        hitungJawabKosong();
 
         popupView = layoutInflater.inflate(R.layout.popup_verifikasi_selesai,null);
         tvJwbKosong = popupView.findViewById(R.id.tv_jwb_kosong);
