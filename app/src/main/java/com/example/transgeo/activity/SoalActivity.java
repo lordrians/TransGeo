@@ -41,7 +41,7 @@ public class SoalActivity extends AppCompatActivity implements View.OnClickListe
     private TextView tvTimer;
     private Dialog popDialogVerif;
     private ViewPager2 vpSoal;
-    private View popupView;
+    private View popupView, popUpVerif;
     private boolean pressedKumpulkan = false;
 
     private CountDownTimer timerUjian;
@@ -154,7 +154,9 @@ public class SoalActivity extends AppCompatActivity implements View.OnClickListe
             editor.clear();
             editor.apply();
             popDialogVerif.dismiss();
-            timerUjian.cancel();
+            if (timerUjian != null){
+                timerUjian.cancel();
+            }
             finish();
         });
 
@@ -209,6 +211,7 @@ public class SoalActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.btn_akhiri_ujian:
                 if (pilihanSoal.equals(GlobalVar.SOAL_UJIAN)){
+                    Toast.makeText(getApplicationContext(),"PopUp", Toast.LENGTH_LONG).show();
                     ShowPopUp();
 
                 }
