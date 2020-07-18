@@ -44,6 +44,8 @@ public class SoalActivity extends AppCompatActivity implements View.OnClickListe
     private View popupView;
     private boolean pressedKumpulkan = false;
 
+    private CountDownTimer timerUjian;
+
     private int jmlSoal, hasil, jawabanUser, jawabanBenar =0, jawabanSalah = 0, waktuUjian = 10;
     private SharedPreferences sharedPreferences;
     private Toolbar toolbar;
@@ -86,7 +88,8 @@ public class SoalActivity extends AppCompatActivity implements View.OnClickListe
 
         if (pilihanSoal.equals(GlobalVar.SOAL_UJIAN)){
             btnAkhiriUjian.setText(R.string.akhiri_ujian);
-            new CountDownTimer(waktuUjian * 1000,1000){
+            timerUjian = new CountDownTimer(waktuUjian * 1000,1000) {
+                @SuppressLint("DefaultLocale")
                 @Override
                 public void onTick(long l) {
                     tvTimer.setText(
@@ -117,9 +120,9 @@ public class SoalActivity extends AppCompatActivity implements View.OnClickListe
                         }
 
                     }
-
                 }
             }.start();
+
         }
 
 
@@ -151,6 +154,7 @@ public class SoalActivity extends AppCompatActivity implements View.OnClickListe
             editor.clear();
             editor.apply();
             popDialogVerif.dismiss();
+            timerUjian.cancel();
             finish();
         });
 
@@ -206,6 +210,7 @@ public class SoalActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_akhiri_ujian:
                 if (pilihanSoal.equals(GlobalVar.SOAL_UJIAN)){
                     ShowPopUp();
+
                 }
                 keluar();
                 break;
@@ -235,7 +240,6 @@ public class SoalActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    @SuppressLint("SetTextI18n")
     private void ShowPopUp() {
 
         TextView tvJwbKosong;
@@ -257,6 +261,7 @@ public class SoalActivity extends AppCompatActivity implements View.OnClickListe
         });
         btnKumpulkan.setOnClickListener(view -> {
             pressedKumpulkan = true;
+            timerUjian.cancel();
             kumpulkanJawan();
         });
 
