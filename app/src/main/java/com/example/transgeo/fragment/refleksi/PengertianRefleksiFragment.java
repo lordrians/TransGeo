@@ -7,11 +7,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
@@ -45,12 +48,18 @@ public class PengertianRefleksiFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         ivPengertian = view.findViewById(R.id.iv_ref_pengertian);
-        tvPengertian = view.findViewById(R.id.tv_ref_pengertian);
+//        tvPengertian = view.findViewById(R.id.tv_ref_pengertian);
 
         SharedPreferences sharedPreferences = getContext().getSharedPreferences(GlobalVar.MFILE_SHARED_PREF, 0);
-        tvPengertian.setText(sharedPreferences.getString(GlobalVar.P_ISI_REF,""));
+//        tvPengertian.setText(sharedPreferences.getString(GlobalVar.P_ISI_REF,""));
+        String pengertian = getResources().getString(R.string.pengertian_refleksi);
+//        tvPengertian.setText(Html.fromHtml(pengertian));
+        WebView webView = view.findViewById(R.id.webView);
+        webView.loadUrl("file:///android_asset/REF_Pengertian.html");
+
+//        tvPengertian.setText(pengertian);
         Glide.with(getContext())
-                .load(sharedPreferences.getString(GlobalVar.P_PHOTO_REF,""))
+                .load("https://www.yuksinau.id/wp-content/uploads/2019/07/makalah-transformasi-geometri.jpg")
                 .apply(new RequestOptions().centerCrop())
                 .into(ivPengertian);
 

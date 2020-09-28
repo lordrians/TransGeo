@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pengertian_refleksi">
+        <![CDATA[
+        <html>
+            <head>
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+            </head>
+            <body>
+                Rotasi atau perputaran merupakan perubahan kedudukan objek dengan cara diputar melalui pusat dan sudut tertentu. Besarnya rotasi dalam transformasi geometri sebesar α disepakati untuk arah yang berlawanan dengan arah jalan jarum jam. Jika arah perputaran rotasi suatu benda searah dengan jarum jam, maka sudut yang dibentuk adalah –α.
+    Suatu rotasi pada bidang datar ditentukan oleh unsur-unsur berikut.
+        <ol>
+            <li>asdasd</li>
+            <li>asdasd</li>
+            <li>asdasd</li>
+        </ol>
+        \n3) Pusat Rotasi
+        \n2) Besar sudut (jarak) rotasi.
+        \n3) Arah rotasi (searah atau berlawanan arah dengan putaran jarum jam).
+    \nJika berlawanan arah dengan arah perputaran jarum jam, maka sudut putarannya positif.
+    Jika searah dengan arah putaran jarum jam, maka sudut putarannya negatif.
+    Sifat:
+        \n1) Bangun yang diputar (rotasi) tidak mengalami perubahan bentuk dan ukuran
+        \n2) Bangun yang diputar (rotasi) mengalami perubahan posisi.
+
+       Situasi di atas, dalam translasi dapat dinyatakan bahwa titik A(x, y) ditranslasikan dengan  menghasilkan bayangan A’(x’, y’) sehingga diperoleh hubungan.
+            <t>\nx’ = x + a</t>
+            <t>\ny’ = y + b</t>
+        \nDengan demikian,dapat disimpulkan sebagai berikut.
+            Bayangan titik <b>A(x, y)</b> pada translasi  adalah <b>A’(x + a, y + b)</b> \n3) Pusat Rotasi
+        \n2) Besar sudut (jarak) rotasi.
+        \n3) Arah rotasi (searah atau berlawanan arah dengan putaran jarum jam).
+    \nJika berlawanan arah dengan arah perputaran jarum jam, maka sudut putarannya positif.
+    Jika searah dengan arah putaran jarum jam, maka sudut putarannya negatif.
+    Sifat:
+        \n1) Bangun yang diputar (rotasi) tidak mengalami perubahan bentuk dan ukuran
+        \n2) Bangun yang diputar (rotasi) mengalami perubahan posisi.
+
+       Situasi di atas, dalam translasi dapat dinyatakan bahwa titik A(x, y) ditranslasikan dengan  menghasilkan bayangan A’(x’, y’) sehingga diperoleh hubungan.
+            <t>\nx’ = x + a</t>
+            <t>\ny’ = y + b</t>
+        \nDengan demikian,dapat disimpulkan sebagai berikut.
+            Bayangan titik <b>A(x, y)</b> pada translasi  adalah <b>A’(x + a, y + b)</b> \n3) Pusat Rotasi
+        \n2) Besar sudut (jarak) rotasi.
+        \n3) Arah rotasi (searah atau berlawanan arah dengan putaran jarum jam).
+    \nJika berlawanan arah dengan arah perputaran jarum jam, maka sudut putarannya positif.
+    Jika searah dengan arah putaran jarum jam, maka sudut putarannya negatif.
+    Sifat:
+        \n1) Bangun yang diputar (rotasi) tidak mengalami perubahan bentuk dan ukuran
+        \n2) Bangun yang diputar (rotasi) mengalami perubahan posisi.
+
+       Situasi di atas, dalam translasi dapat dinyatakan bahwa titik A(x, y) ditranslasikan dengan  menghasilkan bayangan A’(x’, y’) sehingga diperoleh hubungan.
+            <t>\nx’ = x + a</t>
+            <t>\ny’ = y + b</t>
+        \nDengan demikian,dapat disimpulkan sebagai berikut.
+            Bayangan titik <b>A(x, y)</b> pada translasi  adalah <b>A’(x + a, y + b)</b> \n3) Pusat Rotasi
+        \n2) Besar sudut (jarak) rotasi.
+        \n3) Arah rotasi (searah atau berlawanan arah dengan putaran jarum jam).
+    \nJika berlawanan arah dengan arah perputaran jarum jam, maka sudut putarannya positif.
+    Jika searah dengan arah putaran jarum jam, maka sudut putarannya negatif.
+    Sifat:
+        \n1) Bangun yang diputar (rotasi) tidak mengalami perubahan bentuk dan ukuran
+        \n2) Bangun yang diputar (rotasi) mengalami perubahan posisi.
+
+       Situasi di atas, dalam translasi dapat dinyatakan bahwa titik A(x, y) ditranslasikan dengan  menghasilkan bayangan A’(x’, y’) sehingga diperoleh hubungan.
+            <t>\nx’ = x + a</t>
+            <t>\ny’ = y + b</t>
+        \nDengan demikian,dapat disimpulkan sebagai berikut.
+            Bayangan titik <b>A(x, y)</b> pada translasi  adalah <b>A’(x + a, y + b)</b>
+            </body>
+        </html>
+
+
+        ]]>
+    </string>
+</resources>

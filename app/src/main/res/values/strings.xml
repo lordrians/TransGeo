@@ -81,4 +81,6 @@
     <string name="jawabanbenar">Jawaban Benar</string>
     <string name="akhiri_latihan">Akhiri Latihan</string>
     <string name="waktuhabis">Maaf waktu ujian anda habis.</string>
+    <string name="refleksi_thd_garis">Refleksi Terhadap Garis</string>
+    <string name="refleksi_pd_bidangkordinat">Pada Bidang Koordinat</string>
 </resources>

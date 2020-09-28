@@ -32,9 +32,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:background="@drawable/bg_materi_green"
-                android:text="@string/deskTokoh"
+                android:text="@string/pengertian_refleksi"
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_materi"
+                android:gravity="fill_vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/iv_trans_pengertian" />

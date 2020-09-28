@@ -56,9 +56,9 @@ public class ViewPagerRefleksiAdapter extends FragmentStatePagerAdapter {
             case 0:
                 return mContext.getString(R.string.pengertian);
             case 1:
-                return mContext.getString(R.string.syarat);
+                return mContext.getString(R.string.refleksi_thd_garis);
             case 2:
-                return mContext.getString(R.string.langkah);
+                return mContext.getString(R.string.refleksi_pd_bidangkordinat);
             case 3:
                 return mContext.getString(R.string.contoh);
             case 4:

@@ -149,7 +149,6 @@
                             android:background="@drawable/ic_translasi"
                             android:foreground="@drawable/selector_btn_press" />
 
-
                         <ImageButton
                             android:id="@+id/btn_dilatasi"
                             android:layout_width="0dp"

@@ -50,4 +50,7 @@ dependencies {
     implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
     implementation files('libs/YouTubeAndroidPlayerApi.jar')
     implementation 'com.google.android.material:material:1.2.0-alpha05'
+
+
+    implementation 'rouchuan.viewpagerlayoutmanager:viewpagerlayoutmanager:2.0.22'
 }

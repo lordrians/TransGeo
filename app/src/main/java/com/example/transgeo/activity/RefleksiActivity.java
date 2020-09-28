@@ -74,7 +74,7 @@ public class RefleksiActivity extends AppCompatActivity {
         arrayList = DtMateri.getDataRefleksi();
 
         SharedPreferences.Editor editor =  sharedPreferences.edit();
-        editor.putString(GlobalVar.P_ISI_REF, arrayList.get(0).getIsiMateri());
+//        editor.putString(GlobalVar.P_ISI_REF, arrayList.get(0).getIsiMateri());
         editor.putString(GlobalVar.P_PHOTO_REF, arrayList.get(0).getPhoto());
         editor.putString(GlobalVar.S_ISI_REF, arrayList.get(1).getIsiMateri());
         editor.putString(GlobalVar.S_PHOTO_REF, arrayList.get(1).getPhoto());
