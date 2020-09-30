@@ -109,6 +109,7 @@ public class ViewPagerSoalAdapter extends RecyclerView.Adapter<ViewPagerSoalAdap
 
     }
 
+
     @Override
     public int getItemCount() {
         return listSoal.size();

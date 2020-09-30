@@ -1,8 +1,6 @@
 package com.example.transgeo.adapter;
 
 import android.content.Context;
-import android.os.Bundle;
-import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -12,8 +10,8 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 
 import com.example.transgeo.R;
 import com.example.transgeo.fragment.refleksi.ContohRefleksiFragment;
-import com.example.transgeo.fragment.refleksi.LangkahRefleksiFragment;
-import com.example.transgeo.fragment.refleksi.PengertianRefleksiFragment;
+import com.example.transgeo.fragment.refleksi.RefBidKordinat;
+import com.example.transgeo.fragment.refleksi.RefPengertian;
 import com.example.transgeo.fragment.refleksi.SyaratRefleksiFragment;
 import com.example.transgeo.fragment.refleksi.VideoRefleksiFragment;
 
@@ -26,16 +24,17 @@ public class ViewPagerRefleksiAdapter extends FragmentStatePagerAdapter {
         mContext = context;
     }
 
+
     @NonNull
     @Override
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return new PengertianRefleksiFragment();
+                return new RefPengertian();
             case 1:
                 return new SyaratRefleksiFragment();
             case 2:
-                return new LangkahRefleksiFragment();
+                return new RefBidKordinat();
             case 3:
                 return new ContohRefleksiFragment();
             case 4:

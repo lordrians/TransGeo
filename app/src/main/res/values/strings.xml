@@ -83,4 +83,10 @@
     <string name="waktuhabis">Maaf waktu ujian anda habis.</string>
     <string name="refleksi_thd_garis">Refleksi Terhadap Garis</string>
     <string name="refleksi_pd_bidangkordinat">Pada Bidang Koordinat</string>
+    <string name="bayangan_suatu_titik">Bayangan Suatu Titik</string>
+    <string name="bayangan_suatu_garis">Bayangan Suatu Garis</string>
+    <string name="bayangan_suatu_bangun">Bayangan Suatu Bangun</string>
+    <string name="ref_thd_sumbu_kordinat">Terhadap Sumbu Kordinat</string>
+    <string name="ref_garis_sejajar">Terhadap Garis Sejajar dengan Sumbu Kordinat</string>
+    <string name="ref_thd_garis"><![CDATA[Terhadap Garis y = x & y = -x]]></string>
 </resources>

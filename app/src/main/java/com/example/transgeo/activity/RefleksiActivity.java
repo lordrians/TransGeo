@@ -3,44 +3,103 @@ package com.example.transgeo.activity;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
+import androidx.viewpager2.widget.ViewPager2;
 
+import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Toast;
 
 import com.example.transgeo.R;
-import com.example.transgeo.adapter.ViewPagerRefleksiAdapter;
+import com.example.transgeo.adapter.VpRefleksi;
 import com.example.transgeo.dtobject.DtMateri;
 import com.example.transgeo.object.GlobalVar;
 import com.example.transgeo.object.Materi;
 import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 
 import java.util.ArrayList;
 
 public class RefleksiActivity extends AppCompatActivity {
 
     private ViewPager viewPager;
+    private ViewPager2 vpRefleksi;
     private TabLayout tabLayout;
     private SharedPreferences sharedPreferences;
     private Toolbar toolbar;
     
 
+    @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_refleksi);
 
-        viewPager = findViewById(R.id.vp_refleksi);
+        vpRefleksi = findViewById(R.id.vp_refleksi);
         tabLayout = findViewById(R.id.tl_refleksi);
         toolbar = findViewById(R.id.tb_refleksi);
 
         setSupportActionBar(toolbar);
         toolbar.setNavigationOnClickListener(view -> finish());
 
-        ViewPagerRefleksiAdapter adapter = new ViewPagerRefleksiAdapter(this, getSupportFragmentManager());
-        viewPager.setAdapter(adapter);
+//        ViewPagerRefleksiAdapter adapter = new ViewPagerRefleksiAdapter(this, getSupportFragmentManager());
+        VpRefleksi vpRefleksiAdapter = new VpRefleksi(this);
+        vpRefleksi.setAdapter(vpRefleksiAdapter);
         sharedPreferences = getSharedPreferences(GlobalVar.MFILE_SHARED_PREF, MODE_PRIVATE);
-        tabLayout.setupWithViewPager(viewPager);
+        TabLayoutMediator tabLayoutMediator = new TabLayoutMediator(tabLayout, vpRefleksi,(tab, position) -> {
+            if (position == 0){
+                tab.setText(R.string.pengertian);
+            } else if (position == 1){
+                tab.setText(R.string.refleksi_thd_garis);
+            } else if (position == 2){
+                tab.setText(R.string.refleksi_pd_bidangkordinat);
+            } else {
+                tab.setText("");
+            }
+
+        });
+
+//        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+//            @Override
+//            public void onTabSelected(TabLayout.Tab tab) {
+//
+//
+////                ContextCompat.getColor(getApplicationContext(), R.color.colorAccent)
+//            }
+//
+//            @Override
+//            public void onTabUnselected(TabLayout.Tab tab) {
+////                tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.colorPrimaryDark));
+//
+//            }
+//
+//            @Override
+//            public void onTabReselected(TabLayout.Tab tab) {
+//
+//            }
+//        });
+        tabLayoutMediator.attach();
+        vpRefleksi.setUserInputEnabled(false);
+//        new TabLayoutMediator(tabLayout, vpCustom, (tab, position) -> {
+//            switch (position) {
+//                case 0:
+//                    tab.setText(R.string.pengertian);
+//                    Toast.makeText(this, "0", Toast.LENGTH_SHORT).show();
+//                case 1:
+//                    Toast.makeText(this, "1", Toast.LENGTH_SHORT).show();
+//                    tab.setText(R.string.refleksi_thd_garis);
+//                case 2:
+//                    Toast.makeText(this, "2", Toast.LENGTH_SHORT).show();
+//                    tab.setText(R.string.refleksi_pd_bidangkordinat);
+//                case 3:
+//                    Toast.makeText(this, "3", Toast.LENGTH_SHORT).show();
+//                    tab.setText(R.string.contoh);
+//                case 4:
+//                    Toast.makeText(this, "4", Toast.LENGTH_SHORT).show();
+//                    tab.setText(R.string.video);
+//            }
+//        }).attach();
+//        tabLayout.setupWithViewPager(viewPager);
 
         if (!sharedPreferences.contains(GlobalVar.P_ISI_REF)){
             setDataMateri();

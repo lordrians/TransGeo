@@ -7,24 +7,29 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.transgeo.R;
+import com.example.transgeo.activity.RefleksiActivity;
 import com.example.transgeo.object.GlobalVar;
+
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class LangkahRefleksiFragment extends Fragment {
-    private ImageView ivLangkah;
-    private TextView tvLangkah;
-    public LangkahRefleksiFragment() {
+public class RefPengertian extends Fragment {
+    private ImageView ivPengertian;
+
+    public RefPengertian() {
         // Required empty public constructor
     }
 
@@ -33,22 +38,25 @@ public class LangkahRefleksiFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_langkah_refleksi, container, false);
+        return inflater.inflate(R.layout.fragment_pengertian_refleksi, container, false);
+
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        ivLangkah = view.findViewById(R.id.iv_ref_langkah);
-        tvLangkah = view.findViewById(R.id.tv_ref_langkah);
+        ivPengertian = view.findViewById(R.id.iv_ref_pengertian);
 
-        SharedPreferences sharedPreferences = getContext().getSharedPreferences(GlobalVar.MFILE_SHARED_PREF, 0);
-        tvLangkah.setText(sharedPreferences.getString(GlobalVar.L_ISI_REF,""));
+        WebView webView = view.findViewById(R.id.webView);
+        webView.loadUrl("file:///android_asset/REF_Pengertian.html");
+
         Glide.with(getContext())
-                .load(sharedPreferences.getString(GlobalVar.L_PHOTO_REF,""))
+                .load("https://www.yuksinau.id/wp-content/uploads/2019/07/makalah-transformasi-geometri.jpg")
                 .apply(new RequestOptions().centerCrop())
-                .into(ivLangkah);
+                .into(ivPengertian);
+
+
 
     }
 }
