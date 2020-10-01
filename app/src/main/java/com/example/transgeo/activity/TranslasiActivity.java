@@ -3,6 +3,7 @@ package com.example.transgeo.activity;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -10,15 +11,18 @@ import android.widget.Toast;
 
 import com.example.transgeo.R;
 import com.example.transgeo.adapter.ViewPagerTranslasiAdapter;
+import com.example.transgeo.adapter.VpTranslasi;
 import com.example.transgeo.dtobject.DtMateri;
 import com.example.transgeo.object.GlobalVar;
 import com.example.transgeo.object.Materi;
 import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 
 import java.util.ArrayList;
 
 public class TranslasiActivity extends AppCompatActivity {
 
+    private ViewPager2 vpTranslasi;
     private ViewPager viewPager;
     private TabLayout tabLayout;
     private SharedPreferences sharedPreferences;
@@ -29,17 +33,32 @@ public class TranslasiActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_translasi);
 
-        viewPager = findViewById(R.id.vp_translasi);
+        vpTranslasi = findViewById(R.id.vp_translasi);
         tabLayout = findViewById(R.id.tl_translasi);
         toolbar = findViewById(R.id.tb_translasi);
 
         setSupportActionBar(toolbar);
         toolbar.setNavigationOnClickListener(view -> finish());
 
-        ViewPagerTranslasiAdapter adapter = new ViewPagerTranslasiAdapter(this, getSupportFragmentManager());
-        viewPager.setAdapter(adapter);
+        VpTranslasi adapter = new VpTranslasi(this);
+        vpTranslasi.setAdapter(adapter);
         sharedPreferences = getSharedPreferences(GlobalVar.MFILE_SHARED_PREF, MODE_PRIVATE);
-        tabLayout.setupWithViewPager(viewPager);
+
+        TabLayoutMediator tabLayoutMediator = new TabLayoutMediator(tabLayout, vpTranslasi, (tab, position) -> {
+            if (position == 0){
+                tab.setText(R.string.pengertian);
+            } else if (position == 1){
+                tab.setText(R.string.translasi_notasi);
+            } else if (position == 2){
+                tab.setText(R.string.translasi_kordinat);
+            } else if (position == 3){
+                tab.setText(R.string.translasi_berurutan);
+            } else {
+                tab.setText("");
+            }
+        });
+
+        tabLayoutMediator.attach();
 
         if (!sharedPreferences.contains(GlobalVar.P_ISI_TRANS)){
             setDataMateri();

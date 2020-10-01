@@ -3,6 +3,7 @@ package com.example.transgeo.activity;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -10,15 +11,18 @@ import android.widget.Toast;
 
 import com.example.transgeo.R;
 import com.example.transgeo.adapter.ViewPagerDilatasiAdapter;
+import com.example.transgeo.adapter.VpDilatasi;
 import com.example.transgeo.dtobject.DtMateri;
 import com.example.transgeo.object.GlobalVar;
 import com.example.transgeo.object.Materi;
 import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 
 import java.util.ArrayList;
 
 public class DilatasiActivity extends AppCompatActivity {
 
+    private ViewPager2 vpDilatasi;
     private ViewPager viewPager;
     private TabLayout tabLayout;
     private SharedPreferences sharedPreferences;
@@ -29,7 +33,7 @@ public class DilatasiActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dilatasi);
 
-        viewPager = findViewById(R.id.vp_dilatasi);
+        vpDilatasi = findViewById(R.id.vp_dilatasi);
         tabLayout = findViewById(R.id.tl_dilatasi);
         toolbar = findViewById(R.id.tb_dilatasi);
 
@@ -37,10 +41,21 @@ public class DilatasiActivity extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(view -> finish());
 
 
-        ViewPagerDilatasiAdapter adapter = new ViewPagerDilatasiAdapter(this, getSupportFragmentManager());
-        viewPager.setAdapter(adapter);
+        VpDilatasi adapter = new VpDilatasi(this);
+        vpDilatasi.setAdapter(adapter);
         sharedPreferences = getSharedPreferences(GlobalVar.MFILE_SHARED_PREF, MODE_PRIVATE);
-        tabLayout.setupWithViewPager(viewPager);
+
+        TabLayoutMediator tabLayoutMediator = new TabLayoutMediator(tabLayout, vpDilatasi, (tab, position) -> {
+            if (position == 0){
+                tab.setText(R.string.pengertian);
+            } else if (position == 1){
+                tab.setText(R.string.dil_faktor_skala);
+            } else {
+                tab.setText("");
+            }
+        });
+        tabLayoutMediator.attach();
+        vpDilatasi.setUserInputEnabled(false);
 
         if (!sharedPreferences.contains(GlobalVar.P_ISI_DIL)){
             setDataMateri();

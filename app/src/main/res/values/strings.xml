@@ -89,4 +89,14 @@
     <string name="ref_thd_sumbu_kordinat">Terhadap Sumbu Kordinat</string>
     <string name="ref_garis_sejajar">Terhadap Garis Sejajar dengan Sumbu Kordinat</string>
     <string name="ref_thd_garis"><![CDATA[Terhadap Garis y = x & y = -x]]></string>
+    <string name="translasi_notasi">Notasi dg Pasangan Bilangan</string>
+    <string name="translasi_kordinat">Kordinat Bayangan</string>
+    <string name="translasi_berurutan">Dua Translasi Berurutan</string>
+    <string name="rotasi_kartesius">Rotasi Bidang Kartesius</string>
+    <string name="rot_90">Rotasi 90°</string>
+    <string name="rot_min_90">Rotasi -90°</string>
+    <string name="rot_180">Rotasi 180°</string>
+    <string name="dil_faktor_skala">Faktor Skala</string>
+    <string name="dil_positif">Skala Positif</string>
+    <string name="dil_negatif">Skala Negatif</string>
 </resources>

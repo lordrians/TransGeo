@@ -3,6 +3,7 @@ package com.example.transgeo.activity;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -10,15 +11,18 @@ import android.widget.Toast;
 
 import com.example.transgeo.R;
 import com.example.transgeo.adapter.ViewPagerRotasiAdapter;
+import com.example.transgeo.adapter.VpRotasi;
 import com.example.transgeo.dtobject.DtMateri;
 import com.example.transgeo.object.GlobalVar;
 import com.example.transgeo.object.Materi;
 import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 
 import java.util.ArrayList;
 
 public class RotasiActivity extends AppCompatActivity {
 
+    private ViewPager2 vpRotasi;
     private ViewPager viewPager;
     private TabLayout tabLayout;
     private SharedPreferences sharedPreferences;
@@ -29,17 +33,36 @@ public class RotasiActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rotasi);
 
-        viewPager = findViewById(R.id.vp_rotasi);
+        vpRotasi = findViewById(R.id.vp_rotasi);
         tabLayout = findViewById(R.id.tl_rotasi);
         toolbar = findViewById(R.id.tb_rotasi);
 
         setSupportActionBar(toolbar);
         toolbar.setNavigationOnClickListener(view -> finish());
 
-        ViewPagerRotasiAdapter adapter = new ViewPagerRotasiAdapter(this, getSupportFragmentManager());
-        viewPager.setAdapter(adapter);
+        VpRotasi adapter = new VpRotasi(this);
+        vpRotasi.setAdapter(adapter);
         sharedPreferences = getSharedPreferences(GlobalVar.MFILE_SHARED_PREF, MODE_PRIVATE);
-        tabLayout.setupWithViewPager(viewPager);
+
+        TabLayoutMediator tabLayoutMediator = new TabLayoutMediator(tabLayout, vpRotasi, (tab, position) -> {
+            switch (position){
+                case 0:
+                    tab.setText(R.string.pengertian);
+                case 1:
+                    tab.setText(R.string.rotasi_kartesius);
+            }
+//
+//            if (position == 0){
+//                tab.setText(R.string.pengertian);
+//            } else if (position == 1){
+//                tab.setText(R.string.translasi_notasi);
+//            } else if (position == 2){
+//                tab.setText(R.string.translasi_kordinat);
+//            } else if (position == 3){
+//                tab.setText(R.string.translasi_berurutan);
+        });
+        tabLayoutMediator.attach();
+        vpRotasi.setUserInputEnabled(false);
 
         if (!sharedPreferences.contains(GlobalVar.P_ISI_ROT)){
             setDataMateri();

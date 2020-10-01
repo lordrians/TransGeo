@@ -25,26 +25,22 @@
         android:id="@+id/tl_translasi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:background="@drawable/bg_tab_layout"
         android:clipToPadding="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tb_translasi"
-        app:tabBackground="@drawable/selector_tab_layout"
-        app:tabGravity="fill"
-        app:tabIndicatorHeight="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/tb_translasi"
         app:tabMode="scrollable"
         app:tabPaddingEnd="20dp"
-        app:tabPaddingStart="20dp"
-        app:tabSelectedTextColor="@android:color/black" />
+        app:tabPaddingStart="20dp" />
 
-    <androidx.viewpager.widget.ViewPager
+    <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/vp_translasi"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tl_translasi" />
+        app:layout_constraintTop_toBottomOf="@+id/tl_translasi" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
