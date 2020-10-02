@@ -45,21 +45,13 @@ public class RotasiActivity extends AppCompatActivity {
         sharedPreferences = getSharedPreferences(GlobalVar.MFILE_SHARED_PREF, MODE_PRIVATE);
 
         TabLayoutMediator tabLayoutMediator = new TabLayoutMediator(tabLayout, vpRotasi, (tab, position) -> {
-            switch (position){
-                case 0:
-                    tab.setText(R.string.pengertian);
-                case 1:
-                    tab.setText(R.string.rotasi_kartesius);
+            if (position == 0){
+                tab.setText(R.string.pengertian);
+            } else if (position == 1) {
+                tab.setText(R.string.rotasi_kartesius);
+            } else {
+                tab.setText("");
             }
-//
-//            if (position == 0){
-//                tab.setText(R.string.pengertian);
-//            } else if (position == 1){
-//                tab.setText(R.string.translasi_notasi);
-//            } else if (position == 2){
-//                tab.setText(R.string.translasi_kordinat);
-//            } else if (position == 3){
-//                tab.setText(R.string.translasi_berurutan);
         });
         tabLayoutMediator.attach();
         vpRotasi.setUserInputEnabled(false);

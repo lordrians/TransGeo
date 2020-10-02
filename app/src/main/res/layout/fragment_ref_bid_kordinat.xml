@@ -20,7 +20,7 @@
         app:tabBackground="@drawable/selector_tab_layout"
         app:tabGravity="fill"
         app:tabIndicatorHeight="0dp"
-        app:tabMode="fixed"
+        app:tabMode="scrollable"
         app:tabPaddingEnd="20dp"
         app:tabPaddingStart="20dp"
         app:tabSelectedTextColor="@android:color/black" />

@@ -26,21 +26,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-<!--            <TextView-->
-<!--                android:justificationMode="inter_word"-->
-<!--                android:id="@+id/tv_ref_pengertian"-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="32dp"-->
-<!--                android:background="@drawable/bg_materi_green"-->
-<!--                android:text="@string/pengertian_refleksi"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:textSize="@dimen/text_materi"-->
-<!--                android:visibility="gone"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/iv_ref_pengertian" />-->
-
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -51,7 +36,7 @@
                 android:background="@drawable/bg_materi_green"
                 tools:ignore="WebViewLayout">
                 <WebView
-                    android:id="@+id/webView"
+                    android:id="@+id/wv_ref_pengertian"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_materi_green"

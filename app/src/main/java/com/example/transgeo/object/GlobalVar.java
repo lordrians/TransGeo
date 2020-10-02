@@ -68,7 +68,11 @@ public class GlobalVar {
     public static final String BENAR = "BENAR";
     public static final String SALAH = "SALAH";
 
+    //html location
+    public static final String BASE_LOCATION_HTML = "file:///android_asset/";
 
+    public static final String HTML_REF_BAYANGAN_SUATU_TITIK = BASE_LOCATION_HTML +"REF_BayanganSuatuTitik.html";
+    public static final String HTML_REF_BAYANGAN_SUATU_GARIS = BASE_LOCATION_HTML +"REF_BayanganSuatuGaris.html";
 
 
 

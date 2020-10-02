@@ -48,7 +48,7 @@ public class RefPengertian extends Fragment {
 
         ivPengertian = view.findViewById(R.id.iv_ref_pengertian);
 
-        WebView webView = view.findViewById(R.id.webView);
+        WebView webView = view.findViewById(R.id.wv_ref_pengertian);
         webView.loadUrl("file:///android_asset/REF_Pengertian.html");
 
         Glide.with(getContext())
