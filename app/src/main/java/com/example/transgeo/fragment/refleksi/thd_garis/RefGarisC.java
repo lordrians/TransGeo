@@ -1,5 +1,6 @@
 package com.example.transgeo.fragment.refleksi.thd_garis;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -9,9 +10,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.transgeo.R;
+import com.example.transgeo.object.GlobalVar;
 
 public class RefGarisC extends Fragment {
 
@@ -25,13 +30,20 @@ public class RefGarisC extends Fragment {
         return inflater.inflate(R.layout.fragment_ref_garis_c, container, false);
     }
 
+    @SuppressLint("SetJavaScriptEnabled")
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
         ImageView ivGarisC = view.findViewById(R.id.iv_ref_garisc);
+        WebView wvGarisC = view.findViewById(R.id.wv_ref_garisc);
+        wvGarisC.getSettings().setJavaScriptEnabled(true);
 
-
+        wvGarisC.loadUrl(GlobalVar.HTML_REF_BAYANGAN_SUATU_TITIK);
+        Glide.with(getContext())
+                .load("https://www.yuksinau.id/wp-content/uploads/2019/07/makalah-transformasi-geometri.jpg")
+                .apply(new RequestOptions().centerCrop())
+                .into(ivGarisC);
 
     }
 }

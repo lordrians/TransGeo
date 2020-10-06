@@ -90,7 +90,7 @@ public class GlobalVar {
 
 
     public static final String HTML_TRA_Pengertian = BASE_LOCATION_HTML +"TRA_Pengertian.html";
-    public static final String HTML_TRA_DuatTransBerurutan = BASE_LOCATION_HTML +"TRA_DuatTransBerurutan.html";
+    public static final String HTML_TRA_DuatTransBerurutan = BASE_LOCATION_HTML +"TRA_DuaTransBerurutan.html";
     public static final String HTML_TRA_KordinatBayangan = BASE_LOCATION_HTML +"TRA_KordinatBayangan.html";
     public static final String HTML_TRA_NotasiDgPasanganBil = BASE_LOCATION_HTML +"TRA_NotasiDgPasanganBil.html";
 

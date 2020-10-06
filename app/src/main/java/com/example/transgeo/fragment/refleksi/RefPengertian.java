@@ -1,5 +1,6 @@
 package com.example.transgeo.fragment.refleksi;
 
+import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
@@ -42,6 +43,7 @@ public class RefPengertian extends Fragment {
 
     }
 
+    @SuppressLint("SetJavaScriptEnabled")
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -49,7 +51,8 @@ public class RefPengertian extends Fragment {
         ivPengertian = view.findViewById(R.id.iv_ref_pengertian);
 
         WebView webView = view.findViewById(R.id.wv_ref_pengertian);
-        webView.loadUrl("file:///android_asset/REF_Pengertian.html");
+        webView.loadUrl(GlobalVar.HTML_REF_PENGERTIAN);
+        webView.getSettings().setJavaScriptEnabled(true);
 
         Glide.with(getContext())
                 .load("https://www.yuksinau.id/wp-content/uploads/2019/07/makalah-transformasi-geometri.jpg")

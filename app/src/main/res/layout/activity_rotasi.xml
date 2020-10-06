@@ -30,7 +30,7 @@ tools:context=".activity.RotasiActivity">
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tb_rotasi"
-        app:tabMode="scrollable"
+        app:tabMode="auto"
         app:tabPaddingEnd="20dp"
         app:tabPaddingStart="20dp" />
 

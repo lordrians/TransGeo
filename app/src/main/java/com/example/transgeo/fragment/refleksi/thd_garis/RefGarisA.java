@@ -1,5 +1,6 @@
 package com.example.transgeo.fragment.refleksi.thd_garis;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -31,12 +32,14 @@ public class RefGarisA extends Fragment {
         return inflater.inflate(R.layout.fragment_ref_garis_a, container, false);
     }
 
+    @SuppressLint("SetJavaScriptEnabled")
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
         ImageView ivGarisA = view.findViewById(R.id.iv_ref_garisa);
         WebView wvGarisA = view.findViewById(R.id.wv_ref_garisa);
+        wvGarisA.getSettings().setJavaScriptEnabled(true);
 
         wvGarisA.loadUrl(GlobalVar.HTML_REF_BAYANGAN_SUATU_TITIK);
         Glide.with(getContext())
