@@ -38,7 +38,7 @@ public class RefGarisA extends Fragment {
         ImageView ivGarisA = view.findViewById(R.id.iv_ref_garisa);
         WebView wvGarisA = view.findViewById(R.id.wv_ref_garisa);
 
-        wvGarisA.loadUrl(GlobalVar.HTML_REF_BAYANGAN_SUATU_GARIS);
+        wvGarisA.loadUrl(GlobalVar.HTML_REF_BAYANGAN_SUATU_TITIK);
         Glide.with(getContext())
                 .load("https://www.yuksinau.id/wp-content/uploads/2019/07/makalah-transformasi-geometri.jpg")
                 .apply(new RequestOptions().centerCrop())
