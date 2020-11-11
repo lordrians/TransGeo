@@ -4,8 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragment.refleksi.thd_garis.RefGarisA">
-
+    tools:context=".fragment.dilatasi.faktor_skala.DilPusatS">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -15,11 +14,11 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/iv_ref_garisa"
+                android:id="@+id/iv_dil_pusats"
                 android:layout_width="@dimen/materi_image_width"
                 android:layout_height="@dimen/materi_image_height"
-                android:layout_marginStart="24dp"
                 android:layout_marginTop="24dp"
+                android:layout_marginStart="24dp"
                 android:layout_marginEnd="24dp"
                 android:src="@color/unselected_tab"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -33,11 +32,11 @@
                 android:background="@drawable/bg_materi_green"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/iv_ref_garisa"
+                app:layout_constraintTop_toBottomOf="@id/iv_dil_pusats"
                 tools:ignore="WebViewLayout">
 
                 <WebView
-                    android:id="@+id/wv_ref_garisa"
+                    android:id="@+id/wv_dil_pusats"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_materi_green"
@@ -51,5 +50,5 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
-
 </FrameLayout>
+

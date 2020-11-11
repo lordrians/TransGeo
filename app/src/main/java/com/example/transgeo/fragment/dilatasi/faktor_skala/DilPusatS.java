@@ -1,6 +1,5 @@
-package com.example.transgeo.fragment.refleksi.thd_garis;
+package com.example.transgeo.fragment.dilatasi.faktor_skala;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -18,32 +17,30 @@ import com.bumptech.glide.request.RequestOptions;
 import com.example.transgeo.R;
 import com.example.transgeo.object.GlobalVar;
 
-public class RefGarisC extends Fragment {
+public class DilPusatS extends Fragment {
 
-    public RefGarisC() {
+    public DilPusatS() {
+        // Required empty public constructor
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_ref_garis_c, container, false);
+        return inflater.inflate(R.layout.fragment_dil_pusat_s, container, false);
     }
 
-    @SuppressLint("SetJavaScriptEnabled")
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        ImageView imageView = view.findViewById(R.id.iv_dil_pusats);
+        WebView webView = view.findViewById(R.id.wv_dil_pusats);
+        webView.getSettings().setJavaScriptEnabled(true);
 
-        ImageView ivGarisC = view.findViewById(R.id.iv_ref_garisc);
-        WebView wvGarisC = view.findViewById(R.id.wv_ref_garisc);
-        wvGarisC.getSettings().setJavaScriptEnabled(true);
-
-        wvGarisC.loadUrl(GlobalVar.HTML_REF_BAYANGAN_SUATU_BANGUN);
+        webView.loadUrl(GlobalVar.HTML_DIL_PusatS);
         Glide.with(getContext())
                 .load("https://www.yuksinau.id/wp-content/uploads/2019/07/makalah-transformasi-geometri.jpg")
                 .apply(new RequestOptions().centerCrop())
-                .into(ivGarisC);
-
+                .into(imageView);
     }
 }

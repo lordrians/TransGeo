@@ -41,5 +41,4 @@
             <solid android:color="@color/unselected_tab" />
         </shape>
     </item>
-
 </selector>

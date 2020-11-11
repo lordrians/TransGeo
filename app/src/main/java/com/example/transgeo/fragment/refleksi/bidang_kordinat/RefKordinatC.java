@@ -40,7 +40,7 @@ public class RefKordinatC extends Fragment {
         WebView webView = view.findViewById(R.id.wv_ref_kordinatc);
         webView.getSettings().setJavaScriptEnabled(true);
 
-        webView.loadUrl(GlobalVar.HTML_REF_THDGARISSEJAJARDGSUMBUKORDINAT);
+        webView.loadUrl(GlobalVar.HTML_REF_THD_GARIS_XY);
         Glide.with(getContext())
                 .load("https://www.yuksinau.id/wp-content/uploads/2019/07/makalah-transformasi-geometri.jpg")
                 .apply(new RequestOptions().centerCrop())

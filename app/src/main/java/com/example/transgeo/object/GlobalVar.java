@@ -73,6 +73,8 @@ public class GlobalVar {
 
     public static final String HTML_REF_BAYANGAN_SUATU_TITIK = BASE_LOCATION_HTML +"REF_BayanganSuatuTitik.html";
     public static final String HTML_REF_BAYANGAN_SUATU_GARIS = BASE_LOCATION_HTML +"REF_BayanganSuatuGaris.html";
+    public static final String HTML_REF_BAYANGAN_SUATU_BANGUN = BASE_LOCATION_HTML +"REF_BayanganSuatuBangun.html";
+    public static final String HTML_REF_THD_GARIS_XY = BASE_LOCATION_HTML +"REF_ThdGarisYX.html";
     public static final String HTML_REF_PENGERTIAN = BASE_LOCATION_HTML +"REF_Pengertian.html";
     public static final String HTML_REF_THDGARISSEJAJARDGSUMBUKORDINAT = BASE_LOCATION_HTML +"REF_ThdGarisSejajarDgSumbuKordinat.html";
     public static final String HTML_REF_THDSUMBUKORDINAT = BASE_LOCATION_HTML +"REF_ThdSumbuKordinat.html";
@@ -81,6 +83,8 @@ public class GlobalVar {
     public static final String HTML_DIL_PENGERTIAN = BASE_LOCATION_HTML +"DIL_Pengertian.html";
     public static final String HTML_DIL_SkalaNegatif = BASE_LOCATION_HTML +"DIL_SkalaNegatif.html";
     public static final String HTML_DIL_SkalaPositif = BASE_LOCATION_HTML +"DIL_SkalaPositif.html";
+    public static final String HTML_DIL_BidangKordinat = BASE_LOCATION_HTML +"DIL_BidangKordinat.html";
+    public static final String HTML_DIL_PusatS = BASE_LOCATION_HTML +"DIL_PusatS.html";
 
 
     public static final String HTML_ROT_Pengertian = BASE_LOCATION_HTML +"ROT_Pengertian.html";

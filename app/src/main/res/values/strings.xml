@@ -99,4 +99,6 @@
     <string name="dil_faktor_skala">Faktor Skala</string>
     <string name="dil_positif">Skala Positif</string>
     <string name="dil_negatif">Skala Negatif</string>
+    <string name="dil_bid_kor">Pada Bidang Koordinat</string>
+    <string name="dil_pusat_s">Dengan Pusat S (x, y)</string>
 </resources>

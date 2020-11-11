@@ -7,6 +7,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
+import com.example.transgeo.fragment.dilatasi.faktor_skala.DilBidangKordinat;
+import com.example.transgeo.fragment.dilatasi.faktor_skala.DilPusatS;
 import com.example.transgeo.fragment.dilatasi.faktor_skala.DilSkalaNegatif;
 import com.example.transgeo.fragment.dilatasi.faktor_skala.DilSkalaPositif;
 
@@ -31,12 +33,16 @@ public class VpDilatasiFaktorSkala extends FragmentStateAdapter {
                 return new DilSkalaPositif();
             case 1:
                 return new DilSkalaNegatif();
+            case 2:
+                return new DilBidangKordinat();
+            case 3:
+                return new DilPusatS();
         }
         return null;
     }
 
     @Override
     public int getItemCount() {
-        return 2;
+        return 4;
     }
 }

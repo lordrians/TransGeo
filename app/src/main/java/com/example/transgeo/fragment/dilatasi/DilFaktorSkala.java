@@ -45,6 +45,10 @@ public class DilFaktorSkala extends Fragment {
                 tab.setText(R.string.dil_positif);
             } else if (position == 1){
                 tab.setText(R.string.dil_negatif);
+            } else if (position == 2){
+                tab.setText(R.string.dil_bid_kor);
+            } else if (position == 3){
+                tab.setText(R.string.dil_pusat_s);
             } else {
                 tab.setText("");
             }

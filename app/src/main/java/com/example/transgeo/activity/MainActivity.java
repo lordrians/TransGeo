@@ -18,6 +18,8 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -26,6 +28,7 @@ import com.example.transgeo.R;
 import com.example.transgeo.adapter.TokohAdapterHorizontal;
 import com.example.transgeo.dtobject.dtTokoh;
 import com.example.transgeo.object.GlobalVar;
+import com.example.transgeo.object.MyBounceInterpolator;
 import com.example.transgeo.object.Tokoh;
 import com.google.android.material.navigation.NavigationView;
 import com.leochuan.CarouselLayoutManager;
@@ -39,6 +42,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Toolbar toolbar;
     private View popupView;
     private Dialog popDialogVerif;
+    private Animation btnAnimation;
+    private MyBounceInterpolator interpolator;
 
     private RecyclerView rvTokoh;
     private ArrayList<Tokoh> listTokoh = new ArrayList<>();
@@ -74,6 +79,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         showRvTokoh();
         setUpNavigationView();
+
+        btnAnimation = AnimationUtils.loadAnimation(this, R.anim.bounce_btn);
+        interpolator = new MyBounceInterpolator(0.1, 20);
+        btnAnimation.setInterpolator(interpolator);
 
         btnLihatSemua.setOnClickListener(this);
         btnRefleksi.setOnClickListener(this);
@@ -124,30 +133,38 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
 
             case R.id.btn_lihat_semua_tokoh:
+//                btnLihatSemua.startAnimation(btnAnimation);
                 startActivity(new Intent(getApplicationContext(),ListTokohActivity.class));
                 break;
             case R.id.btn_refleksi:
+//                btnRefleksi.startAnimation(btnAnimation);
                 startActivity(new Intent(getApplicationContext(),RefleksiActivity.class));
                 break;
             case R.id.btn_rotasi:
+//                btnRotasi.startAnimation(btnAnimation);
                 startActivity(new Intent(getApplicationContext(),RotasiActivity.class));
                 break;
             case R.id.btn_dilatasi:
+//                btnDilatasi.startAnimation(btnAnimation);
                 startActivity(new Intent(getApplicationContext(),DilatasiActivity.class));
                 break;
             case R.id.btn_translasi:
+//                btnTranslasi.startAnimation(btnAnimation);
                 startActivity(new Intent(getApplicationContext(),TranslasiActivity.class));
                 break;
 
             case R.id.btn_soal_easy:
+//                btnSoalEasy.startAnimation(btnAnimation);
                 sendPaketSoal(GlobalVar.PILIHAN_SOAL, GlobalVar.SOAL_EASY);
                 break;
 
             case R.id.btn_soal_medium:
+//                btnMedium.startAnimation(btnAnimation);
                 sendPaketSoal(GlobalVar.PILIHAN_SOAL, GlobalVar.SOAL_EASY);
                 break;
 
             case R.id.btn_soal_hard:
+//                btnHard.startAnimation(btnAnimation);
                 sendPaketSoal(GlobalVar.PILIHAN_SOAL, GlobalVar.SOAL_EASY);
                 break;
         }
