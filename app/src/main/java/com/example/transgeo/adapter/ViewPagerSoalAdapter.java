@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -55,9 +56,13 @@ public class ViewPagerSoalAdapter extends RecyclerView.Adapter<ViewPagerSoalAdap
         return new MyViewHolder(view);
     }
 
+    @SuppressLint("SetJavaScriptEnabled")
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.tvSoal.setText(listSoal.get(position).getSoal());
+
+        holder.wvSoal.getSettings().setJavaScriptEnabled(true);
+        holder.wvSoal.loadUrl(listSoal.get(position).getSoal());
+//        holder.tvSoal.setText(listSoal.get(position).getSoal());
         holder.rbPgA.setText(listSoal.get(position).getPgA());
         holder.rbPgB.setText(listSoal.get(position).getPgB());
         holder.rbPgC.setText(listSoal.get(position).getPgC());
@@ -72,6 +77,7 @@ public class ViewPagerSoalAdapter extends RecyclerView.Adapter<ViewPagerSoalAdap
         } else {
             holder.ivSoal.setVisibility(View.GONE);
         }
+
         holder.rgPg.setOnCheckedChangeListener((radioGroup, i) -> {
             RadioButton rbCheck = radioGroup.findViewById(i);
             String JwbUser = rbCheck.getText().toString();
@@ -121,11 +127,13 @@ public class ViewPagerSoalAdapter extends RecyclerView.Adapter<ViewPagerSoalAdap
         ImageView ivSoal;
         RadioButton rbPgA,rbPgB,rbPgC,rbPgD;
         RadioGroup rgPg;
+        WebView wvSoal;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            tvSoal = itemView.findViewById(R.id.tv_soal);
+//            tvSoal = itemView.findViewById(R.id.tv_soal);
+            wvSoal = itemView.findViewById(R.id.wv_soal);
             rbPgA = itemView.findViewById(R.id.rb_pg_a);
             rbPgB = itemView.findViewById(R.id.rb_pg_b);
             rbPgC = itemView.findViewById(R.id.rb_pg_c);

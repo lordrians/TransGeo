@@ -18,18 +18,25 @@
             android:layout_marginTop="@dimen/margin_top_soal"
             android:src="@color/colorPrimary"/>
 
-
-        <TextView
-            android:id="@+id/tv_soal"
+        <WebView
+            android:id="@+id/wv_soal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins"
-            android:textSize="@dimen/text_soal"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:textColor="@color/black"
-            android:text="@string/deskTokoh"
-            android:layout_marginTop="@dimen/margin_top_soal"/>
+            android:background="@drawable/bg_materi_green"/>
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_soal"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:fontFamily="@font/poppins"-->
+<!--            android:textSize="@dimen/text_soal"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginEnd="16dp"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:text="@string/deskTokoh"-->
+<!--            android:layout_marginTop="@dimen/margin_top_soal"/>-->
 
         <RadioGroup
             android:id="@+id/rg_pilihan_ganda"

@@ -31,6 +31,7 @@ import com.example.transgeo.dtobject.DtSoalHard;
 import com.example.transgeo.dtobject.DtSoalMedium;
 import com.example.transgeo.dtobject.DtSoalUjian;
 import com.example.transgeo.object.GlobalVar;
+import com.example.transgeo.object.SoalUjian;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
@@ -326,7 +327,7 @@ public class SoalActivity extends AppCompatActivity implements View.OnClickListe
     private void pilPaketSoal() {
         if (pilihanSoal.equals(GlobalVar.SOAL_UJIAN)){
 
-            SoalAdapter = new ViewPagerSoalAdapter(this, DtSoalUjian.randSoal(), GlobalVar.SOAL_UJIAN);
+            SoalAdapter = new ViewPagerSoalAdapter(this, SoalUjian.randSoal(), GlobalVar.SOAL_UJIAN);
             jmlSoal = DtSoalUjian.randSoal().size();
             storeSharedPreference();
             vpSoal.setOffscreenPageLimit(jmlSoal);
