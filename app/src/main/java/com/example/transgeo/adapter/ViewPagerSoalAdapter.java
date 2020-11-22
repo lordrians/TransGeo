@@ -25,6 +25,7 @@ import com.bumptech.glide.request.RequestOptions;
 import com.example.transgeo.R;
 import com.example.transgeo.object.GlobalVar;
 import com.example.transgeo.object.Soal;
+import com.github.chrisbanes.photoview.PhotoView;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
@@ -124,7 +125,7 @@ public class ViewPagerSoalAdapter extends RecyclerView.Adapter<ViewPagerSoalAdap
     public class MyViewHolder extends RecyclerView.ViewHolder {
         TextView tvSoal;
         ViewPager vpSoal;
-        ImageView ivSoal;
+        PhotoView ivSoal;
         RadioButton rbPgA,rbPgB,rbPgC,rbPgD;
         RadioGroup rgPg;
         WebView wvSoal;

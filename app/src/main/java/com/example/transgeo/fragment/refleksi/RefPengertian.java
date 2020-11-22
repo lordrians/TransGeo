@@ -16,19 +16,21 @@ import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.squareup.picasso.Picasso;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.transgeo.R;
 import com.example.transgeo.activity.RefleksiActivity;
 import com.example.transgeo.object.GlobalVar;
+import com.github.chrisbanes.photoview.PhotoView;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class RefPengertian extends Fragment {
-    private ImageView ivPengertian;
+    private PhotoView ivPengertian;
 
     public RefPengertian() {
         // Required empty public constructor
@@ -48,7 +50,7 @@ public class RefPengertian extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        ivPengertian = view.findViewById(R.id.iv_ref_pengertian);
+        ivPengertian = (PhotoView) view.findViewById(R.id.iv_ref_pengertian);
 
         WebView webView = view.findViewById(R.id.wv_ref_pengertian);
         webView.loadUrl(GlobalVar.HTML_REF_PENGERTIAN);

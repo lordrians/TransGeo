@@ -9,14 +9,13 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <ImageView
+        <com.github.chrisbanes.photoview.PhotoView
             android:id="@+id/iv_soal"
             android:layout_width="match_parent"
             android:layout_height="@dimen/image_soal_height"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginTop="@dimen/margin_top_soal"
-            android:src="@color/colorPrimary"/>
+            android:layout_marginTop="@dimen/margin_top_soal"/>
 
         <WebView
             android:id="@+id/wv_soal"
