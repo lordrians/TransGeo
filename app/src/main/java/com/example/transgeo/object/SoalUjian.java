@@ -449,9 +449,64 @@ public class SoalUjian {
     };
 
     private static String[] photoSoal = {
-            "https://3.bp.blogspot.com/-EeHVZ87pmck/UF75WXjZ2MI/AAAAAAAAAtg/m5MLaBlRQ6w/s1600/pythagoras.jpg",
             "",
-            "https://3.bp.blogspot.com/-EeHVZ87pmck/UF75WXjZ2MI/AAAAAAAAAtg/m5MLaBlRQ6w/s1600/pythagoras.jpg",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "https://drive.google.com/uc?id=1Yup-Ig6pEBMy7x1Dkudf7rWYVcb-DaUb",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "",
             ""
     };
@@ -473,12 +528,12 @@ public class SoalUjian {
         return list;
     }
 
-    public static ArrayList<Soal> randSoal(){
+    public static ArrayList<Soal> randSoal(int jmlSoal){
         Random rand = new Random();
         ArrayList<Soal> soalAwal = getSoalUjian();
 
         ArrayList<Soal> randomSoal = new ArrayList<>();
-        for (int i = 0; i < 5; i++){
+        for (int i = 0; i < jmlSoal; i++){
             int randomIndex = rand.nextInt(soalAwal.size());
 
             randomSoal.add(soalAwal.get(randomIndex));

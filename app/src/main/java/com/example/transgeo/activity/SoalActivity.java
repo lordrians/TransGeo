@@ -45,9 +45,11 @@ public class SoalActivity extends AppCompatActivity implements View.OnClickListe
     private View popupView;
     private boolean pressedKumpulkan = false;
 
+    private int jmlSoalUjian = 25;
+
     private CountDownTimer timerUjian;
 
-    private int jmlSoal, hasil, jawabanUser, jawabanBenar =0, jawabanSalah = 0, waktuUjian = 30;
+    private int jmlSoal, hasil, jawabanUser, jawabanBenar =0, jawabanSalah = 0, waktuUjian = 1500;
     private SharedPreferences sharedPreferences;
     private Toolbar toolbar;
     private String pilihanSoal;
@@ -333,8 +335,8 @@ public class SoalActivity extends AppCompatActivity implements View.OnClickListe
     private void pilPaketSoal() {
         if (pilihanSoal.equals(GlobalVar.SOAL_UJIAN)){
 
-            SoalAdapter = new ViewPagerSoalAdapter(this, SoalUjian.randSoal(), GlobalVar.SOAL_UJIAN);
-            jmlSoal = SoalUjian.randSoal().size();
+            SoalAdapter = new ViewPagerSoalAdapter(this, SoalUjian.randSoal(jmlSoalUjian), GlobalVar.SOAL_UJIAN);
+            jmlSoal = SoalUjian.randSoal(jmlSoalUjian).size();
             storeSharedPreference();
             vpSoal.setOffscreenPageLimit(jmlSoal);
             vpSoal.setAdapter(SoalAdapter);

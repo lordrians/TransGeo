@@ -51,7 +51,7 @@ public class DtMateri {
 
     private static String[] photoTranslasi = {
             "https://elnicovengeance.files.wordpress.com/2013/01/011913_1348_refleksipen1.png",
-            "https://drive.google.com/uc?id=1i8KecB_qGxGIxlItPQQmIieUX3pNZwq9",
+            "https://drive.google.com/uc?id=1Yup-Ig6pEBMy7x1Dkudf7rWYVcb-DaUb",
             "https://drive.google.com/uc?id=1W-_9ULmWApuwZhyzQn_GP82TS4N3fC7u",
             "https://drive.google.com/uc?id=1hWK6rSDNQMXuQm_ttglHxkLMM_eGCf6I"
     };
