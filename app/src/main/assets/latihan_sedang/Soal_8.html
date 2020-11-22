@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="text-justify">
+            Tentukan bayangan kurva $y = -x^2 - 8x + 4$ yang dirotasikan $180˚$ berlawanan arah dengan perputaran jarum jam dengan pusat $O(0, 0)!$
+        </div>
+        <div class="text-justify">
+            Misalkan diambil sembarang titik pada garis $y = -x^2 - 8 + 4$ , yaitu $A(x, y).$
+            <br>
+            > Titik $A(x,y)$ $\xrightarrow{[ O , 180˚]}$ $A’(-x, -y),$ sehingga:
+            <ul style="list-style-type:none;">
+                <li>
+                    $x’ = -y$	atau	$x = –x’	...(1)$
+                    <br>
+                    $y’ = -y$	atau	$y = -y’	...(2)$
+                </li>
+            </ul>
+            > Subtitusikan persamaan (1) dan (2) ke garis $y = -x^2 - 8x + 4$, diperoleh:
+            <ul style="list-style-type:none;">
+                <li>
+                    $\begin{align}
+                    y &= -x^2 - 8x + 4 \\ 
+                    -y' &= -((-x')^2) - 8(-x') + 4 \\
+                    -y' &= (-x')^2 + 8(x') + 4 \\
+                    y' &= (x')^2 - 8x' - 4 \\
+                    \end{align}$
+                </li>
+            </ul>
+            <br>
+            Jadi, bayangan garis $y = -x^2 - 8x + 4$ oleh rotasi $180˚$ dengan pusat $O(0, 0)$ adalah $y = x^2 - 8x - 4.$
+            
+        </div>
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+        });
+        </script>
+        <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    </body>
+</html>
