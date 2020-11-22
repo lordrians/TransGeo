@@ -17,7 +17,7 @@
     <dimen name="image_soal_height">200dp</dimen>
     <dimen name="image_soal_mStart">24dp</dimen>
     <dimen name="image_soal_mEnd">24dp</dimen>
-    <dimen name="margin_top_soal">8dp</dimen>
+    <dimen name="margin_top_soal">16dp</dimen>
     <dimen name="image_ss_start_width">300</dimen>
     <dimen name="image_ss_start_height">250dp</dimen>
     <dimen name="alert_width">100dp</dimen>

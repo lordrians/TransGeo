@@ -13,8 +13,8 @@
             android:id="@+id/iv_soal"
             android:layout_width="match_parent"
             android:layout_height="@dimen/image_soal_height"
-            android:layout_marginStart="@dimen/image_soal_mStart"
-            android:layout_marginEnd="@dimen/image_soal_mEnd"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:layout_marginTop="@dimen/margin_top_soal"
             android:src="@color/colorPrimary"/>
 
@@ -22,6 +22,7 @@
             android:id="@+id/wv_soal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_soal"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:background="@drawable/bg_materi_green"/>

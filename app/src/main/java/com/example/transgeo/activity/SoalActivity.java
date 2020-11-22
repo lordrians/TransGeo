@@ -129,13 +129,19 @@ public class SoalActivity extends AppCompatActivity implements View.OnClickListe
 
         toolbar.setNavigationOnClickListener(view -> {
 
-            keluar();
+            popUpExit();
 
         });
 
     }
 
-    private void keluar() {
+    @Override
+    public void onBackPressed() {
+        popUpExit();
+
+    }
+
+    private void popUpExit(){
         Button btnTidak, btnKeluar;
         DisplayMetrics metrics = getResources().getDisplayMetrics();
 
@@ -215,7 +221,7 @@ public class SoalActivity extends AppCompatActivity implements View.OnClickListe
                     ShowPopUp();
 
                 } else {
-                    keluar();
+                    popUpExit();
                 }
 
                 break;
@@ -328,7 +334,7 @@ public class SoalActivity extends AppCompatActivity implements View.OnClickListe
         if (pilihanSoal.equals(GlobalVar.SOAL_UJIAN)){
 
             SoalAdapter = new ViewPagerSoalAdapter(this, SoalUjian.randSoal(), GlobalVar.SOAL_UJIAN);
-            jmlSoal = DtSoalUjian.randSoal().size();
+            jmlSoal = SoalUjian.randSoal().size();
             storeSharedPreference();
             vpSoal.setOffscreenPageLimit(jmlSoal);
             vpSoal.setAdapter(SoalAdapter);
