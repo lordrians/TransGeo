@@ -102,4 +102,49 @@
     <string name="dil_bid_kor">Pada Bidang Koordinat</string>
     <string name="dil_pusat_s">Dengan Pusat S (x, y)</string>
     <string name="lihat_jawaban">Lihat Jawaban</string>
+    <string name="standar_isi">Standar Isi</string>
+
+    <string name="content_standar_isi">
+        • Kompetensi Dasar 3
+        \nMenjelaskan transformasi geometri (refleksi, translasi, rotasi, dan dilatasi) yang dihubungkan dengan masalah kontekstual
+        \n• Kompetensi Dasar 4
+        \nMenyelesaikan masalah kontekstual yang berkaitan dengan transformasi geometri (refleksi, translasi, rotasi, dan dilatasi)
+        \n• Tujuan Pembelajaran
+        \nMelalui media mobile learning ini, siswa mampu memahami konsep transformasi geometri dan mampu menyelesaikan masalah kontekstual tentang transformasi geometri  (refleksi, translasi, rotasi, dan dilatasi)
+    </string>
+    <string name="content_daftar_isi">
+        MATERI
+        \n• Adinawan, M. Cholik. MATEMATIKA SMP Jilid 3A Kelas IX Semester 1. Jakarta: Erlangga. 2018.
+        \n• https://www.academia.edu/35713905/Transformasi_Translasi_Refleksi_Rotasi_dan_Dilatasi
+        \n• https://youtu.be/097rIkJ0-Pg
+        \n• https://youtu.be/_gYu4JqK20g
+        \n• https://youtu.be/tM6RMmQ80QM
+        \n• https://youtu.be/GKQ0oooWL7g
+
+        \n\nSoal
+        \n• Adinawan, M. Cholik. MATEMATIKA SMP Jilid 3A Kelas IX Semester 1. Jakarta: Erlangga.2018.
+        \n• Supriadi, Atang. Matematika untuk SMP/MTs Kelas IX. Bandung: Grafindo Media Pratama. 2018.
+
+        \n\nTokoh
+        \n• Subchan, dkk.. MATEMATIKA Untuk SMP/MTs Kelas IX. Jakarta: Kmentrian Pendidikan dan Kebudayaan. 2018.
+        \n• https://www.kompasiana.com/aanswatie/564fd002b49373ce055e458f/georg-friedrich-bernhard-riemann?page=1
+        \n• https://biografi.kamikamu.co.id/euclid-guru-matematika-sepanjang-masa/
+
+    </string>
+    <string name="content_tentangapps">
+        Aplikasi ini merupakan aplikasi pembelajaran berbasis mobile learning yang membahas bidang geometri dalam matematika yang cocok untuk kalangan pelajar masa kini. Aplikasi ini membahas materi mengenai transformasi geometri yang meliputi refleksi, translasi, rotasi, dan dilatasi yang disajikan secara ringkas dan menarik. Di dalam aplikasi pembelajaran ini terdapat 84 soal yaoitu 60 soal ujian dan 24 soal latihan beserta pembahasannya.
+    </string>
+    <string name="content_profile">
+        ADHAR RIZKI MUSTAFA
+        \nDepok, 18 April 1998
+        \nadhar.feras18@gmail.com
+        \n
+        \nPendidikan Matematika
+        \nFakultas Ilmu Tarbiyah dan Keguruan
+        \nUniversitas Islam Negeri Syarif Hidayatullah Jakarta
+    </string>
+
+    <string name="daftar_pustaka">Daftar Pustaka</string>
+    <string name="tentang_aplikasi">Tentang Aplikasi</string>
+    <string name="tentang_pengembang">Tentang Pengembang</string>
 </resources>

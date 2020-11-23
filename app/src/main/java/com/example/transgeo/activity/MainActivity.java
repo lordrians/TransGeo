@@ -114,6 +114,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     sendPaketSoal(GlobalVar.PILIHAN_SOAL, GlobalVar.SOAL_UJIAN);
                     drawerLayout.closeDrawer(GravityCompat.START);
                     return false;
+                case R.id.nav_draw_informasi:
+                    startActivity(new Intent(getApplicationContext(), InformasiActivity.class));
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                    return false;
 
             }
             return false;
