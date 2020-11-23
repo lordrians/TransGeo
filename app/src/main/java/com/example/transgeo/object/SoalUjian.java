@@ -464,7 +464,7 @@ public class SoalUjian {
             "",
             "",
             "",
-            "https://drive.google.com/uc?id=1Yup-Ig6pEBMy7x1Dkudf7rWYVcb-DaUb",
+            "https://drive.google.com/uc?id=1ctHsUfbPN1T7uxI6wbtuWR7X2oz7my72",
             "",
             "",
             "",
