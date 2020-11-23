@@ -43,8 +43,8 @@ public class RefKordinatB extends Fragment {
 
         webView.loadUrl(GlobalVar.HTML_REF_THDGARISSEJAJARDGSUMBUKORDINAT);
         Glide.with(getContext())
-                .load("https://www.yuksinau.id/wp-content/uploads/2019/07/makalah-transformasi-geometri.jpg")
-                .apply(new RequestOptions().centerCrop())
+                .load("https://drive.google.com/uc?id=1jyWm3u4QZsI6NF50o0LQH7ve-uPut75-")
+                .apply(new RequestOptions().fitCenter())
                 .into(imageView);
 
     }

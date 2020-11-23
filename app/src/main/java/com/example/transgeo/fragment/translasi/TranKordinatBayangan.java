@@ -42,8 +42,8 @@ public class TranKordinatBayangan extends Fragment {
 
         webView.loadUrl(GlobalVar.HTML_TRA_KordinatBayangan);
         Glide.with(getContext())
-                .load("https://www.yuksinau.id/wp-content/uploads/2019/07/makalah-transformasi-geometri.jpg")
-                .apply(new RequestOptions().centerCrop())
+                .load("https://drive.google.com/uc?id=1rHctBL3XSMjcO7f4amSX-NA7_eb8x7lP")
+                .apply(new RequestOptions().fitCenter())
                 .into(imageView);
 
     }

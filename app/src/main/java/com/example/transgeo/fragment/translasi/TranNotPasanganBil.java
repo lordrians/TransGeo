@@ -42,8 +42,8 @@ public class TranNotPasanganBil extends Fragment {
 
         webView.loadUrl(GlobalVar.HTML_TRA_NotasiDgPasanganBil);
         Glide.with(getContext())
-                .load("https://www.yuksinau.id/wp-content/uploads/2019/07/makalah-transformasi-geometri.jpg")
-                .apply(new RequestOptions().centerCrop())
+                .load("https://drive.google.com/uc?id=1ovsnF5Oa2PFRR0KqPyRFsVNMxvt7KagQ")
+                .apply(new RequestOptions().fitCenter())
                 .into(imageView);
 
     }

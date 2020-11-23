@@ -40,8 +40,8 @@ public class DilPengertian extends Fragment {
 
         webView.loadUrl(GlobalVar.HTML_DIL_PENGERTIAN);
         Glide.with(getContext())
-                .load("https://www.yuksinau.id/wp-content/uploads/2019/07/makalah-transformasi-geometri.jpg")
-                .apply(new RequestOptions().centerCrop())
+                .load("https://drive.google.com/uc?id=1Sw6BX-QDXLKVT7EoG_po-HVfgkzDIcJC")
+                .apply(new RequestOptions().fitCenter())
                 .into(imageView);
     }
 }

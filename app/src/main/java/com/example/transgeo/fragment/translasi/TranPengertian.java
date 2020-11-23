@@ -42,8 +42,8 @@ public class TranPengertian extends Fragment {
 
         webView.loadUrl(GlobalVar.HTML_TRA_Pengertian);
         Glide.with(getContext())
-                .load("https://www.yuksinau.id/wp-content/uploads/2019/07/makalah-transformasi-geometri.jpg")
-                .apply(new RequestOptions().centerCrop())
+                .load("https://drive.google.com/uc?id=10lPPcHZdeP_AV6DJW_fkdO_OVLv_-tlm")
+                .apply(new RequestOptions().fitCenter())
                 .into(imageView);
     }
 }

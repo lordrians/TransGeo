@@ -42,8 +42,8 @@ public class DilSkalaPositif extends Fragment {
 
         webView.loadUrl(GlobalVar.HTML_DIL_SkalaPositif);
         Glide.with(getContext())
-                .load("https://www.yuksinau.id/wp-content/uploads/2019/07/makalah-transformasi-geometri.jpg")
-                .apply(new RequestOptions().centerCrop())
+                .load("https://drive.google.com/uc?id=12SGaG3iFtWBeaUrwFDGgGdL5fpZrEEUu")
+                .apply(new RequestOptions().fitCenter())
                 .into(imageView);
     }
 }

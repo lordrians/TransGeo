@@ -57,8 +57,8 @@ public class RefPengertian extends Fragment {
         webView.getSettings().setJavaScriptEnabled(true);
 
         Glide.with(getContext())
-                .load("https://www.yuksinau.id/wp-content/uploads/2019/07/makalah-transformasi-geometri.jpg")
-                .apply(new RequestOptions().centerCrop())
+                .load("https://drive.google.com/uc?id=18so2SQXNae2BEL9nW19QCyNjwWRIdQPr")
+                .apply(new RequestOptions().fitCenter())
                 .into(ivPengertian);
 
 

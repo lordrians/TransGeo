@@ -43,8 +43,8 @@ public class RefGarisA extends Fragment {
 
         wvGarisA.loadUrl(GlobalVar.HTML_REF_BAYANGAN_SUATU_TITIK);
         Glide.with(getContext())
-                .load("https://www.yuksinau.id/wp-content/uploads/2019/07/makalah-transformasi-geometri.jpg")
-                .apply(new RequestOptions().centerCrop())
+                .load("https://drive.google.com/uc?id=1SUl_IviT1M6KGbR6n95l5FqbIe1m4ku0")
+                .apply(new RequestOptions().fitCenter())
                 .into(ivGarisA);
 
     }

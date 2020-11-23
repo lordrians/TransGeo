@@ -41,8 +41,8 @@ public class RefGarisC extends Fragment {
 
         wvGarisC.loadUrl(GlobalVar.HTML_REF_BAYANGAN_SUATU_BANGUN);
         Glide.with(getContext())
-                .load("https://www.yuksinau.id/wp-content/uploads/2019/07/makalah-transformasi-geometri.jpg")
-                .apply(new RequestOptions().centerCrop())
+                .load("https://drive.google.com/uc?id=1uc8UDIiIU5Gx2bycgmkpfSOYuahSWUrf")
+                .apply(new RequestOptions().fitCenter())
                 .into(ivGarisC);
 
     }

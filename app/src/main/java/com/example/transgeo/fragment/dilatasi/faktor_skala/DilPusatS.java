@@ -39,8 +39,8 @@ public class DilPusatS extends Fragment {
 
         webView.loadUrl(GlobalVar.HTML_DIL_PusatS);
         Glide.with(getContext())
-                .load("https://www.yuksinau.id/wp-content/uploads/2019/07/makalah-transformasi-geometri.jpg")
-                .apply(new RequestOptions().centerCrop())
+                .load("https://drive.google.com/uc?id=1Q1wo2ydHggHwrQypzrytcGJ0OJR1cJkn")
+                .apply(new RequestOptions().fitCenter())
                 .into(imageView);
     }
 }

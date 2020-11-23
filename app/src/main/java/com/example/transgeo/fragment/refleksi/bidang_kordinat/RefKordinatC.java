@@ -42,8 +42,8 @@ public class RefKordinatC extends Fragment {
 
         webView.loadUrl(GlobalVar.HTML_REF_THD_GARIS_XY);
         Glide.with(getContext())
-                .load("https://www.yuksinau.id/wp-content/uploads/2019/07/makalah-transformasi-geometri.jpg")
-                .apply(new RequestOptions().centerCrop())
+                .load("https://drive.google.com/uc?id=1A1emB0GFjT2HFF_bvEDwLSW3CYgnoIao")
+                .apply(new RequestOptions().fitCenter())
                 .into(imageView);
 
     }

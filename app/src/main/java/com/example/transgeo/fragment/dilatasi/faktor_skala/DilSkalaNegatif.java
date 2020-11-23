@@ -40,8 +40,8 @@ public class DilSkalaNegatif extends Fragment {
 
         webView.loadUrl(GlobalVar.HTML_DIL_SkalaNegatif);
         Glide.with(getContext())
-                .load("https://www.yuksinau.id/wp-content/uploads/2019/07/makalah-transformasi-geometri.jpg")
-                .apply(new RequestOptions().centerCrop())
+                .load("https://drive.google.com/uc?id=1IyREM7HwphZ6rEYzLOHn1qWieI3k-JH8")
+                .apply(new RequestOptions().fitCenter())
                 .into(imageView);
     }
 }

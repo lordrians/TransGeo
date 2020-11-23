@@ -44,8 +44,8 @@ public class RefKordinatA extends Fragment {
 
         wvKordinatA.loadUrl(GlobalVar.HTML_REF_THDSUMBUKORDINAT);
         Glide.with(getContext())
-                .load("https://www.yuksinau.id/wp-content/uploads/2019/07/makalah-transformasi-geometri.jpg")
-                .apply(new RequestOptions().centerCrop())
+                .load("https://drive.google.com/uc?id=1e96yGezC7vcq3YzBfJv37Eb6GSxfJamL")
+                .apply(new RequestOptions().fitCenter())
                 .into(ivKordinatA);
 
     }

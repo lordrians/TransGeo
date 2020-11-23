@@ -42,8 +42,8 @@ public class Rotasi180 extends Fragment {
 
         webView.loadUrl(GlobalVar.HTML_ROT_180);
         Glide.with(getContext())
-                .load("https://www.yuksinau.id/wp-content/uploads/2019/07/makalah-transformasi-geometri.jpg")
-                .apply(new RequestOptions().centerCrop())
+                .load("https://drive.google.com/uc?id=1w_Wo7GaNIPD_TzcHlE4UmcO2rpFW3FhV")
+                .apply(new RequestOptions().fitCenter())
                 .into(imageView);
     }
 }

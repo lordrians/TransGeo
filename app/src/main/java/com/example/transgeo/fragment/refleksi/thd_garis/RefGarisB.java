@@ -39,8 +39,8 @@ public class RefGarisB extends Fragment {
 
         wvRefGarisB.loadUrl(GlobalVar.HTML_REF_BAYANGAN_SUATU_GARIS);
         Glide.with(getContext())
-                .load("https://www.yuksinau.id/wp-content/uploads/2019/07/makalah-transformasi-geometri.jpg")
-                .apply(new RequestOptions().centerCrop())
+                .load("https://drive.google.com/uc?id=17K06kZxRwiU1DdJVAGZafgx4DCcWLk6e")
+                .apply(new RequestOptions().fitCenter())
                 .into(ivRefGarisB);
 
     }

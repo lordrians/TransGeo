@@ -43,8 +43,8 @@ public class TranDuaBerurutan extends Fragment {
 
         webView.loadUrl(GlobalVar.HTML_TRA_DuatTransBerurutan);
         Glide.with(getContext())
-                .load("https://www.yuksinau.id/wp-content/uploads/2019/07/makalah-transformasi-geometri.jpg")
-                .apply(new RequestOptions().centerCrop())
+                .load("https://drive.google.com/uc?id=1qS-HV3tO3vzwyRRawfnT6SBEUFSikVw-")
+                .apply(new RequestOptions().fitCenter())
                 .into(imageView);
     }
 }

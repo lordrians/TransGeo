@@ -41,8 +41,8 @@ public class Rotasi90 extends Fragment {
 
         webView.loadUrl(GlobalVar.HTML_ROT_90);
         Glide.with(getContext())
-                .load("https://www.yuksinau.id/wp-content/uploads/2019/07/makalah-transformasi-geometri.jpg")
-                .apply(new RequestOptions().centerCrop())
+                .load("https://drive.google.com/uc?id=1F3leMB0jBodsrRZ9o6sw0_09RW5n0ygr")
+                .apply(new RequestOptions().fitCenter())
                 .into(imageView);
 
     }
