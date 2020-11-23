@@ -343,26 +343,29 @@ public class SoalActivity extends AppCompatActivity implements View.OnClickListe
 
         } else if (pilihanSoal.equals(GlobalVar.SOAL_EASY)){
 
-            SoalAdapter = new ViewPagerSoalAdapter(this, DtSoalEasy.randSoal(),GlobalVar.SOAL_EASY);
-            jmlSoal = DtSoalEasy.randSoal().size();
+            SoalAdapter = new ViewPagerSoalAdapter(this, SoalUjian.getLatihan(0,getApplicationContext()),GlobalVar.SOAL_EASY);
+            jmlSoal = SoalUjian.getLatihan(0,getApplicationContext()).size();
             storeSharedPreference();
             vpSoal.setOffscreenPageLimit(jmlSoal);
+            vpSoal.setUserInputEnabled(false);
             vpSoal.setAdapter(SoalAdapter);
 
         } else if (pilihanSoal.equals(GlobalVar.SOAL_MEDIUM)){
 
-            SoalAdapter = new ViewPagerSoalAdapter(this, DtSoalMedium.randSoal(), GlobalVar.SOAL_MEDIUM);
-            jmlSoal = DtSoalMedium.randSoal().size();
+            SoalAdapter = new ViewPagerSoalAdapter(this, SoalUjian.getLatihan(1,getApplicationContext()), GlobalVar.SOAL_MEDIUM);
+            jmlSoal = SoalUjian.getLatihan(1,getApplicationContext()).size();
             storeSharedPreference();
             vpSoal.setOffscreenPageLimit(jmlSoal);
+            vpSoal.setUserInputEnabled(false);
             vpSoal.setAdapter(SoalAdapter);
 
         } else if (pilihanSoal.equals(GlobalVar.SOAL_HARD)){
 
-            SoalAdapter = new ViewPagerSoalAdapter(this, DtSoalHard.randSoal(), GlobalVar.SOAL_HARD);
-            jmlSoal = DtSoalHard.randSoal().size();
+            SoalAdapter = new ViewPagerSoalAdapter(this, SoalUjian.getLatihan(2,getApplicationContext()), GlobalVar.SOAL_HARD);
+            jmlSoal = SoalUjian.getLatihan(2,getApplicationContext()).size();
             storeSharedPreference();
             vpSoal.setOffscreenPageLimit(jmlSoal);
+            vpSoal.setUserInputEnabled(false);
             vpSoal.setAdapter(SoalAdapter);
 
         }

@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -19,6 +20,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
@@ -79,15 +81,15 @@ public class ViewPagerSoalAdapter extends RecyclerView.Adapter<ViewPagerSoalAdap
             holder.ivSoal.setVisibility(View.GONE);
         }
 
-        holder.rgPg.setOnCheckedChangeListener((radioGroup, i) -> {
-            RadioButton rbCheck = radioGroup.findViewById(i);
-            String JwbUser = rbCheck.getText().toString();
+        if (PaketSoal.equals(GlobalVar.SOAL_UJIAN)){
+            holder.rgPg.setOnCheckedChangeListener((radioGroup, i) -> {
+                RadioButton rbCheck = radioGroup.findViewById(i);
+                String JwbUser = rbCheck.getText().toString();
 
-            int select = tabLayout.getSelectedTabPosition();
-            TabLayout.Tab se = tabLayout.getTabAt(select);
-            se.view.setBackgroundResource(R.drawable.selector_bg_nosoal);
+                int select = tabLayout.getSelectedTabPosition();
+                TabLayout.Tab se = tabLayout.getTabAt(select);
+                se.view.setBackgroundResource(R.drawable.selector_bg_nosoal);
 
-            if (PaketSoal.equals(GlobalVar.SOAL_UJIAN)){
                 if (JwbUser.equals(listSoal.get(position).getCorrectAns())){
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putInt(GlobalVar.SOAL_NUM_ + position, 1);
@@ -97,22 +99,48 @@ public class ViewPagerSoalAdapter extends RecyclerView.Adapter<ViewPagerSoalAdap
                     editor.putInt(GlobalVar.SOAL_NUM_ + position, 0);
                     editor.apply();
                 }
-            } else {
-                if (JwbUser.equals(listSoal.get(position).getCorrectAns())){
-                    SharedPreferences.Editor editor = sharedPreferences.edit();
-                    editor.putInt(GlobalVar.SOAL_NUM_ + position, 1);
-                    editor.apply();
-                    Toast.makeText(context, R.string.jawabanbenar, Toast.LENGTH_SHORT).show();
+
+//                if (PaketSoal.equals(GlobalVar.SOAL_UJIAN)){
+//                    if (JwbUser.equals(listSoal.get(position).getCorrectAns())){
+//                        SharedPreferences.Editor editor = sharedPreferences.edit();
+//                        editor.putInt(GlobalVar.SOAL_NUM_ + position, 1);
+//                        editor.apply();
+//                    } else {
+//                        SharedPreferences.Editor editor =  sharedPreferences.edit();
+//                        editor.putInt(GlobalVar.SOAL_NUM_ + position, 0);
+//                        editor.apply();
+//                    }
+//                } else {
+//                    if (JwbUser.equals(listSoal.get(position).getCorrectAns())){
+//                        SharedPreferences.Editor editor = sharedPreferences.edit();
+//                        editor.putInt(GlobalVar.SOAL_NUM_ + position, 1);
+//                        editor.apply();
+//                        Toast.makeText(context, R.string.jawabanbenar, Toast.LENGTH_SHORT).show();
+//                    } else {
+//                        SharedPreferences.Editor editor =  sharedPreferences.edit();
+//                        editor.putInt(GlobalVar.SOAL_NUM_ + position, 0);
+//                        editor.apply();
+//                        Toast.makeText(context, R.string.jawabansalah, Toast.LENGTH_SHORT).show();
+//                    }
+//                }
+            });
+        } else {
+            holder.rgPg.setVisibility(View.GONE);
+            holder.btnLihatJawaban.setVisibility(View.VISIBLE);
+            holder.btnLihatJawaban.setOnClickListener(v -> {
+                if (holder.wvJwb.getVisibility() != View.VISIBLE){
+                    holder.wvJwb.setVisibility(View.VISIBLE);
+                    holder.wvJwb.getSettings().setJavaScriptEnabled(true);
+                    holder.wvJwb.loadUrl(listSoal.get(position).getJawaban());
                 } else {
-                    SharedPreferences.Editor editor =  sharedPreferences.edit();
-                    editor.putInt(GlobalVar.SOAL_NUM_ + position, 0);
-                    editor.apply();
-                    Toast.makeText(context, R.string.jawabansalah, Toast.LENGTH_SHORT).show();
+                    holder.wvJwb.setVisibility(View.GONE);
                 }
-            }
+
+            });
+
+        }
 
 
-        });
 
     }
 
@@ -124,11 +152,12 @@ public class ViewPagerSoalAdapter extends RecyclerView.Adapter<ViewPagerSoalAdap
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         TextView tvSoal;
-        ViewPager vpSoal;
+        ViewPager2 vpSoal;
         PhotoView ivSoal;
         RadioButton rbPgA,rbPgB,rbPgC,rbPgD;
         RadioGroup rgPg;
-        WebView wvSoal;
+        WebView wvSoal, wvJwb;
+        Button btnLihatJawaban;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -142,6 +171,8 @@ public class ViewPagerSoalAdapter extends RecyclerView.Adapter<ViewPagerSoalAdap
             rgPg = itemView.findViewById(R.id.rg_pilihan_ganda);
             vpSoal = itemView.findViewById(R.id.vp_soal);
             ivSoal = itemView.findViewById(R.id.iv_soal);
+            btnLihatJawaban = itemView.findViewById(R.id.item_btn_lihatjawaban);
+            wvJwb = itemView.findViewById(R.id.wv_jawaban);
 
 
         }

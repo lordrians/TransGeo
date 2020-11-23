@@ -2,7 +2,15 @@ package com.example.transgeo.object;
 
 
 public class Soal {
-    private String soal, pgA, pgB, pgC, pgD, correctAns, photoSoal ;
+    private String soal, pgA, pgB, pgC, pgD, correctAns, photoSoal , Jawaban;
+
+    public String getJawaban() {
+        return Jawaban;
+    }
+
+    public void setJawaban(String jawaban) {
+        Jawaban = jawaban;
+    }
 
     public String getPhotoSoal() {
         return photoSoal;

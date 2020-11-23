@@ -4,6 +4,7 @@
     android:background="@color/white"
     xmlns:android="http://schemas.android.com/apk/res/android" >
 
+
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -79,6 +80,24 @@
                 android:textColor="@android:color/black"/>
 
         </RadioGroup>
+
+        <Button
+            android:id="@+id/item_btn_lihatjawaban"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lihat_jawaban"
+            android:layout_marginTop="@dimen/margin_top_soal"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:background="@drawable/rounded_btn_start"/>
+
+        <WebView
+            android:id="@+id/wv_jawaban"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_soal"
+            android:visibility="gone"
+            android:background="@drawable/bg_materi_green"/>
 
     </LinearLayout>
 

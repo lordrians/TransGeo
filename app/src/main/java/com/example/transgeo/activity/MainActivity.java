@@ -23,12 +23,14 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.example.transgeo.R;
 import com.example.transgeo.adapter.TokohAdapterHorizontal;
 import com.example.transgeo.dtobject.dtTokoh;
 import com.example.transgeo.object.GlobalVar;
 import com.example.transgeo.object.MyBounceInterpolator;
+import com.example.transgeo.object.Soal;
 import com.example.transgeo.object.Tokoh;
 import com.google.android.material.navigation.NavigationView;
 import com.leochuan.CarouselLayoutManager;
@@ -95,6 +97,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         toolbar.setNavigationOnClickListener(view -> drawerLayout.openDrawer(GravityCompat.START));
 
+
+
     }
 
     private void setUpNavigationView() {
@@ -160,12 +164,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.btn_soal_medium:
 //                btnMedium.startAnimation(btnAnimation);
-                sendPaketSoal(GlobalVar.PILIHAN_SOAL, GlobalVar.SOAL_EASY);
+                sendPaketSoal(GlobalVar.PILIHAN_SOAL, GlobalVar.SOAL_MEDIUM);
                 break;
 
             case R.id.btn_soal_hard:
 //                btnHard.startAnimation(btnAnimation);
-                sendPaketSoal(GlobalVar.PILIHAN_SOAL, GlobalVar.SOAL_EASY);
+                sendPaketSoal(GlobalVar.PILIHAN_SOAL, GlobalVar.SOAL_HARD);
                 break;
         }
     }
