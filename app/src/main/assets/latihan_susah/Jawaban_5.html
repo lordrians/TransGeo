@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    </head>
+    <body> 
+        <div class="text-justify">
+            Misalkan diambil sembarang yang terletak pada kurva $y = x^2 + 2x – 8$, yaitu $B(x, y).$
+            <br>
+            &bull; Titik $B(x, y) \begin{pmatrix}-4\\3\end{pmatrix} B’(x-4,y+3),$ sehingga:
+            <ul style="list-style-type:none;">
+                <li>
+                    <br>
+                    $\begin{align}
+                    x’ = x - 4	\:	&atau \:	x = x’ + 4	...(1) \\
+                    y’ = y + 3	\:	&atau \:	y = y’ - 3	...(2) \\
+                    \end{align}$
+                </li>
+            </ul> 
+            &bull; Subtitusikan persamaan (1) dan (2) ke garis $y = x^2 + 2x – 8$, diperoleh:
+            <ul style="list-style-type:none;">
+                <li>
+                    $\begin{align}
+                    y &= x^2 + 2x – 8 \\
+                    y’ – 3 &= (x'+4)^2 + 2(x’ + 4) – 8 \\
+                    y’ – 3 &= (x')^2 + 2(x’)(4) + 4^2 + 2x’ + 8 – 8 \\
+                    y’ – 3 &= (x')^2 + 8x’ + 16 + 2x’ \\
+                    y’ – 3 &= (x')^2 + 10x’ + 16 \\
+                    y’ &= (x')^2 + 10x’ + 19 \\
+                    \end{align}$
+                </li>
+            </ul> 
+            Jadi, bayangan kurva $y = x^2 + 2x – 8$ pada translasi $\begin{pmatrix}-4\\3\end{pmatrix}$ adalah $y = x^2 + 10x + 19.$
+        </div>
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+        });
+        </script>
+        <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    </body>
+</html>

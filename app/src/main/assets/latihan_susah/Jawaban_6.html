@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    </head>
+    <body> 
+        <div class="text-justify">
+            Misalkan diambil sembarang titik pada kurva $y = x^2 - 2x + 4,$ yaitu $B(x, y).$ Dua translasi $\begin{pmatrix}2\\3\end{pmatrix}$ dan $\begin{pmatrix}-6\\-2\end{pmatrix}$ adalah:
+            <br>
+            $\begin{pmatrix}2\\3\end{pmatrix} + \begin{pmatrix}-6\\-2\end{pmatrix} = \begin{pmatrix}-4\\1\end{pmatrix}$
+            <br><br>
+            &bull; Titik $B(x, y) \begin{pmatrix}4\\-1\end{pmatrix} B’(x-4,y+1),$ sehingga:
+            <ul style="list-style-type:none;">
+                <li>
+                    <br>
+                    $\begin{align}
+                    x’ = x – 4	\:	&atau \:	x = x’ + 4	...(1) \\
+                    y’ = y + 1 	\:	&atau \:	y = y’ – 1	...(2) \\
+                    \end{align}$
+                </li>
+            </ul> 
+            &bull; Subtitusikan persamaan (1) dan (2) ke garis $y = x^2 - 2x + 4$, diperoleh:
+            <ul style="list-style-type:none;">
+                <li>
+                    $\begin{align}
+                    y &= x^2 - 2x +4 \\
+                    y’ – 1 &= (x'+4)^2 - 2(x’ + 4) + 4\\
+                    y’ – 1 &= (x')^2 + 8x’ + 16 – 2x’ – 8 + 4 \\
+                    y’ – 1 &= (x')^2 +  6x’ + 12 \\
+                    y’ &= (x')^2 + 6x’ + 13 \\
+                    \end{align}$
+                </li>
+            </ul> 
+            Jadi, bayangan kurva $y = x^2 - 2x +4$ pada translasi $\begin{pmatrix}2\\3\end{pmatrix}$ dilanjutkan dengan $\begin{pmatrix}-6\\-2\end{pmatrix}$ adalah $y = x^2 + 6x + 13.$
+        </div>
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+        });
+        </script>
+        <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    </body>
+</html>

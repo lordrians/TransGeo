@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="text-justify">
+            <ul style="list-style-type:none;">
+                <li>
+                    <b>></b> Rotasi $[O, 90˚]$ artinya rotasi dengan pusat $O(0, 0)$ dan sudut rotasi $90˚$ searah dengan perputaran jarum jam.
+                    <br><br>
+                </li>
+                <li>
+                    <b>></b> Misalkan diambil sembarang titik pada kurva $y = 3x^2 – 6$, yaitu titik $Q(x, y).$
+                    <br>
+                    $P(a, b) \xrightarrow{[ O , -90˚]} P’(b, -a)$
+                    <br>
+                    Titik $Q(x, y) \xrightarrow{[ O , -90˚]} Q’(y, -x)$
+                    <ul style="list-style-type:none;">
+                        <li>
+                            $x’ = y ⟺ y = x’$
+                            <br>
+                            $y’ = -x ⟺ x = -y’.$
+                            <br>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <b>></b> Substitusikan persamaan-persamaan di atas ke kurva $y = 3x^2 – 6$, diperoleh:
+                    <br>
+                    <ul style="list-style-type:none;">
+                        <li>
+                            $\begin{align}
+                            y &= 3x^2 – 6 \\
+                            x’ &= 3(-y')^2 – 6 \\
+                            x’ &= 3(y)^2 – 6 \\
+                            \end{align}$
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <br>
+            Jadi, bayangan kurva $y = 3x^2 – 6$ pada rotasi $[O, -90˚]$ adalah $x’ = 3(y)^2 – 6.$
+            
+        </div>
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+        });
+        </script>
+        <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    </body>
+</html>
