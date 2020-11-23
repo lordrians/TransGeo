@@ -4,8 +4,8 @@
     package="com.example.transgeo">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -14,17 +14,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.FinishUjianActivity">
-
-        </activity>
-        <activity android:name=".activity.SplashScreenStartSoal"
+        <activity android:name=".activity.InformasiActivity"></activity>
+        <activity android:name=".activity.FinishUjianActivity"></activity>
+        <activity
+            android:name=".activity.SplashScreenStartSoal"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity android:name=".activity.SoalActivity" />
         <activity android:name=".activity.DilatasiActivity" />
         <activity android:name=".activity.TranslasiActivity" />
         <activity android:name=".activity.RotasiActivity" />
-        <activity android:name=".activity.CalculatorActivity"
+        <activity
+            android:name=".activity.CalculatorActivity"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity android:name=".activity.DetailTokohActivity" />
@@ -37,9 +38,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.RefleksiActivity" />
-        <activity android:name=".activity.MainActivity"
+        <activity
+            android:name=".activity.MainActivity"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"/>
+            tools:ignore="LockedOrientationActivity" />
     </application>
 
 </manifest>

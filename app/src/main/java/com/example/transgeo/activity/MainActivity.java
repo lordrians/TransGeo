@@ -122,12 +122,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     private void showRvTokoh() {
-//        rvTokoh.setLayoutManager(new LinearLayoutManager(this,RecyclerView.HORIZONTAL,false));
+        rvTokoh.setLayoutManager(new LinearLayoutManager(this,RecyclerView.HORIZONTAL,false));
         TokohAdapterHorizontal tokohAdapterHorizontal = new TokohAdapterHorizontal(listTokoh, getApplicationContext());
-        CarouselLayoutManager carouselLayoutManager = new CarouselLayoutManager(getApplicationContext(),0);
-        carouselLayoutManager.setItemSpace(260);
-        carouselLayoutManager.setInfinite(true);
-        rvTokoh.setLayoutManager(carouselLayoutManager);
+
 
         rvTokoh.setAdapter(tokohAdapterHorizontal);
     }

@@ -34,7 +34,7 @@
                 android:maxLines="1"
                 android:text="@string/phytagoras"
                 android:textColor="@color/black"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -44,6 +44,7 @@
                 android:fontFamily="@font/poppins"
                 android:maxLines="1"
                 android:text="@string/master_filsafat"
+                android:visibility="gone"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -53,8 +54,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
                 android:fontFamily="@font/poppins"
-                android:maxLength="120"
-                android:maxLines="3"
+                android:maxLines="5"
                 android:text="@string/deskTokoh"
                 android:textAlignment="viewStart"
                 android:textColor="@color/descTokoh"
