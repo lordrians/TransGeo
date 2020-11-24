@@ -1,16 +1,22 @@
 package com.example.transgeo.adapter;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebChromeClient;
+import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TabHost;
@@ -40,6 +46,7 @@ public class ViewPagerSoalAdapter extends RecyclerView.Adapter<ViewPagerSoalAdap
     private SharedPreferences sharedPreferences;
     private View parentLayout;
     private String PaketSoal;
+    private Activity activity;
 
     public ViewPagerSoalAdapter(Context context, ArrayList<Soal> listSoal, String PaketSoal) {
         this.context = context;
@@ -53,6 +60,7 @@ public class ViewPagerSoalAdapter extends RecyclerView.Adapter<ViewPagerSoalAdap
         View view = LayoutInflater.from(context).inflate(R.layout.item_soal, parent, false);
         View parentLayout = parent.getRootView();
         tabLayout = parentLayout.findViewById(R.id.tl_soal);
+        activity = (Activity) context;
 
         sharedPreferences = context.getSharedPreferences(GlobalVar.MYFILE_SP_SOAL, 0);
 
@@ -65,6 +73,7 @@ public class ViewPagerSoalAdapter extends RecyclerView.Adapter<ViewPagerSoalAdap
 
         holder.wvSoal.getSettings().setJavaScriptEnabled(true);
         holder.wvSoal.loadUrl(listSoal.get(position).getSoal());
+
 //        holder.tvSoal.setText(listSoal.get(position).getSoal());
         holder.rbPgA.setText(listSoal.get(position).getPgA());
         holder.rbPgB.setText(listSoal.get(position).getPgB());
@@ -158,6 +167,8 @@ public class ViewPagerSoalAdapter extends RecyclerView.Adapter<ViewPagerSoalAdap
         RadioGroup rgPg;
         WebView wvSoal, wvJwb;
         Button btnLihatJawaban;
+        int loadedPercentage = 0;
+        boolean loaded = false;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -173,7 +184,6 @@ public class ViewPagerSoalAdapter extends RecyclerView.Adapter<ViewPagerSoalAdap
             ivSoal = itemView.findViewById(R.id.iv_soal);
             btnLihatJawaban = itemView.findViewById(R.id.item_btn_lihatjawaban);
             wvJwb = itemView.findViewById(R.id.wv_jawaban);
-
 
         }
     }
