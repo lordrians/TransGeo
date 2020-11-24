@@ -42,7 +42,7 @@ public class Rotasi180 extends Fragment {
 
         webView.loadUrl(GlobalVar.HTML_ROT_180);
         Glide.with(getContext())
-                .load("https://drive.google.com/uc?id=1w_Wo7GaNIPD_TzcHlE4UmcO2rpFW3FhV")
+                .load("https://drive.google.com/uc?id=1dyzd-INXZodapeIkShJtsmppRYvOi7LL" )
                 .apply(new RequestOptions().fitCenter())
                 .into(imageView);
     }

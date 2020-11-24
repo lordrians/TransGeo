@@ -26,13 +26,13 @@ public class dtTokoh {
     };
 
     private static String[] poto = {
-            "https://3.bp.blogspot.com/-EeHVZ87pmck/UF75WXjZ2MI/AAAAAAAAAtg/m5MLaBlRQ6w/s1600/pythagoras.jpg",
-            "https://3.bp.blogspot.com/-EeHVZ87pmck/UF75WXjZ2MI/AAAAAAAAAtg/m5MLaBlRQ6w/s1600/pythagoras.jpg",
-            "https://3.bp.blogspot.com/-EeHVZ87pmck/UF75WXjZ2MI/AAAAAAAAAtg/m5MLaBlRQ6w/s1600/pythagoras.jpg",
-            "https://3.bp.blogspot.com/-EeHVZ87pmck/UF75WXjZ2MI/AAAAAAAAAtg/m5MLaBlRQ6w/s1600/pythagoras.jpg",
-            "https://3.bp.blogspot.com/-EeHVZ87pmck/UF75WXjZ2MI/AAAAAAAAAtg/m5MLaBlRQ6w/s1600/pythagoras.jpg",
-            "https://3.bp.blogspot.com/-EeHVZ87pmck/UF75WXjZ2MI/AAAAAAAAAtg/m5MLaBlRQ6w/s1600/pythagoras.jpg",
-            "https://3.bp.blogspot.com/-EeHVZ87pmck/UF75WXjZ2MI/AAAAAAAAAtg/m5MLaBlRQ6w/s1600/pythagoras.jpg"
+            "https://drive.google.com/uc?id=1LlsPBsI1jFSLZaRLhKfuXAtZbd57-Vdg",
+            "https://drive.google.com/uc?id=1Bf9YXsXgm_XXWFHV_UvfgWIzuO3bYQJ3",
+            "https://drive.google.com/uc?id=1n5y25AtCFVkmFxNrYFQ3N3aZbxM0aPIE",
+            "https://drive.google.com/uc?id=1pDmJcifvDTt_Bcb1Q5uvgWgoKcfBExG1",
+            "https://drive.google.com/uc?id=1OkFbUqpFumy-tuzvnUTzxLsiQI20dVLU",
+            "https://drive.google.com/uc?id=19YcbcjwwYegrNTWnKB5hx3Hc-wFwbEWR",
+            "https://drive.google.com/uc?id=1K3I7LIsI-wmoDhIHJOGxhMMN0dn9xE4G"
     };
 
     private static String[] deskripsi = {
